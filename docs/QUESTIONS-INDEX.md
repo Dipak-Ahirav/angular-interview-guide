@@ -94,3 +94,17 @@ Basic • Intermediate • Advanced • Senior / Architect
 16. [Handling production incidents effectively.](architect/16-incident-handling.md)
 17. [Common Angular red flags in interviews.](architect/17-red-flags.md)
 18. [Self-assessment checklist for Angular architects.](architect/18-self-assessment.md)
+
+19. [How to become an Angular architect?](architect/19-become-architect.md)
+
+20. [Architectural patterns for Angular apps.](architect/20-architectural-patterns.md)
+
+21. [How to design Angular apps for scalability?](architect/21-scalability.md)
+
+22. [How to design Angular apps for maintainability?](architect/22-maintainability.md)
+
+23. [How to design Angular apps for performance?](architect/23-performance.md)
+
+24. [How to design Angular apps for security?](architect/24-security.md)
+
+25. [How to design Angular apps for accessibility?](architect/25-accessibility.md)
