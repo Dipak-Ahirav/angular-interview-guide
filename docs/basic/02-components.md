@@ -16,10 +16,10 @@ Each small LEGO piece builds a small part of the structure.
 
 In Angular:
 
-- Header is a component  
-- Footer is a component  
-- Login form is a component  
-- Dashboard card is a component  
+- Header is a component
+- Footer is a component
+- Login form is a component
+- Dashboard card is a component
 
 👉 An Angular application is made up of multiple components combined together.
 
@@ -31,7 +31,7 @@ Every Angular component has three main parts:
 
 1️⃣ **Template (HTML)** → Defines the UI  
 2️⃣ **Class (TypeScript)** → Contains logic and data  
-3️⃣ **Metadata (@Component decorator)** → Configuration for Angular  
+3️⃣ **Metadata (@Component decorator)** → Configuration for Angular
 
 ---
 
@@ -52,30 +52,30 @@ AppComponent
  ├── HeaderComponent  
  ├── SidebarComponent  
  ├── DashboardComponent  
- │    ├── CardComponent  
- │    └── ChartComponent  
- └── FooterComponent  
+ │ ├── CardComponent  
+ │ └── ChartComponent  
+ └── FooterComponent
 
 This structure improves:
 
-- Scalability  
-- Maintainability  
-- Testability  
+- Scalability
+- Maintainability
+- Testability
 
 ---
 
 # 🔥 Component Anatomy
 
 ```ts
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-user',
+  selector: "app-user",
   template: `<h2>Hello {{ name }}</h2>`,
-  styleUrls: ['./user.component.css']
+  styleUrls: ["./user.component.css"],
 })
 export class UserComponent {
-  name = 'Dipak';
+  name = "Dipak";
 }
 ```
 
@@ -90,16 +90,19 @@ Usage:
 # 🧠 Important Concepts
 
 ### 🔹 Component-Based Architecture
+
 Angular applications are built as a tree of components.
 
 ### 🔹 Smart vs Dumb Components
 
 **Smart (Container) Components:**
+
 - Handle business logic
 - Call APIs
 - Manage state
 
 **Dumb (Presentational) Components:**
+
 - Receive data via @Input
 - Emit events via @Output
 - Only responsible for UI
@@ -110,11 +113,11 @@ This separation makes apps cleaner and easier to scale.
 
 # 💡 Why Components Are Important
 
-- Code reusability  
-- Clear separation of concerns  
-- Easier debugging  
-- Better performance control  
-- Unit test friendly  
+- Code reusability
+- Clear separation of concerns
+- Easier debugging
+- Better performance control
+- Unit test friendly
 
 ---
 
@@ -137,13 +140,13 @@ When asked about components, interviewer checks:
 
 # 💬 Common Follow-up Questions
 
-1. Difference between component and directive?  
-2. How do parent and child components communicate?  
-3. What is a standalone component?  
-4. What is change detection strategy?  
+1. Difference between component and directive?
+2. How do parent and child components communicate?
+3. What is a standalone component?
+4. What is change detection strategy?
 
 ---
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

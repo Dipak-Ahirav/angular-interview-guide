@@ -16,32 +16,35 @@ Multi-tenancy means:
 
 👉 One application  
 👉 Multiple customers (tenants)  
-👉 Isolated data and configuration  
+👉 Isolated data and configuration
 
 Example:
 
-- tenantA.myapp.com  
-- tenantB.myapp.com  
-- tenantC.myapp.com  
+- tenantA.myapp.com
+- tenantB.myapp.com
+- tenantC.myapp.com
 
 Each tenant:
 
-- Has different branding  
-- Different permissions  
-- Different feature access  
-- Different backend data  
+- Has different branding
+- Different permissions
+- Different feature access
+- Different backend data
 
 ---
 
 # 🧠 Types of Multi-Tenant Architectures
 
-### 1️⃣ Database per Tenant  
+### 1️⃣ Database per Tenant
+
 Each tenant has separate database.
 
-### 2️⃣ Schema per Tenant  
+### 2️⃣ Schema per Tenant
+
 Same DB, different schemas.
 
-### 3️⃣ Shared Database with Tenant ID  
+### 3️⃣ Shared Database with Tenant ID
+
 Same tables, tenantId column separates data.
 
 Angular typically handles UI-level separation, while backend enforces data isolation.
@@ -73,7 +76,7 @@ From:
 Example:
 
 ```ts
-const tenant = window.location.hostname.split('.')[0];
+const tenant = window.location.hostname.split(".")[0];
 ```
 
 ---
@@ -101,7 +104,10 @@ Use CSS variables or theme files.
 Example:
 
 ```ts
-document.documentElement.style.setProperty('--primary-color', config.primaryColor);
+document.documentElement.style.setProperty(
+  "--primary-color",
+  config.primaryColor,
+);
 ```
 
 Each tenant can have:
@@ -136,8 +142,8 @@ canActivate(): boolean {
 Enable/disable features dynamically.
 
 ```ts
-if(config.features.analyticsEnabled) {
-   // load analytics module
+if (config.features.analyticsEnabled) {
+  // load analytics module
 }
 ```
 
@@ -186,7 +192,7 @@ Each tenant can load different remote modules dynamically.
 ❌ Never trust tenant ID from frontend  
 ❌ Backend must enforce tenant isolation  
 ❌ Validate permissions server-side  
-❌ Prevent cross-tenant data access  
+❌ Prevent cross-tenant data access
 
 Frontend handles UI separation only.
 
@@ -232,4 +238,4 @@ SaaS Product:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

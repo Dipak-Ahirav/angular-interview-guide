@@ -33,10 +33,12 @@ Angular automatically replaces {{ name }} with the value.
 # 🔹 Why Do We Need Interpolation?
 
 Without interpolation:
+
 - We would manually update HTML using JavaScript.
 - Code becomes complex.
 
 With interpolation:
+
 - Angular automatically updates UI when data changes.
 - Clean and readable templates.
 
@@ -112,10 +114,11 @@ Interpolation:
 Property Binding:
 
 ```html
-<img [src]="imageUrl">
+<img [src]="imageUrl" />
 ```
 
 Difference:
+
 - Interpolation is mainly used for text.
 - Property binding is used for element properties.
 
@@ -128,13 +131,13 @@ Yes, but property binding is preferred.
 Example:
 
 ```html
-<img src="{{ imageUrl }}">
+<img src="{{ imageUrl }}" />
 ```
 
 Better way:
 
 ```html
-<img [src]="imageUrl">
+<img [src]="imageUrl" />
 ```
 
 ---
@@ -182,4 +185,4 @@ Compute value once in component.
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

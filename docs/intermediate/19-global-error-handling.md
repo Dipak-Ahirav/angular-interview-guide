@@ -49,7 +49,7 @@ With global handling:
 Angular provides:
 
 ```ts
-ErrorHandler
+ErrorHandler;
 ```
 
 We can override it with our own implementation.
@@ -59,11 +59,10 @@ We can override it with our own implementation.
 # 💻 Step 1: Create Custom Error Handler
 
 ```ts
-import { ErrorHandler, Injectable } from '@angular/core';
+import { ErrorHandler, Injectable } from "@angular/core";
 
 @Injectable()
 export class GlobalErrorHandler implements ErrorHandler {
-
   handleError(error: any): void {
     console.error("Global Error Caught:", error);
 
@@ -83,9 +82,9 @@ export class GlobalErrorHandler implements ErrorHandler {
 providers: [
   {
     provide: ErrorHandler,
-    useClass: GlobalErrorHandler
-  }
-]
+    useClass: GlobalErrorHandler,
+  },
+];
 ```
 
 Now Angular uses our handler globally.
@@ -137,7 +136,7 @@ For HTTP errors:
 Example:
 
 ```ts
-catchError(error => {
+catchError((error) => {
   if (error.status === 401) {
     // Redirect to login
   }
@@ -149,12 +148,12 @@ catchError(error => {
 
 # 🟡 Difference: ErrorHandler vs HTTP Interceptor
 
-| Feature | ErrorHandler | HTTP Interceptor |
-|----------|--------------|-----------------|
-| Handles runtime errors | ✅ Yes | ❌ No |
-| Handles HTTP errors | ❌ No | ✅ Yes |
-| Global logging | ✅ Yes | ⚠️ Limited |
-| Centralized handling | ✅ Yes | ✅ Yes |
+| Feature                | ErrorHandler | HTTP Interceptor |
+| ---------------------- | ------------ | ---------------- |
+| Handles runtime errors | ✅ Yes       | ❌ No            |
+| Handles HTTP errors    | ❌ No        | ✅ Yes           |
+| Global logging         | ✅ Yes       | ⚠️ Limited       |
+| Centralized handling   | ✅ Yes       | ✅ Yes           |
 
 ---
 
@@ -202,4 +201,4 @@ Global ErrorHandler captures errors triggered inside Angular zone.
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

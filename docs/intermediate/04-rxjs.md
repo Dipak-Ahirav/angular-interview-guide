@@ -50,9 +50,9 @@ Without RxJS, Angular async handling would be limited.
 Represents a stream of values over time.
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from "rxjs";
 
-const obs = new Observable(observer => {
+const obs = new Observable((observer) => {
   observer.next("Hello");
   observer.complete();
 });
@@ -65,7 +65,7 @@ const obs = new Observable(observer => {
 Consumes values emitted by Observable.
 
 ```ts
-obs.subscribe(value => console.log(value));
+obs.subscribe((value) => console.log(value));
 ```
 
 ---
@@ -104,10 +104,10 @@ Important for preventing memory leaks.
 Acts as both Observable and Observer.
 
 ```ts
-import { Subject } from 'rxjs';
+import { Subject } from "rxjs";
 
 const subject = new Subject<number>();
-subject.subscribe(val => console.log("A:", val));
+subject.subscribe((val) => console.log("A:", val));
 subject.next(1);
 ```
 
@@ -118,10 +118,10 @@ subject.next(1);
 Stores latest value.
 
 ```ts
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from "rxjs";
 
 const bs = new BehaviorSubject<number>(0);
-bs.subscribe(val => console.log(val));
+bs.subscribe((val) => console.log(val));
 ```
 
 Used heavily for state management.
@@ -211,7 +211,7 @@ this.searchControl.valueChanges
   .pipe(
     debounceTime(300),
     distinctUntilChanged(),
-    switchMap(value => this.api.search(value))
+    switchMap((value) => this.api.search(value)),
   )
   .subscribe();
 ```
@@ -235,9 +235,7 @@ Best practices:
 # 🚀 Async Pipe (Recommended)
 
 ```html
-<div *ngFor="let user of users$ | async">
-  {{ user.name }}
-</div>
+<div *ngFor="let user of users$ | async">{{ user.name }}</div>
 ```
 
 Async pipe automatically:
@@ -259,10 +257,9 @@ Async pipe automatically:
 Example:
 
 ```ts
-forkJoin([
-  this.api.getUsers(),
-  this.api.getProducts()
-]).subscribe(([users, products]) => {});
+forkJoin([this.api.getUsers(), this.api.getProducts()]).subscribe(
+  ([users, products]) => {},
+);
 ```
 
 ---
@@ -295,4 +292,4 @@ forkJoin([
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

@@ -14,15 +14,15 @@ Self-assessment for an Angular Architect evaluates skills across architecture de
 
 At architect level:
 
-- You design systems, not just features  
-- You guide teams  
-- You make critical decisions  
+- You design systems, not just features
+- You guide teams
+- You make critical decisions
 
 Without self-assessment:
 
 ❌ Skill gaps remain hidden  
 ❌ Poor decision making  
-❌ Career stagnation  
+❌ Career stagnation
 
 ---
 
@@ -35,7 +35,7 @@ Without self-assessment:
 5️⃣ Security Knowledge  
 6️⃣ Testing Strategy  
 7️⃣ DevOps & CI/CD  
-8️⃣ Leadership & Communication  
+8️⃣ Leadership & Communication
 
 ---
 
@@ -43,13 +43,13 @@ Without self-assessment:
 
 Ask yourself:
 
-- Can I design scalable Angular apps?  
-- Do I follow modular architecture?  
-- Can I handle large codebases?  
+- Can I design scalable Angular apps?
+- Do I follow modular architecture?
+- Can I handle large codebases?
 
 ✔ Core / Shared / Feature separation  
 ✔ Monorepo understanding  
-✔ Microfrontend awareness  
+✔ Microfrontend awareness
 
 ---
 
@@ -57,11 +57,11 @@ Ask yourself:
 
 Evaluate:
 
-- Change detection (OnPush, signals)  
-- RxJS mastery  
-- Lazy loading  
-- Forms architecture  
-- Routing architecture  
+- Change detection (OnPush, signals)
+- RxJS mastery
+- Lazy loading
+- Forms architecture
+- Routing architecture
 
 ---
 
@@ -69,13 +69,13 @@ Evaluate:
 
 Can you design:
 
-- SaaS applications  
-- Real-time dashboards  
-- High-performance apps  
+- SaaS applications
+- Real-time dashboards
+- High-performance apps
 
 ✔ Data flow design  
 ✔ API integration  
-✔ Scalability decisions  
+✔ Scalability decisions
 
 ---
 
@@ -83,12 +83,12 @@ Can you design:
 
 Check:
 
-- Bundle optimization  
-- Lazy loading  
-- Caching strategies  
-- Rendering performance  
+- Bundle optimization
+- Lazy loading
+- Caching strategies
+- Rendering performance
 
-✔ Can you improve slow apps?  
+✔ Can you improve slow apps?
 
 ---
 
@@ -96,9 +96,9 @@ Check:
 
 Ask:
 
-- Do I understand XSS, CSRF?  
-- Do I know secure auth strategies?  
-- Can I design secure APIs?  
+- Do I understand XSS, CSRF?
+- Do I know secure auth strategies?
+- Can I design secure APIs?
 
 ---
 
@@ -106,11 +106,11 @@ Ask:
 
 Evaluate:
 
-- Unit vs integration vs E2E  
-- CI/CD test automation  
-- Flaky test handling  
+- Unit vs integration vs E2E
+- CI/CD test automation
+- Flaky test handling
 
-✔ Can you scale testing?  
+✔ Can you scale testing?
 
 ---
 
@@ -118,11 +118,11 @@ Evaluate:
 
 Knowledge of:
 
-- Build pipelines  
-- Deployment strategies  
-- Monitoring & logging  
+- Build pipelines
+- Deployment strategies
+- Monitoring & logging
 
-✔ Can you debug production issues?  
+✔ Can you debug production issues?
 
 ---
 
@@ -130,22 +130,22 @@ Knowledge of:
 
 Check:
 
-- Code reviews  
-- Mentoring developers  
-- Decision making  
-- Conflict resolution  
+- Code reviews
+- Mentoring developers
+- Decision making
+- Conflict resolution
 
-✔ Can you guide teams?  
+✔ Can you guide teams?
 
 ---
 
 # 🟢 9️⃣ Communication Skills
 
-- Explaining architecture clearly  
-- Writing documentation  
-- Stakeholder communication  
+- Explaining architecture clearly
+- Writing documentation
+- Stakeholder communication
 
-✔ Can non-tech people understand you?  
+✔ Can non-tech people understand you?
 
 ---
 
@@ -155,7 +155,7 @@ Check:
 ✔ Can optimize performance  
 ✔ Can enforce architecture standards  
 ✔ Can lead teams  
-✔ Can handle production issues  
+✔ Can handle production issues
 
 ---
 
@@ -163,10 +163,10 @@ Check:
 
 Be ready to answer:
 
-- Design a scalable Angular app  
-- How do you handle performance?  
-- How do you scale teams?  
-- How do you ensure security?  
+- Design a scalable Angular app
+- How do you handle performance?
+- How do you scale teams?
+- How do you ensure security?
 
 ---
 
@@ -178,4 +178,4 @@ Be ready to answer:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

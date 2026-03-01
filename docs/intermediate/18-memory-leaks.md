@@ -20,7 +20,7 @@ If you navigate away but the subscription is still active:
 
 👉 Memory keeps increasing  
 👉 Performance degrades  
-👉 App becomes slow  
+👉 App becomes slow
 
 That is a memory leak.
 
@@ -34,7 +34,7 @@ Most common reasons:
 2️⃣ Long-lived subscriptions in services  
 3️⃣ setInterval / setTimeout not cleared  
 4️⃣ Event listeners not removed  
-5️⃣ Global objects holding references  
+5️⃣ Global objects holding references
 
 ---
 
@@ -95,9 +95,7 @@ Recommended pattern in enterprise apps.
 If used in template:
 
 ```html
-<div *ngFor="let user of users$ | async">
-  {{ user.name }}
-</div>
+<div *ngFor="let user of users$ | async">{{ user.name }}</div>
 ```
 
 Async pipe automatically unsubscribes.
@@ -110,9 +108,9 @@ Async pipe automatically unsubscribes.
 
 Examples that auto-complete:
 
-- HttpClient requests  
-- of()  
-- from()  
+- HttpClient requests
+- of()
+- from()
 
 These complete automatically.
 
@@ -120,11 +118,11 @@ These complete automatically.
 
 # 🧠 Observables That Require Unsubscribe
 
-- interval()  
-- fromEvent()  
-- Subject streams  
-- valueChanges (Forms)  
-- Custom infinite streams  
+- interval()
+- fromEvent()
+- Subject streams
+- valueChanges (Forms)
+- Custom infinite streams
 
 ---
 
@@ -149,13 +147,13 @@ ngOnDestroy() {
 # 🔥 Event Listener Leak
 
 ```ts
-window.addEventListener('resize', this.onResize);
+window.addEventListener("resize", this.onResize);
 ```
 
 Must remove:
 
 ```ts
-window.removeEventListener('resize', this.onResize);
+window.removeEventListener("resize", this.onResize);
 ```
 
 ---
@@ -164,11 +162,11 @@ window.removeEventListener('resize', this.onResize);
 
 Common issue:
 
-- Router navigation  
-- Component destroyed  
-- Subscription continues  
-- API still firing  
-- Duplicate calls  
+- Router navigation
+- Component destroyed
+- Subscription continues
+- API still firing
+- Duplicate calls
 
 Fix: takeUntil + OnDestroy.
 
@@ -178,35 +176,35 @@ Fix: takeUntil + OnDestroy.
 
 Tools:
 
-- Chrome DevTools → Performance tab  
-- Chrome DevTools → Memory tab  
-- Angular DevTools  
-- Heap snapshots  
+- Chrome DevTools → Performance tab
+- Chrome DevTools → Memory tab
+- Angular DevTools
+- Heap snapshots
 
 Symptoms:
 
-- Increasing memory usage  
-- Slow UI  
-- Duplicate API calls  
+- Increasing memory usage
+- Slow UI
+- Duplicate API calls
 
 ---
 
 # 🚨 Common Mistakes
 
-- Subscribing inside subscribe  
-- Forgetting to unsubscribe from Subjects  
-- Not completing destroy$ Subject  
-- Using global event bus incorrectly  
+- Subscribing inside subscribe
+- Forgetting to unsubscribe from Subjects
+- Not completing destroy$ Subject
+- Using global event bus incorrectly
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Do you understand subscription lifecycle?  
-- When to unsubscribe?  
-- Does HttpClient need unsubscribe?  
-- Best pattern to prevent leaks?  
-- Async pipe vs manual subscribe?  
+- Do you understand subscription lifecycle?
+- When to unsubscribe?
+- Does HttpClient need unsubscribe?
+- Best pattern to prevent leaks?
+- Async pipe vs manual subscribe?
 
 ---
 
@@ -218,14 +216,14 @@ Symptoms:
 
 # 💬 Common Follow-up Questions
 
-1. Does HttpClient require unsubscribe?  
-2. What is takeUntil pattern?  
-3. How to detect memory leaks?  
-4. What causes duplicate API calls?  
-5. Does async pipe prevent memory leaks?  
+1. Does HttpClient require unsubscribe?
+2. What is takeUntil pattern?
+3. How to detect memory leaks?
+4. What causes duplicate API calls?
+5. Does async pipe prevent memory leaks?
 
 ---
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

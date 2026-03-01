@@ -27,10 +27,12 @@ But in large enterprise apps, checking everything can slow down performance.
 # 🔹 Why Do We Need OnPush?
 
 Without OnPush:
+
 - Angular runs change detection on the whole component tree.
 - Performance may degrade in large applications.
 
 With OnPush:
+
 - Angular checks only when required.
 - Improves performance.
 - Encourages better coding practices (immutability).
@@ -42,17 +44,18 @@ With OnPush:
 By default, Angular uses:
 
 ```ts
-ChangeDetectionStrategy.Default
+ChangeDetectionStrategy.Default;
 ```
 
 This means:
+
 - Every async event triggers change detection.
 - Entire component tree is checked.
 
 When we use:
 
 ```ts
-ChangeDetectionStrategy.OnPush
+ChangeDetectionStrategy.OnPush;
 ```
 
 Angular checks the component only when:
@@ -67,12 +70,12 @@ Angular checks the component only when:
 # 💻 Basic Example
 
 ```ts
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
-  selector: 'app-user',
+  selector: "app-user",
   template: `<p>{{ user.name }}</p>`,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserComponent {
   user = { name: "Dipak" };
@@ -127,11 +130,11 @@ This immediately triggers change detection for that component.
 
 # 🧠 Default vs OnPush Comparison
 
-| Feature | Default | OnPush |
-|----------|----------|----------|
-| Checks whole tree | ✅ Yes | ❌ No |
-| Performance optimized | ❌ No | ✅ Yes |
-| Requires immutability | ❌ No | ✅ Yes |
+| Feature                  | Default    | OnPush |
+| ------------------------ | ---------- | ------ |
+| Checks whole tree        | ✅ Yes     | ❌ No  |
+| Performance optimized    | ❌ No      | ✅ Yes |
+| Requires immutability    | ❌ No      | ✅ Yes |
 | Good for enterprise apps | ⚠️ Limited | ✅ Yes |
 
 ---
@@ -174,4 +177,4 @@ OnPush is commonly used in:
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

@@ -34,7 +34,7 @@ Optimizing bundle size directly improves:
 2️⃣ Not lazy loading features  
 3️⃣ Including unused third-party packages  
 4️⃣ Large polyfills  
-5️⃣ Development build usage in production  
+5️⃣ Development build usage in production
 
 ---
 
@@ -65,13 +65,13 @@ Example:
 ❌ Bad:
 
 ```ts
-import * as _ from 'lodash';
+import * as _ from "lodash";
 ```
 
 ✅ Good:
 
 ```ts
-import debounce from 'lodash/debounce';
+import debounce from "lodash/debounce";
 ```
 
 Only required functions are bundled.
@@ -201,12 +201,12 @@ Prevents duplicate Angular runtime loading.
 
 # 🔥 Before vs After Optimization
 
-| Metric | Before | After |
-|--------|--------|-------|
-| Initial bundle | 2.5MB | 900KB |
-| FCP | 3.5s | 1.2s |
-| TTI | 5s | 2s |
-| Lighthouse | 65 | 92 |
+| Metric         | Before | After |
+| -------------- | ------ | ----- |
+| Initial bundle | 2.5MB  | 900KB |
+| FCP            | 3.5s   | 1.2s  |
+| TTI            | 5s     | 2s    |
+| Lighthouse     | 65     | 92    |
 
 ---
 
@@ -217,7 +217,7 @@ Step 2: Lazy load heavy features
 Step 3: Remove unused dependencies  
 Step 4: Optimize imports  
 Step 5: Enable SSR + Hydration  
-Step 6: Use CDN & compression  
+Step 6: Use CDN & compression
 
 ---
 
@@ -259,4 +259,4 @@ Step 6: Use CDN & compression
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

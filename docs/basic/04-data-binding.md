@@ -29,10 +29,12 @@ That connection is called **Data Binding**.
 # 🔹 Why Do We Need Data Binding?
 
 Without data binding:
+
 - We would manually update the DOM.
 - Code would become complex and messy.
 
 With data binding:
+
 - Angular updates the UI automatically.
 - Code becomes cleaner and reactive.
 
@@ -69,8 +71,7 @@ Used to display values inside HTML.
 Used to bind values to HTML element properties.
 
 ```html
-<img [src]="imageUrl">
-<button [disabled]="isDisabled">Click</button>
+<img [src]="imageUrl" /> <button [disabled]="isDisabled">Click</button>
 ```
 
 - One-way binding
@@ -96,7 +97,7 @@ Used to listen to DOM events.
 Combines property + event binding.
 
 ```html
-<input [(ngModel)]="username">
+<input [(ngModel)]="username" />
 <p>{{ username }}</p>
 ```
 
@@ -108,10 +109,12 @@ Combines property + event binding.
 # 🧠 Understanding Data Flow
 
 ### 🔹 One-Way Binding
+
 Data flows in one direction:
 Component → View OR View → Component
 
 ### 🔹 Two-Way Binding
+
 Data flows in both directions:
 Component ↔ View
 
@@ -178,4 +181,4 @@ When this question is asked, interviewer checks:
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

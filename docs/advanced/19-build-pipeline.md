@@ -25,7 +25,7 @@ Without a proper pipeline:
 ❌ Manual deployment errors  
 ❌ Inconsistent builds  
 ❌ Security risks  
-❌ Deployment delays  
+❌ Deployment delays
 
 ---
 
@@ -44,7 +44,7 @@ Angular performs:
 3️⃣ Dead Code Elimination  
 4️⃣ Minification  
 5️⃣ Bundle Optimization  
-6️⃣ Source Map Generation (optional)  
+6️⃣ Source Map Generation (optional)
 
 ---
 
@@ -57,7 +57,7 @@ Angular performs:
 5️⃣ Build Production Bundle  
 6️⃣ Security Scan  
 7️⃣ Artifact Creation  
-8️⃣ Deploy to Environment  
+8️⃣ Deploy to Environment
 
 ---
 
@@ -214,7 +214,7 @@ Post-deployment tools:
 ❌ Not running tests before deploy  
 ❌ No rollback strategy  
 ❌ Hardcoded environment configs  
-❌ No dependency scanning  
+❌ No dependency scanning
 
 ---
 
@@ -246,4 +246,4 @@ Post-deployment tools:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

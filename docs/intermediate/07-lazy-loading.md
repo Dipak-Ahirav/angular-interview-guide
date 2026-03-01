@@ -15,10 +15,12 @@ Lazy Loading in Angular is a technique where feature modules are loaded only whe
 Imagine your Angular app is a big shopping mall 🏬
 
 Without Lazy Loading:
+
 - All shops open at once.
 - It takes time to open everything.
 
 With Lazy Loading:
+
 - Only the entrance opens first.
 - Other shops open only when customers walk toward them.
 
@@ -71,14 +73,15 @@ This automatically sets up lazy loading.
 ```ts
 const routes: Routes = [
   {
-    path: 'admin',
+    path: "admin",
     loadChildren: () =>
-      import('./admin/admin.module').then(m => m.AdminModule)
-  }
+      import("./admin/admin.module").then((m) => m.AdminModule),
+  },
 ];
 ```
 
 Notice:
+
 - No direct import at top
 - Dynamic import() is used
 
@@ -89,6 +92,7 @@ Notice:
 Before Lazy Loading:
 
 Main bundle includes:
+
 - Admin module
 - Dashboard module
 - Reports module
@@ -97,6 +101,7 @@ Main bundle includes:
 After Lazy Loading:
 
 Initial bundle includes:
+
 - App module
 - Home components only
 
@@ -106,12 +111,12 @@ Other modules load on demand.
 
 # 🧠 Lazy Loading vs Eager Loading
 
-| Feature | Eager Loading | Lazy Loading |
-|----------|---------------|---------------|
-| Loads at startup | ✅ Yes | ❌ No |
-| Improves startup speed | ❌ No | ✅ Yes |
-| Good for large apps | ❌ No | ✅ Yes |
-| Complexity | Simple | Slightly advanced |
+| Feature                | Eager Loading | Lazy Loading      |
+| ---------------------- | ------------- | ----------------- |
+| Loads at startup       | ✅ Yes        | ❌ No             |
+| Improves startup speed | ❌ No         | ✅ Yes            |
+| Good for large apps    | ❌ No         | ✅ Yes            |
+| Complexity             | Simple        | Slightly advanced |
 
 ---
 
@@ -140,7 +145,7 @@ Example:
 
 ```ts
 RouterModule.forRoot(routes, {
-  preloadingStrategy: PreloadAllModules
+  preloadingStrategy: PreloadAllModules,
 });
 ```
 
@@ -217,4 +222,4 @@ Because it reduces initial bundle size, improves startup time, enhances performa
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

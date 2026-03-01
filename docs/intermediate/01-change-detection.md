@@ -33,11 +33,13 @@ This automatic update process is called **Change Detection**.
 # 🔹 Why Do We Need Change Detection?
 
 Without change detection:
+
 - UI would not update automatically.
 - We would manually manipulate the DOM.
 - Code becomes complex.
 
 With change detection:
+
 - Automatic UI updates.
 - Reactive behavior.
 - Cleaner and maintainable code.
@@ -66,7 +68,7 @@ When an async event happens (click, HTTP call, setTimeout, Promise):
 By default Angular uses:
 
 ```ts
-ChangeDetectionStrategy.Default
+ChangeDetectionStrategy.Default;
 ```
 
 - Checks entire component tree.
@@ -99,8 +101,8 @@ This improves performance significantly.
 
 ```ts
 @Component({
-  selector: 'app-counter',
-  template: `<h2>{{ count }}</h2>`
+  selector: "app-counter",
+  template: `<h2>{{ count }}</h2>`,
 })
 export class CounterComponent {
   count = 0;
@@ -142,6 +144,7 @@ this.cd.detectChanges();
 ```
 
 Used when:
+
 - Working outside Angular zone
 - Using third-party libraries
 - Performance tuning
@@ -176,4 +179,4 @@ Used when:
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

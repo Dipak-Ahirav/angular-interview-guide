@@ -14,17 +14,17 @@ An enterprise testing strategy in Angular is a layered approach that ensures con
 
 In enterprise systems:
 
-- Multiple teams contribute daily  
-- Frequent deployments  
-- High regression risk  
-- Business-critical workflows  
+- Multiple teams contribute daily
+- Frequent deployments
+- High regression risk
+- Business-critical workflows
 
 Without a strategy:
 
 ❌ Flaky tests block releases  
 ❌ Refactoring becomes risky  
 ❌ Bugs reach production  
-❌ CI becomes slow & expensive  
+❌ CI becomes slow & expensive
 
 ---
 
@@ -35,7 +35,7 @@ Without a strategy:
        Unit Tests
 
 ✔ More unit tests → fast feedback  
-✔ Fewer E2E tests → less flakiness  
+✔ Fewer E2E tests → less flakiness
 
 ---
 
@@ -43,23 +43,23 @@ Without a strategy:
 
 Test:
 
-- Services  
-- Utilities  
-- Pipes  
-- Validators  
-- State logic  
+- Services
+- Utilities
+- Pipes
+- Validators
+- State logic
 
 Best practices:
 
-- Avoid TestBed unless needed  
-- Prefer pure unit tests for logic  
-- Mock external dependencies  
+- Avoid TestBed unless needed
+- Prefer pure unit tests for logic
+- Mock external dependencies
 
 Example:
 
 ```ts
-describe('DiscountService', () => {
-  it('should apply discount correctly', () => {
+describe("DiscountService", () => {
+  it("should apply discount correctly", () => {
     const s = new DiscountService();
     expect(s.apply(100, 10)).toBe(90);
   });
@@ -72,16 +72,16 @@ describe('DiscountService', () => {
 
 Test:
 
-- Rendering  
-- Inputs/Outputs  
-- DOM behavior  
-- Change detection  
+- Rendering
+- Inputs/Outputs
+- DOM behavior
+- Change detection
 
 Best practices:
 
-- Use stable selectors (data-testid)  
-- Prefer Angular Material Harnesses  
-- Avoid brittle CSS selectors  
+- Use stable selectors (data-testid)
+- Prefer Angular Material Harnesses
+- Avoid brittle CSS selectors
 
 ---
 
@@ -89,19 +89,19 @@ Best practices:
 
 Test:
 
-- Component + Service interaction  
-- Router + Guards  
-- HTTP + Interceptors  
+- Component + Service interaction
+- Router + Guards
+- HTTP + Interceptors
 
 Use:
 
-- HttpTestingController  
-- RouterTestingModule  
+- HttpTestingController
+- RouterTestingModule
 
 Example:
 
 ```ts
-const req = httpMock.expectOne('/api/orders');
+const req = httpMock.expectOne("/api/orders");
 req.flush(mockOrders);
 ```
 
@@ -111,20 +111,20 @@ req.flush(mockOrders);
 
 Cover:
 
-- Login  
-- Core workflows (checkout, payments, approvals)  
-- Smoke tests  
+- Login
+- Core workflows (checkout, payments, approvals)
+- Smoke tests
 
 Tools:
 
-- Cypress  
-- Playwright  
+- Cypress
+- Playwright
 
 Best practices:
 
-- Keep E2E tests minimal  
-- Run full suite nightly  
-- Run smoke suite on PRs  
+- Keep E2E tests minimal
+- Run full suite nightly
+- Run smoke suite on PRs
 
 ---
 
@@ -132,19 +132,19 @@ Best practices:
 
 Common causes:
 
-- timing issues  
-- animations  
-- shared state  
-- unstable selectors  
-- real network dependency  
+- timing issues
+- animations
+- shared state
+- unstable selectors
+- real network dependency
 
 Solutions:
 
-- use fake timers  
-- disable animations in tests  
-- use consistent mocks  
-- retry only at framework level (not everywhere)  
-- keep test environment deterministic  
+- use fake timers
+- disable animations in tests
+- use consistent mocks
+- retry only at framework level (not everywhere)
+- keep test environment deterministic
 
 ---
 
@@ -152,15 +152,15 @@ Solutions:
 
 Targets:
 
-- 80%+ overall  
-- 100% for critical business logic  
-- Avoid chasing fake 100%  
+- 80%+ overall
+- 100% for critical business logic
+- Avoid chasing fake 100%
 
 Focus:
 
 ✔ meaningful tests  
 ✔ edge cases  
-✔ business flows  
+✔ business flows
 
 ---
 
@@ -173,7 +173,7 @@ Pipeline stages:
 3️⃣ Coverage reports  
 4️⃣ Integration tests  
 5️⃣ E2E smoke  
-6️⃣ Deploy  
+6️⃣ Deploy
 
 Example command:
 
@@ -187,11 +187,11 @@ ng test --watch=false --code-coverage
 
 Techniques:
 
-- parallel test execution  
-- caching in CI (Nx caching)  
-- run affected tests only  
-- split test suites  
-- avoid heavy TestBed setup  
+- parallel test execution
+- caching in CI (Nx caching)
+- run affected tests only
+- split test suites
+- avoid heavy TestBed setup
 
 Nx example:
 
@@ -205,10 +205,10 @@ nx affected:test
 
 Enforce:
 
-- PR quality checks  
-- mandatory test updates  
-- shared testing utilities  
-- consistent mocks/factories  
+- PR quality checks
+- mandatory test updates
+- shared testing utilities
+- consistent mocks/factories
 
 ---
 
@@ -218,17 +218,17 @@ Enforce:
 ❌ No separation of test types  
 ❌ Slow CI due to full test runs  
 ❌ Ignoring flaky tests  
-❌ Writing brittle DOM tests  
+❌ Writing brittle DOM tests
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Test pyramid understanding  
-- Unit vs integration vs E2E  
-- CI/CD testing automation  
-- How to reduce flakiness  
-- How to scale tests across teams  
+- Test pyramid understanding
+- Unit vs integration vs E2E
+- CI/CD testing automation
+- How to reduce flakiness
+- How to scale tests across teams
 
 ---
 
@@ -240,4 +240,4 @@ Enforce:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

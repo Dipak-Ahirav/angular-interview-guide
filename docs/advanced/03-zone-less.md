@@ -80,9 +80,7 @@ In Angular 16+:
 
 ```ts
 bootstrapApplication(AppComponent, {
-  providers: [
-    provideZoneChangeDetection({ eventCoalescing: true })
-  ]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true })],
 });
 ```
 
@@ -125,12 +123,12 @@ This makes Angular reactive like React/Vue.
 
 # 🔥 Zone-less vs OnPush
 
-| Feature | OnPush | Zone-less |
-|----------|---------|------------|
-| Requires Zone.js | ✅ Yes | ❌ No |
-| Fine-grained updates | ⚠️ Partial | ✅ Yes |
-| Manual detection needed | Sometimes | Sometimes |
-| Performance | Good | Better |
+| Feature                 | OnPush     | Zone-less |
+| ----------------------- | ---------- | --------- |
+| Requires Zone.js        | ✅ Yes     | ❌ No     |
+| Fine-grained updates    | ⚠️ Partial | ✅ Yes    |
+| Manual detection needed | Sometimes  | Sometimes |
+| Performance             | Good       | Better    |
 
 ---
 
@@ -199,4 +197,4 @@ Not recommended for:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

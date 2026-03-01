@@ -14,17 +14,17 @@ A System Design Dashboard in Angular is an architecture that visualizes real-tim
 
 In enterprise systems:
 
-- Real-time monitoring required  
-- High data volume (metrics/logs)  
-- Multiple data sources  
-- Critical business visibility  
+- Real-time monitoring required
+- High data volume (metrics/logs)
+- Multiple data sources
+- Critical business visibility
 
 Without proper design:
 
 ❌ Slow dashboards  
 ❌ Data inconsistency  
 ❌ Poor UX  
-❌ High memory usage  
+❌ High memory usage
 
 ---
 
@@ -34,7 +34,7 @@ Without proper design:
 2️⃣ Efficient rendering  
 3️⃣ Scalable architecture  
 4️⃣ Separation of concerns  
-5️⃣ High performance  
+5️⃣ High performance
 
 ---
 
@@ -50,17 +50,17 @@ API/WebSocket → Data Layer → State Management → Components → UI Charts
 
 Sources:
 
-- REST APIs  
-- WebSockets (real-time)  
-- Event streams  
+- REST APIs
+- WebSockets (real-time)
+- Event streams
 
 Example:
 
 ```ts
-this.socket$.subscribe(data => this.store.update(data));
+this.socket$.subscribe((data) => this.store.update(data));
 ```
 
-✔ Centralized data handling  
+✔ Centralized data handling
 
 ---
 
@@ -68,12 +68,12 @@ this.socket$.subscribe(data => this.store.update(data));
 
 Options:
 
-- RxJS services  
-- NgRx  
-- Signals  
+- RxJS services
+- NgRx
+- Signals
 
 ✔ Store dashboard state centrally  
-✔ Avoid duplicate API calls  
+✔ Avoid duplicate API calls
 
 ---
 
@@ -81,12 +81,14 @@ Options:
 
 Split components:
 
-✔ Container Components  
-- Fetch data  
-- Manage state  
+✔ Container Components
 
-✔ Presentational Components  
-- Render charts/tables  
+- Fetch data
+- Manage state
+
+✔ Presentational Components
+
+- Render charts/tables
 
 ---
 
@@ -94,11 +96,11 @@ Split components:
 
 Use libraries:
 
-- Chart.js  
-- D3.js  
-- ngx-charts  
+- Chart.js
+- D3.js
+- ngx-charts
 
-✔ Render large datasets efficiently  
+✔ Render large datasets efficiently
 
 ---
 
@@ -106,37 +108,37 @@ Use libraries:
 
 Use:
 
-- WebSockets  
-- Server-Sent Events (SSE)  
+- WebSockets
+- Server-Sent Events (SSE)
 
-✔ Live dashboard updates  
+✔ Live dashboard updates
 
 ---
 
 # 🔥 6️⃣ Performance Optimization
 
-- Use OnPush change detection  
-- Virtual scrolling for large lists  
-- Lazy load modules  
-- Throttle data streams  
+- Use OnPush change detection
+- Virtual scrolling for large lists
+- Lazy load modules
+- Throttle data streams
 
 ---
 
 # 🟡 7️⃣ Data Aggregation Strategy
 
-- Aggregate data at backend  
-- Send only required data  
-- Use pagination  
+- Aggregate data at backend
+- Send only required data
+- Use pagination
 
-✔ Reduce frontend load  
+✔ Reduce frontend load
 
 ---
 
 # 🟢 8️⃣ Caching Strategy
 
-- Cache API responses  
-- Use shareReplay  
-- Avoid redundant calls  
+- Cache API responses
+- Use shareReplay
+- Avoid redundant calls
 
 ---
 
@@ -146,17 +148,17 @@ Use:
 ❌ Too many API calls  
 ❌ No state management  
 ❌ Blocking UI thread  
-❌ No real-time optimization  
+❌ No real-time optimization
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How to design real-time dashboards?  
-- State management strategy?  
-- Handling large datasets?  
-- Performance optimization techniques?  
-- WebSocket integration?  
+- How to design real-time dashboards?
+- State management strategy?
+- Handling large datasets?
+- Performance optimization techniques?
+- WebSocket integration?
 
 ---
 
@@ -168,4 +170,4 @@ Use:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

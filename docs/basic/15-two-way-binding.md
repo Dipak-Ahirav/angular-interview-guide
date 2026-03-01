@@ -13,7 +13,7 @@ Two-way data binding in Angular is a mechanism that synchronizes data between th
 Imagine you have an input box:
 
 ```html
-<input>
+<input />
 ```
 
 And you want:
@@ -30,11 +30,13 @@ Two-way data binding allows both directions to stay synchronized.
 # 🔹 Why Do We Need Two-Way Binding?
 
 Without two-way binding:
+
 - We would manually listen to input events.
 - Then manually update variables.
 - Code becomes repetitive.
 
 With two-way binding:
+
 - Angular automatically keeps UI and data in sync.
 - Cleaner and faster development.
 
@@ -64,8 +66,7 @@ Internally:
 Is equivalent to:
 
 ```html
-[ngModel]="username"
-(ngModelChange)="username = $event"
+[ngModel]="username" (ngModelChange)="username = $event"
 ```
 
 ---
@@ -77,10 +78,10 @@ Is equivalent to:
 In AppModule:
 
 ```ts
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
-  imports: [FormsModule]
+  imports: [FormsModule],
 })
 export class AppModule {}
 ```
@@ -102,7 +103,7 @@ export class AppComponent {
 Template:
 
 ```html
-<input [(ngModel)]="username">
+<input [(ngModel)]="username" />
 <p>{{ username }}</p>
 ```
 
@@ -142,11 +143,11 @@ Usage:
 
 ## 🔹 Difference Between One-Way and Two-Way
 
-| One-Way Binding | Two-Way Binding |
-|----------------|----------------|
-| Component → View OR View → Component | Component ↔ View |
-| More predictable | Easier for forms |
-| Better for performance | Useful for user inputs |
+| One-Way Binding                      | Two-Way Binding        |
+| ------------------------------------ | ---------------------- |
+| Component → View OR View → Component | Component ↔ View       |
+| More predictable                     | Easier for forms       |
+| Better for performance               | Useful for user inputs |
 
 ---
 
@@ -198,4 +199,4 @@ In larger applications, many developers prefer Reactive Forms instead of ngModel
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

@@ -63,13 +63,13 @@ It enables:
 
 # 🟡 CSR vs SSR Comparison
 
-| Feature | CSR | SSR |
-|----------|------|------|
-| Initial load speed | Slower | Faster |
-| SEO | Poor | Excellent |
-| First paint | Delayed | Immediate |
-| Server load | Low | Higher |
-| Complexity | Simple | More complex |
+| Feature            | CSR     | SSR          |
+| ------------------ | ------- | ------------ |
+| Initial load speed | Slower  | Faster       |
+| SEO                | Poor    | Excellent    |
+| First paint        | Delayed | Immediate    |
+| Server load        | Low     | Higher       |
+| Complexity         | Simple  | More complex |
 
 ---
 
@@ -121,7 +121,7 @@ With hydration → smoother UX.
 1️⃣ Client-Side Rendering (CSR)  
 2️⃣ Server-Side Rendering (SSR)  
 3️⃣ Static Site Generation (SSG / Pre-render)  
-4️⃣ Hybrid Rendering  
+4️⃣ Hybrid Rendering
 
 ---
 
@@ -242,4 +242,4 @@ Must handle:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

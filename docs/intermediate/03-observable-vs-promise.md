@@ -53,10 +53,11 @@ const promise = new Promise((resolve, reject) => {
   setTimeout(() => resolve("Data Loaded"), 1000);
 });
 
-promise.then(data => console.log(data));
+promise.then((data) => console.log(data));
 ```
 
 Promise:
+
 - Resolves once
 - Then completes
 
@@ -73,18 +74,19 @@ Promise:
 Example:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from "rxjs";
 
-const observable = new Observable(observer => {
+const observable = new Observable((observer) => {
   observer.next("First Value");
   observer.next("Second Value");
   observer.complete();
 });
 
-observable.subscribe(value => console.log(value));
+observable.subscribe((value) => console.log(value));
 ```
 
 Observable:
+
 - Emits multiple values
 - Can complete or error
 - Can be unsubscribed
@@ -93,15 +95,15 @@ Observable:
 
 # 🔥 Detailed Comparison Table
 
-| Feature | Promise | Observable |
-|----------|----------|-------------|
-| Emits multiple values | ❌ No | ✅ Yes |
-| Lazy execution | ❌ No | ✅ Yes |
-| Cancelable | ❌ No | ✅ Yes |
-| Operators support | ❌ Limited | ✅ Powerful (RxJS) |
-| Retry support | ❌ No | ✅ Yes |
-| Used in Angular HttpClient | ❌ No | ✅ Yes |
-| Supports streaming | ❌ No | ✅ Yes |
+| Feature                    | Promise    | Observable         |
+| -------------------------- | ---------- | ------------------ |
+| Emits multiple values      | ❌ No      | ✅ Yes             |
+| Lazy execution             | ❌ No      | ✅ Yes             |
+| Cancelable                 | ❌ No      | ✅ Yes             |
+| Operators support          | ❌ Limited | ✅ Powerful (RxJS) |
+| Retry support              | ❌ No      | ✅ Yes             |
+| Used in Angular HttpClient | ❌ No      | ✅ Yes             |
+| Supports streaming         | ❌ No      | ✅ Yes             |
 
 ---
 
@@ -110,7 +112,7 @@ Observable:
 ## Promise (Eager)
 
 ```ts
-const promise = fetch('/api/users');
+const promise = fetch("/api/users");
 ```
 
 The request starts immediately.
@@ -120,7 +122,7 @@ The request starts immediately.
 ## Observable (Lazy)
 
 ```ts
-const obs = this.http.get('/api/users');
+const obs = this.http.get("/api/users");
 ```
 
 The request starts only when:
@@ -138,8 +140,7 @@ Promise cannot be canceled.
 Observable can be:
 
 ```ts
-const subscription = this.http.get('/api/users')
-  .subscribe();
+const subscription = this.http.get("/api/users").subscribe();
 
 subscription.unsubscribe();
 ```
@@ -163,10 +164,11 @@ Observables support operators like:
 Example:
 
 ```ts
-this.http.get('/api/users')
+this.http
+  .get("/api/users")
   .pipe(
-    map(users => users.length),
-    catchError(err => throwError(() => err))
+    map((users) => users.length),
+    catchError((err) => throwError(() => err)),
   )
   .subscribe();
 ```
@@ -182,9 +184,7 @@ Promises do not have such powerful operator chains.
 Using Observable + debounceTime:
 
 ```ts
-this.searchControl.valueChanges
-  .pipe(debounceTime(300))
-  .subscribe();
+this.searchControl.valueChanges.pipe(debounceTime(300)).subscribe();
 ```
 
 Promise cannot handle streaming input like this.
@@ -219,4 +219,4 @@ Promise cannot handle streaming input like this.
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

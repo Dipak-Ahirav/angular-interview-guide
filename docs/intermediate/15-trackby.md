@@ -6,7 +6,7 @@
 
 ## ✅ Short Interview Answer
 
-trackBy is a function used with *ngFor to improve performance by helping Angular identify which items have changed, added, or removed in a list. It prevents unnecessary DOM re-rendering.
+trackBy is a function used with \*ngFor to improve performance by helping Angular identify which items have changed, added, or removed in a list. It prevents unnecessary DOM re-rendering.
 
 ---
 
@@ -41,12 +41,10 @@ With trackBy:
 
 ---
 
-# 🟡 Default Behavior of *ngFor
+# 🟡 Default Behavior of \*ngFor
 
 ```html
-<div *ngFor="let user of users">
-  {{ user.name }}
-</div>
+<div *ngFor="let user of users">{{ user.name }}</div>
 ```
 
 Angular compares object references.
@@ -58,9 +56,7 @@ If array changes, Angular may recreate DOM elements.
 # 🔥 Using trackBy
 
 ```html
-<div *ngFor="let user of users; trackBy: trackByUserId">
-  {{ user.name }}
-</div>
+<div *ngFor="let user of users; trackBy: trackByUserId">{{ user.name }}</div>
 ```
 
 ---
@@ -84,30 +80,38 @@ Suppose API returns updated array:
 Before:
 
 ```ts
-[{ id: 1, name: "A" }, { id: 2, name: "B" }]
+[
+  { id: 1, name: "A" },
+  { id: 2, name: "B" },
+];
 ```
 
 After:
 
 ```ts
-[{ id: 1, name: "A Updated" }, { id: 2, name: "B" }]
+[
+  { id: 1, name: "A Updated" },
+  { id: 2, name: "B" },
+];
 ```
 
 Without trackBy:
+
 - Both rows may re-render.
 
 With trackBy:
+
 - Only row with id 1 updates.
 
 ---
 
 # 🧠 Performance Comparison
 
-| Feature | Without trackBy | With trackBy |
-|----------|-----------------|--------------|
-| DOM recreation | High | Low |
-| Performance in large lists | Poor | Optimized |
-| Required unique identifier | ❌ No | ✅ Yes |
+| Feature                    | Without trackBy | With trackBy |
+| -------------------------- | --------------- | ------------ |
+| DOM recreation             | High            | Low          |
+| Performance in large lists | Poor            | Optimized    |
+| Required unique identifier | ❌ No           | ✅ Yes       |
 
 ---
 
@@ -179,7 +183,7 @@ Better to use unique ID.
 
 # 🏆 Perfect Interview Answer (1–2 Minutes)
 
-> trackBy is used with *ngFor to improve performance by uniquely identifying list items using a custom function. It prevents unnecessary DOM re-rendering when data changes. Instead of recreating the entire list, Angular updates only the changed elements. It is especially useful in large or frequently updated lists.
+> trackBy is used with \*ngFor to improve performance by uniquely identifying list items using a custom function. It prevents unnecessary DOM re-rendering when data changes. Instead of recreating the entire list, Angular updates only the changed elements. It is especially useful in large or frequently updated lists.
 
 ---
 
@@ -195,4 +199,4 @@ Better to use unique ID.
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

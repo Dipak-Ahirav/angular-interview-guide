@@ -33,7 +33,7 @@ Module Federation solves this by:
 Instead of bundling everything together:
 
 👉 A Host (Shell) app dynamically loads  
-👉 Remote applications expose modules  
+👉 Remote applications expose modules
 
 No need for rebuilding the entire system.
 
@@ -53,7 +53,7 @@ No need for rebuilding the entire system.
 1️⃣ Host loads remoteEntry.js  
 2️⃣ Remote exposes modules  
 3️⃣ Host imports exposed modules dynamically  
-4️⃣ Shared libraries are reused (Angular core, common, etc.)  
+4️⃣ Shared libraries are reused (Angular core, common, etc.)
 
 ---
 
@@ -69,7 +69,7 @@ new ModuleFederationPlugin({
   shared: {
     "@angular/core": { singleton: true },
     "@angular/common": { singleton: true },
-  }
+  },
 });
 ```
 
@@ -80,12 +80,12 @@ new ModuleFederationPlugin({
 ```js
 new ModuleFederationPlugin({
   remotes: {
-    "ordersApp": "ordersApp@http://localhost:4201/remoteEntry.js"
+    ordersApp: "ordersApp@http://localhost:4201/remoteEntry.js",
   },
   shared: {
     "@angular/core": { singleton: true },
     "@angular/common": { singleton: true },
-  }
+  },
 });
 ```
 
@@ -97,7 +97,7 @@ If Angular is not shared properly:
 
 ❌ Multiple Angular instances load  
 ❌ Runtime errors occur  
-❌ Dependency conflicts happen  
+❌ Dependency conflicts happen
 
 Correct setup:
 
@@ -150,12 +150,12 @@ In Host routing:
 
 # 🟡 Module Federation vs Lazy Loading
 
-| Feature | Lazy Loading | Module Federation |
-|----------|---------------|------------------|
-| Same build | ✅ Yes | ❌ No |
-| Independent deployment | ❌ No | ✅ Yes |
-| Micro frontend ready | ❌ No | ✅ Yes |
-| Complexity | Low | High |
+| Feature                | Lazy Loading | Module Federation |
+| ---------------------- | ------------ | ----------------- |
+| Same build             | ✅ Yes       | ❌ No             |
+| Independent deployment | ❌ No        | ✅ Yes            |
+| Micro frontend ready   | ❌ No        | ✅ Yes            |
+| Complexity             | Low          | High              |
 
 ---
 
@@ -217,4 +217,4 @@ Not recommended for:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

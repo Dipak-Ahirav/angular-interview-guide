@@ -14,15 +14,15 @@ Advanced security architecture in Angular focuses on end-to-end protection of ap
 
 In enterprise systems:
 
-- Sensitive financial/user data  
-- Public exposure  
-- Regulatory compliance (GDPR, etc.)  
+- Sensitive financial/user data
+- Public exposure
+- Regulatory compliance (GDPR, etc.)
 
 Without strong security:
 
 ❌ Data breaches  
 ❌ Legal issues  
-❌ System compromise  
+❌ System compromise
 
 ---
 
@@ -33,7 +33,7 @@ Without strong security:
 3️⃣ Authentication  
 4️⃣ Authorization  
 5️⃣ API Security  
-6️⃣ Infrastructure Security  
+6️⃣ Infrastructure Security
 
 ---
 
@@ -42,11 +42,11 @@ Without strong security:
 Angular provides:
 
 ✔ XSS protection (auto-sanitization)  
-✔ Template binding safety  
+✔ Template binding safety
 
 Avoid:
 
-❌ bypassSecurityTrust... misuse  
+❌ bypassSecurityTrust... misuse
 
 ---
 
@@ -56,11 +56,11 @@ Best practice:
 
 ✔ HttpOnly Cookies  
 ✔ Short-lived access tokens  
-✔ Refresh tokens  
+✔ Refresh tokens
 
 Avoid:
 
-❌ Storing tokens in localStorage  
+❌ Storing tokens in localStorage
 
 ---
 
@@ -68,24 +68,24 @@ Avoid:
 
 Implement:
 
-- Role-based access  
-- Attribute-based access  
+- Role-based access
+- Attribute-based access
 
-✔ Always validate on backend  
+✔ Always validate on backend
 
 ---
 
 # 🟢 4️⃣ API Security
 
-- Rate limiting  
-- Input validation  
-- Authentication headers  
+- Rate limiting
+- Input validation
+- Authentication headers
 
 Example:
 
 ```ts
 req.clone({
-  withCredentials: true
+  withCredentials: true,
 });
 ```
 
@@ -95,7 +95,7 @@ req.clone({
 
 ✔ HTTPS everywhere  
 ✔ HSTS enabled  
-✔ Secure cookies  
+✔ Secure cookies
 
 ---
 
@@ -103,50 +103,50 @@ req.clone({
 
 Headers:
 
-- script-src 'self'  
-- default-src 'self'  
+- script-src 'self'
+- default-src 'self'
 
-✔ Prevent XSS  
+✔ Prevent XSS
 
 ---
 
 # 🔥 7️⃣ CSRF Protection
 
-- CSRF tokens  
-- SameSite cookies  
+- CSRF tokens
+- SameSite cookies
 
-✔ Prevent cross-site attacks  
+✔ Prevent cross-site attacks
 
 ---
 
 # 🟡 8️⃣ Secure Coding Practices
 
-- Validate all inputs  
-- Avoid eval/dynamic scripts  
-- Use strict typing  
+- Validate all inputs
+- Avoid eval/dynamic scripts
+- Use strict typing
 
 ---
 
 # 🟢 9️⃣ Dependency Security
 
-- Regular updates  
-- npm audit  
-- Security scans  
+- Regular updates
+- npm audit
+- Security scans
 
 ---
 
 # 🚀 10️⃣ Monitoring & Auditing
 
-- Log security events  
-- Detect suspicious activity  
-- Use SIEM tools  
+- Log security events
+- Detect suspicious activity
+- Use SIEM tools
 
 ---
 
 # 🧠 11️⃣ Secrets Management
 
 ✔ Never expose secrets in frontend  
-✔ Use environment variables securely  
+✔ Use environment variables securely
 
 ---
 
@@ -156,17 +156,17 @@ Headers:
 ❌ No backend validation  
 ❌ Ignoring CSP  
 ❌ Hardcoded secrets  
-❌ No monitoring  
+❌ No monitoring
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- End-to-end security understanding  
-- Auth vs authz  
-- XSS/CSRF handling  
-- Secure storage practices  
-- Real-world security decisions  
+- End-to-end security understanding
+- Auth vs authz
+- XSS/CSRF handling
+- Secure storage practices
+- Real-world security decisions
 
 ---
 
@@ -178,4 +178,4 @@ Headers:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

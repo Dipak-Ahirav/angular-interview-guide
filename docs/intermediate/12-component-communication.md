@@ -15,6 +15,7 @@ Component communication in Angular refers to the ways components share data and 
 In real projects, components are not isolated.
 
 Example:
+
 - Parent component shows a list
 - Child component shows item details
 - Another component updates the cart count
@@ -109,6 +110,7 @@ onNotify(msg: string) {
 Used when parent needs access to child component instance.
 
 Example:
+
 - Parent calls child method directly
 - Parent reads child variable
 
@@ -147,13 +149,12 @@ So we use shared service with RxJS Subject / BehaviorSubject.
 ### Shared Service
 
 ```ts
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class DataService {
-
-  private messageSource = new BehaviorSubject<string>('Default');
+  private messageSource = new BehaviorSubject<string>("Default");
   message$ = this.messageSource.asObservable();
 
   updateMessage(msg: string) {
@@ -190,11 +191,11 @@ ngOnInit() {
 
 # 🧠 Subject vs BehaviorSubject (Interview Booster)
 
-| Feature | Subject | BehaviorSubject |
-|---------|---------|-----------------|
-| Stores last value | ❌ No | ✅ Yes |
-| Needs initial value | ❌ No | ✅ Yes |
-| New subscriber gets last value | ❌ No | ✅ Yes |
+| Feature                        | Subject | BehaviorSubject |
+| ------------------------------ | ------- | --------------- |
+| Stores last value              | ❌ No   | ✅ Yes          |
+| Needs initial value            | ❌ No   | ✅ Yes          |
+| New subscriber gets last value | ❌ No   | ✅ Yes          |
 
 BehaviorSubject is more common in state management.
 
@@ -256,4 +257,4 @@ For large apps, communication can happen via:
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

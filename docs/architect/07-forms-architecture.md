@@ -14,27 +14,27 @@ Forms architecture in Angular focuses on building scalable, maintainable, and pe
 
 In enterprise apps:
 
-- Complex multi-step forms  
-- Dynamic fields  
-- Heavy validation rules  
-- API-driven forms  
-- Large user input flows  
+- Complex multi-step forms
+- Dynamic fields
+- Heavy validation rules
+- API-driven forms
+- Large user input flows
 
 Without proper architecture:
 
 ❌ Messy form logic  
 ❌ Duplicate validation  
 ❌ Hard-to-maintain code  
-❌ Poor UX  
+❌ Poor UX
 
 ---
 
 # 🧠 Types of Forms in Angular
 
 1️⃣ Template-Driven Forms (Simple use cases)  
-2️⃣ Reactive Forms (Enterprise standard)  
+2️⃣ Reactive Forms (Enterprise standard)
 
-✔ Always prefer Reactive Forms for large applications  
+✔ Always prefer Reactive Forms for large applications
 
 ---
 
@@ -42,16 +42,16 @@ Without proper architecture:
 
 Core building blocks:
 
-- FormControl  
-- FormGroup  
-- FormArray  
+- FormControl
+- FormGroup
+- FormArray
 
 Example:
 
 ```ts
 this.form = this.fb.group({
-  name: ['', Validators.required],
-  email: ['', [Validators.required, Validators.email]]
+  name: ["", Validators.required],
+  email: ["", [Validators.required, Validators.email]],
 });
 ```
 
@@ -61,11 +61,11 @@ this.form = this.fb.group({
 
 ✔ Component → UI  
 ✔ Service → Business logic  
-✔ Validators → Validation logic  
+✔ Validators → Validation logic
 
 Avoid:
 
-❌ Writing everything inside component  
+❌ Writing everything inside component
 
 ---
 
@@ -73,12 +73,12 @@ Avoid:
 
 Create shared components:
 
-- InputFieldComponent  
-- SelectComponent  
-- DatePickerComponent  
+- InputFieldComponent
+- SelectComponent
+- DatePickerComponent
 
 ✔ Improves consistency  
-✔ Reduces duplication  
+✔ Reduces duplication
 
 ---
 
@@ -86,9 +86,9 @@ Create shared components:
 
 Types:
 
-- Built-in validators  
-- Custom validators  
-- Async validators  
+- Built-in validators
+- Custom validators
+- Async validators
 
 Example:
 
@@ -98,7 +98,7 @@ function passwordValidator(control: AbstractControl) {
 }
 ```
 
-✔ Centralize validations  
+✔ Centralize validations
 
 ---
 
@@ -108,11 +108,11 @@ Use FormArray:
 
 ```ts
 this.form = this.fb.group({
-  items: this.fb.array([])
+  items: this.fb.array([]),
 });
 ```
 
-✔ Add/remove controls dynamically  
+✔ Add/remove controls dynamically
 
 ---
 
@@ -120,13 +120,13 @@ this.form = this.fb.group({
 
 Track:
 
-- valueChanges  
-- statusChanges  
+- valueChanges
+- statusChanges
 
 Use RxJS:
 
 ```ts
-this.form.valueChanges.subscribe(value => {
+this.form.valueChanges.subscribe((value) => {
   console.log(value);
 });
 ```
@@ -137,27 +137,27 @@ this.form.valueChanges.subscribe(value => {
 
 Best practice:
 
-- Map form → DTO  
-- Validate before API call  
-- Handle errors gracefully  
+- Map form → DTO
+- Validate before API call
+- Handle errors gracefully
 
 ---
 
 # 🟡 7️⃣ Performance Optimization
 
-- Use OnPush change detection  
-- Avoid unnecessary subscriptions  
-- Debounce valueChanges  
-- Use trackBy in form lists  
+- Use OnPush change detection
+- Avoid unnecessary subscriptions
+- Debounce valueChanges
+- Use trackBy in form lists
 
 ---
 
 # 🟢 8️⃣ UX Best Practices
 
-- Show validation messages  
-- Disable submit if invalid  
-- Use loading states  
-- Auto-focus fields  
+- Show validation messages
+- Disable submit if invalid
+- Use loading states
+- Auto-focus fields
 
 ---
 
@@ -167,17 +167,17 @@ Best practice:
 ❌ Mixing UI & validation logic  
 ❌ Not reusing components  
 ❌ No validation strategy  
-❌ Too many subscriptions  
+❌ Too many subscriptions
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Reactive vs Template forms  
-- How to structure large forms  
-- Validation strategies  
-- Dynamic forms handling  
-- Performance considerations  
+- Reactive vs Template forms
+- How to structure large forms
+- Validation strategies
+- Dynamic forms handling
+- Performance considerations
 
 ---
 
@@ -189,4 +189,4 @@ Best practice:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

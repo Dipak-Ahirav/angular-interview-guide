@@ -70,19 +70,19 @@ Notice:
 # 🔥 Creating a Signal
 
 ```ts
-const name = signal('Angular');
+const name = signal("Angular");
 ```
 
 Update value:
 
 ```ts
-name.set('Angular 17');
+name.set("Angular 17");
 ```
 
 Or:
 
 ```ts
-name.update(val => val + ' Rocks');
+name.update((val) => val + " Rocks");
 ```
 
 ---
@@ -92,7 +92,7 @@ name.update(val => val + ' Rocks');
 Used to derive values from other signals.
 
 ```ts
-import { computed } from '@angular/core';
+import { computed } from "@angular/core";
 
 price = signal(100);
 tax = signal(10);
@@ -109,7 +109,7 @@ Whenever price or tax changes → total updates automatically.
 Used for side effects (like logging, API calls).
 
 ```ts
-import { effect } from '@angular/core';
+import { effect } from "@angular/core";
 
 effect(() => {
   console.log("Count changed:", this.count());
@@ -122,13 +122,13 @@ Runs automatically when signal changes.
 
 # 🟢 Signals vs RxJS
 
-| Feature | Signals | RxJS |
-|----------|----------|------|
-| Simplicity | Very Simple | Complex |
-| Best for UI state | ✅ Yes | ⚠️ Overkill |
-| Async Streams | ❌ Limited | ✅ Excellent |
-| Learning curve | Low | Higher |
-| Fine-grained updates | ✅ Yes | ❌ No |
+| Feature              | Signals     | RxJS         |
+| -------------------- | ----------- | ------------ |
+| Simplicity           | Very Simple | Complex      |
+| Best for UI state    | ✅ Yes      | ⚠️ Overkill  |
+| Async Streams        | ❌ Limited  | ✅ Excellent |
+| Learning curve       | Low         | Higher       |
+| Fine-grained updates | ✅ Yes      | ❌ No        |
 
 ---
 
@@ -137,7 +137,7 @@ Runs automatically when signal changes.
 Signals work perfectly with:
 
 ```ts
-ChangeDetectionStrategy.OnPush
+ChangeDetectionStrategy.OnPush;
 ```
 
 They trigger component re-render automatically without full tree check.
@@ -158,13 +158,13 @@ This improves:
 
 # 🔥 Signal vs BehaviorSubject
 
-| Feature | Signal | BehaviorSubject |
-|----------|----------|----------------|
-| Built-in Angular | ✅ Yes | ❌ No |
-| Requires subscription | ❌ No | ✅ Yes |
-| Template usage | count() | async pipe |
-| Simple state | Best | Good |
-| Async streams | Limited | Strong |
+| Feature               | Signal  | BehaviorSubject |
+| --------------------- | ------- | --------------- |
+| Built-in Angular      | ✅ Yes  | ❌ No           |
+| Requires subscription | ❌ No   | ✅ Yes          |
+| Template usage        | count() | async pipe      |
+| Simple state          | Best    | Good            |
+| Async streams         | Limited | Strong          |
 
 ---
 
@@ -222,4 +222,4 @@ RxJS remains ideal for:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

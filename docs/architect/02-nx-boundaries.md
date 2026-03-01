@@ -14,16 +14,16 @@ Nx module boundaries enforce strict rules between different parts of an Angular 
 
 In large enterprise apps:
 
-- Multiple teams work in parallel  
-- Hundreds of modules/libs  
-- Shared code across domains  
+- Multiple teams work in parallel
+- Hundreds of modules/libs
+- Shared code across domains
 
 Without boundaries:
 
 ❌ Tight coupling  
 ❌ Circular dependencies  
 ❌ Hard to scale  
-❌ Uncontrolled imports  
+❌ Uncontrolled imports
 
 ---
 
@@ -89,20 +89,20 @@ Nx provides:
 # 🟢 Dependency Flow (Best Practice)
 
 ✔ feature → data-access → util  
-✔ feature → ui  
+✔ feature → ui
 
 ❌ ui → feature  
-❌ data-access → feature  
+❌ data-access → feature
 
 ---
 
 # 🚀 Benefits of Nx Boundaries
 
-- Enforces clean architecture  
-- Prevents circular dependencies  
-- Enables team ownership  
-- Improves maintainability  
-- Helps in scaling large codebases  
+- Enforces clean architecture
+- Prevents circular dependencies
+- Enables team ownership
+- Improves maintainability
+- Helps in scaling large codebases
 
 ---
 
@@ -110,9 +110,9 @@ Nx provides:
 
 Each team owns:
 
-- Feature libraries  
-- Related data-access layer  
-- UI components  
+- Feature libraries
+- Related data-access layer
+- UI components
 
 No cross-team interference.
 
@@ -134,7 +134,7 @@ nx affected:build
 1️⃣ Developer updates feature-orders  
 2️⃣ Nx detects affected libs  
 3️⃣ Runs only impacted tests  
-4️⃣ CI becomes faster  
+4️⃣ CI becomes faster
 
 ---
 
@@ -144,17 +144,17 @@ nx affected:build
 ❌ Allowing unrestricted imports  
 ❌ Ignoring lint errors  
 ❌ Mixing UI and business logic  
-❌ Circular dependencies  
+❌ Circular dependencies
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Do you know Nx architecture?  
-- How do you enforce module boundaries?  
-- What are tags?  
-- How to avoid circular dependencies?  
-- How Nx improves CI performance?  
+- Do you know Nx architecture?
+- How do you enforce module boundaries?
+- What are tags?
+- How to avoid circular dependencies?
+- How Nx improves CI performance?
 
 ---
 
@@ -166,4 +166,4 @@ nx affected:build
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

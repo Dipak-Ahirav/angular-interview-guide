@@ -12,10 +12,10 @@ Angular is a modern TypeScript-based framework developed by Google for building 
 
 Imagine you are building:
 
-- Gmail  
-- Facebook  
-- Amazon  
-- Admin dashboard  
+- Gmail
+- Facebook
+- Amazon
+- Admin dashboard
 
 You don’t want the page to reload every time the user clicks something.
 
@@ -40,9 +40,11 @@ Angular uses **TypeScript**, which is a strongly typed superset of JavaScript.
 ## 🔹 What is a Single Page Application (SPA)?
 
 Traditional websites:
+
 - Every click reloads the entire page.
 
 Angular applications:
+
 - Load once
 - Only update required content
 - Faster user experience
@@ -101,27 +103,29 @@ AngularJS is now **deprecated (End of Life in 2021)**.
 
 # 🔥 Major Differences
 
-| Feature | AngularJS (1.x) | Angular (2+) |
-|----------|----------------|--------------|
-| Language | JavaScript | TypeScript |
-| Architecture | MVC | Component-based |
-| Change Detection | Digest cycle | Zone.js |
-| Performance | Slower for large apps | Faster & optimized |
-| Mobile Support | Weak | Strong |
-| Dependency Injection | Basic | Hierarchical DI |
-| Tooling | Limited | Angular CLI |
-| Status | Deprecated | Actively maintained |
+| Feature              | AngularJS (1.x)       | Angular (2+)        |
+| -------------------- | --------------------- | ------------------- |
+| Language             | JavaScript            | TypeScript          |
+| Architecture         | MVC                   | Component-based     |
+| Change Detection     | Digest cycle          | Zone.js             |
+| Performance          | Slower for large apps | Faster & optimized  |
+| Mobile Support       | Weak                  | Strong              |
+| Dependency Injection | Basic                 | Hierarchical DI     |
+| Tooling              | Limited               | Angular CLI         |
+| Status               | Deprecated            | Actively maintained |
 
 ---
 
 # 🧠 Deep Technical Difference (Interview Booster)
 
 ### 🔹 AngularJS Change Detection
+
 - Uses digest cycle
 - Checks all watchers repeatedly
 - Performance degrades as app grows
 
 ### 🔹 Angular Change Detection
+
 - Uses zone.js
 - Unidirectional data flow
 - Supports OnPush optimization
@@ -174,10 +178,10 @@ When this question is asked, they check:
 
 # 🚀 Extra Knowledge (Impress Interviewer)
 
-- AngularJS released in 2010  
-- Angular (2+) released in 2016  
-- AngularJS End of Life: 2021  
-- Angular releases new version every 6 months  
+- AngularJS released in 2010
+- Angular (2+) released in 2016
+- AngularJS End of Life: 2021
+- Angular releases new version every 6 months
 
 ---
 
@@ -196,4 +200,4 @@ When this question is asked, they check:
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

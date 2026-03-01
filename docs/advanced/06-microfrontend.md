@@ -34,7 +34,7 @@ Instead of one monolithic Angular app:
 
 👉 We build multiple small Angular apps  
 👉 Each app handles a feature  
-👉 A Shell app loads them dynamically  
+👉 A Shell app loads them dynamically
 
 Example:
 
@@ -47,13 +47,13 @@ Example:
 
 # 🔥 Micro Frontend vs Monolith
 
-| Feature | Monolith | Micro Frontend |
-|----------|------------|----------------|
-| Deployment | Single build | Independent |
-| Team ownership | Shared | Distributed |
-| Scalability | Limited | High |
-| Complexity | Low | High |
-| Performance | Good | Depends on setup |
+| Feature        | Monolith     | Micro Frontend   |
+| -------------- | ------------ | ---------------- |
+| Deployment     | Single build | Independent      |
+| Team ownership | Shared       | Distributed      |
+| Scalability    | Limited      | High             |
+| Complexity     | Low          | High             |
+| Performance    | Good         | Depends on setup |
 
 ---
 
@@ -64,7 +64,7 @@ Common approaches:
 1️⃣ Webpack Module Federation  
 2️⃣ Single-SPA  
 3️⃣ iframe-based integration  
-4️⃣ Custom dynamic loading  
+4️⃣ Custom dynamic loading
 
 Most modern Angular apps use:
 
@@ -226,4 +226,4 @@ Not recommended for:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

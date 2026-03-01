@@ -14,16 +14,16 @@ Performance architecture in Angular focuses on designing applications that are f
 
 In enterprise apps:
 
-- Large user base  
-- Heavy data processing  
-- Complex UI  
+- Large user base
+- Heavy data processing
+- Complex UI
 
 Without performance optimization:
 
 ❌ Slow UI  
 ❌ Poor user experience  
 ❌ High bounce rate  
-❌ Increased server load  
+❌ Increased server load
 
 ---
 
@@ -33,7 +33,7 @@ Without performance optimization:
 2️⃣ Optimize rendering  
 3️⃣ Reduce network calls  
 4️⃣ Efficient data handling  
-5️⃣ Measure & improve  
+5️⃣ Measure & improve
 
 ---
 
@@ -42,12 +42,12 @@ Without performance optimization:
 Use:
 
 ✔ OnPush strategy  
-✔ Signals (modern Angular)  
+✔ Signals (modern Angular)
 
 Benefits:
 
-- Reduces unnecessary checks  
-- Improves rendering speed  
+- Reduces unnecessary checks
+- Improves rendering speed
 
 ---
 
@@ -62,7 +62,7 @@ Load modules only when needed:
 }
 ```
 
-✔ Reduces initial load time  
+✔ Reduces initial load time
 
 ---
 
@@ -70,19 +70,19 @@ Load modules only when needed:
 
 Techniques:
 
-- Tree shaking  
-- Code splitting  
-- Remove unused libraries  
+- Tree shaking
+- Code splitting
+- Remove unused libraries
 
-✔ Smaller bundle size  
+✔ Smaller bundle size
 
 ---
 
 # 🟢 4️⃣ Rendering Optimization
 
-- Use trackBy in *ngFor  
-- Virtual scrolling for large lists  
-- Avoid heavy DOM  
+- Use trackBy in \*ngFor
+- Virtual scrolling for large lists
+- Avoid heavy DOM
 
 Example:
 
@@ -96,29 +96,29 @@ trackById(index: number, item: any) {
 
 # 🚀 5️⃣ API Optimization
 
-- Pagination  
-- Filtering  
-- Debouncing user input  
+- Pagination
+- Filtering
+- Debouncing user input
 
-✔ Reduce unnecessary requests  
+✔ Reduce unnecessary requests
 
 ---
 
 # 🧠 6️⃣ Caching Strategy
 
-- shareReplay  
-- HTTP caching  
-- CDN  
+- shareReplay
+- HTTP caching
+- CDN
 
-✔ Faster response time  
+✔ Faster response time
 
 ---
 
 # 🔥 7️⃣ State Management Efficiency
 
-- Avoid redundant state updates  
-- Use selectors  
-- Prevent unnecessary subscriptions  
+- Avoid redundant state updates
+- Use selectors
+- Prevent unnecessary subscriptions
 
 ---
 
@@ -126,11 +126,11 @@ trackById(index: number, item: any) {
 
 Use:
 
-- Angular SSR  
-- Hydration  
+- Angular SSR
+- Hydration
 
 ✔ Faster first paint  
-✔ Better SEO  
+✔ Better SEO
 
 ---
 
@@ -138,7 +138,7 @@ Use:
 
 Offload heavy tasks:
 
-✔ Prevent UI blocking  
+✔ Prevent UI blocking
 
 ---
 
@@ -146,23 +146,23 @@ Offload heavy tasks:
 
 Measure:
 
-- Load time  
-- API response  
-- User interactions  
+- Load time
+- API response
+- User interactions
 
 Tools:
 
-- Lighthouse  
-- Chrome DevTools  
+- Lighthouse
+- Chrome DevTools
 
 ---
 
 # 🧠 11️⃣ Memory Management
 
-- Unsubscribe observables  
-- Avoid memory leaks  
+- Unsubscribe observables
+- Avoid memory leaks
 
-✔ Use async pipe / takeUntil  
+✔ Use async pipe / takeUntil
 
 ---
 
@@ -172,17 +172,17 @@ Tools:
 ❌ Large bundle size  
 ❌ Too many API calls  
 ❌ No caching  
-❌ Ignoring performance metrics  
+❌ Ignoring performance metrics
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How do you optimize Angular apps?  
-- Change detection strategies?  
-- Lazy loading benefits?  
-- Handling large data?  
-- Real-world performance fixes?  
+- How do you optimize Angular apps?
+- Change detection strategies?
+- Lazy loading benefits?
+- Handling large data?
+- Real-world performance fixes?
 
 ---
 
@@ -194,4 +194,4 @@ Tools:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

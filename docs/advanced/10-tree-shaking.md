@@ -24,7 +24,7 @@ Without tree shaking:
 ❌ Entire libraries get bundled  
 ❌ Bundle size increases  
 ❌ Slow load times  
-❌ Poor mobile performance  
+❌ Poor mobile performance
 
 Tree shaking ensures only **used code** is included.
 
@@ -37,7 +37,7 @@ Tree shaking works because:
 1️⃣ ES Modules use static imports  
 2️⃣ The compiler knows what is used  
 3️⃣ Unused exports are removed  
-4️⃣ Dead code is eliminated during production build  
+4️⃣ Dead code is eliminated during production build
 
 Angular CLI uses:
 
@@ -50,7 +50,7 @@ Angular CLI uses:
 # 🔥 Example Without Tree Shaking
 
 ```ts
-import * as _ from 'lodash';
+import * as _ from "lodash";
 ```
 
 This imports the entire lodash library.
@@ -60,7 +60,7 @@ This imports the entire lodash library.
 # ✅ Example With Tree Shaking
 
 ```ts
-import debounce from 'lodash/debounce';
+import debounce from "lodash/debounce";
 ```
 
 Only the required function is included.
@@ -90,13 +90,13 @@ Production build enables:
 Tree shaking only works with:
 
 ```ts
-import { something } from 'library';
+import { something } from "library";
 ```
 
 It does NOT work well with:
 
 ```ts
-require('library');
+require("library");
 ```
 
 CommonJS reduces tree shaking effectiveness.
@@ -170,12 +170,12 @@ You can see:
 
 # 🔥 Tree Shaking vs Lazy Loading
 
-| Feature | Tree Shaking | Lazy Loading |
-|----------|--------------|--------------|
-| Removes unused code | ✅ Yes | ❌ No |
-| Splits code into chunks | ❌ No | ✅ Yes |
-| Reduces initial bundle | ✅ Yes | ✅ Yes |
-| Runtime loading | ❌ No | ✅ Yes |
+| Feature                 | Tree Shaking | Lazy Loading |
+| ----------------------- | ------------ | ------------ |
+| Removes unused code     | ✅ Yes       | ❌ No        |
+| Splits code into chunks | ❌ No        | ✅ Yes       |
+| Reduces initial bundle  | ✅ Yes       | ✅ Yes       |
+| Runtime loading         | ❌ No        | ✅ Yes       |
 
 Both should be used together.
 
@@ -247,4 +247,4 @@ Improved:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

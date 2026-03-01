@@ -32,11 +32,13 @@ So,
 ## 🔹 Why Do We Need Modules?
 
 Without modules:
+
 - Code becomes messy
 - Hard to manage
 - Difficult to scale
 
 With modules:
+
 - Code is organized
 - Easy to maintain
 - Large apps are manageable
@@ -66,17 +68,21 @@ Modules help with:
 # 🔥 Types of Modules
 
 ### 1️⃣ Root Module (AppModule)
+
 - Starting point of the app
 - Bootstraps the main component
 
 ### 2️⃣ Feature Modules
+
 - Group specific functionality
 - Example: UserModule, AdminModule
 
 ### 3️⃣ Shared Module
+
 - Reusable components, pipes, directives
 
 ### 4️⃣ Core Module
+
 - Singleton services (Auth, Logger, Interceptors)
 
 ---
@@ -84,14 +90,14 @@ Modules help with:
 # 💻 Basic Example
 
 ```ts
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { UserComponent } from './user.component';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { UserComponent } from "./user.component";
 
 @NgModule({
   declarations: [UserComponent],
   imports: [CommonModule],
-  exports: [UserComponent]
+  exports: [UserComponent],
 })
 export class UserModule {}
 ```
@@ -101,15 +107,19 @@ export class UserModule {}
 ## 🔎 What Each Property Means
 
 ### 🔹 declarations
+
 Components, directives, pipes that belong to this module.
 
 ### 🔹 imports
+
 Other modules required by this module.
 
 ### 🔹 exports
+
 What should be accessible outside this module.
 
 ### 🔹 providers
+
 Services available for dependency injection.
 
 ---
@@ -133,6 +143,7 @@ Example:
 ```
 
 Benefit:
+
 - Faster initial load
 - Better performance
 
@@ -141,12 +152,15 @@ Benefit:
 # 🧠 Deep Concept (Interview Booster)
 
 ### 🔹 Can a Component Belong to Multiple Modules?
+
 ❌ No. A component can be declared in only one module.
 
 ### 🔹 Are Modules Required in Modern Angular?
+
 Angular now supports **Standalone Components**, reducing dependency on NgModules.
 
 But:
+
 - Many enterprise apps still use modules.
 - Interviewers expect module knowledge.
 
@@ -179,4 +193,4 @@ But:
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

@@ -14,17 +14,17 @@ Security architecture in Angular focuses on protecting applications from common 
 
 In enterprise apps:
 
-- Sensitive user data  
-- Financial transactions  
-- Role-based access  
-- Public exposure  
+- Sensitive user data
+- Financial transactions
+- Role-based access
+- Public exposure
 
 Without proper security:
 
 ❌ Data breaches  
 ❌ Account takeover  
 ❌ Compliance violations  
-❌ Reputation damage  
+❌ Reputation damage
 
 ---
 
@@ -34,18 +34,18 @@ Without proper security:
 2️⃣ Least privilege  
 3️⃣ Secure by default  
 4️⃣ Validate & sanitize inputs  
-5️⃣ Trust nothing from client  
+5️⃣ Trust nothing from client
 
 ---
 
 # 🏗️ Threat Model (Common Risks)
 
-- XSS (Cross-Site Scripting)  
-- CSRF (Cross-Site Request Forgery)  
-- Injection (SQL/NoSQL/Command)  
-- Clickjacking  
-- Token leakage  
-- Insecure storage  
+- XSS (Cross-Site Scripting)
+- CSRF (Cross-Site Request Forgery)
+- Injection (SQL/NoSQL/Command)
+- Clickjacking
+- Token leakage
+- Insecure storage
 
 ---
 
@@ -53,7 +53,7 @@ Without proper security:
 
 Angular auto-sanitizes bindings:
 
-- Interpolation: {{ value }}  
+- Interpolation: {{ value }}
 - Property binding: [innerHTML] (sanitized)
 
 Avoid:
@@ -63,7 +63,7 @@ Avoid:
 Use:
 
 ✔ DomSanitizer carefully  
-✔ Never trust user input  
+✔ Never trust user input
 
 ---
 
@@ -84,14 +84,14 @@ Angular side:
 
 Options:
 
-- Cookie-based (recommended for web)  
-- Token-based (JWT)  
+- Cookie-based (recommended for web)
+- Token-based (JWT)
 
 Best practice:
 
 ✔ HttpOnly cookies (not accessible via JS)  
 ✔ Short-lived access tokens + refresh tokens  
-✔ Rotate tokens  
+✔ Rotate tokens
 
 ---
 
@@ -99,7 +99,7 @@ Best practice:
 
 Implement:
 
-- Route Guards (CanActivate)  
+- Route Guards (CanActivate)
 - Backend validation (must-have)
 
 Example:
@@ -116,15 +116,15 @@ canActivate(): boolean {
 
 Use interceptors for:
 
-- Attaching auth tokens  
-- Global error handling  
-- Logging/monitoring  
+- Attaching auth tokens
+- Global error handling
+- Logging/monitoring
 
 Example:
 
 ```ts
 req.clone({
-  withCredentials: true
+  withCredentials: true,
 });
 ```
 
@@ -134,12 +134,12 @@ req.clone({
 
 Avoid:
 
-❌ localStorage/sessionStorage for sensitive tokens  
+❌ localStorage/sessionStorage for sensitive tokens
 
 Prefer:
 
 ✔ HttpOnly cookies  
-✔ In-memory storage for transient data  
+✔ In-memory storage for transient data
 
 ---
 
@@ -147,10 +147,10 @@ Prefer:
 
 Configure headers:
 
-- default-src 'self'  
-- script-src 'self'  
+- default-src 'self'
+- script-src 'self'
 
-✔ Prevents XSS attacks  
+✔ Prevents XSS attacks
 
 ---
 
@@ -158,7 +158,7 @@ Configure headers:
 
 ✔ Always use HTTPS  
 ✔ Enable HSTS  
-✔ Secure cookies (Secure flag)  
+✔ Secure cookies (Secure flag)
 
 ---
 
@@ -172,16 +172,16 @@ Server:
 
 - Strict validation (security)
 
-✔ Never trust client-only validation  
+✔ Never trust client-only validation
 
 ---
 
 # 🧠 10️⃣ Dependency Security
 
-- Keep Angular & libs updated  
-- Use tools: npm audit, Snyk, BlackDuck  
+- Keep Angular & libs updated
+- Use tools: npm audit, Snyk, BlackDuck
 
-✔ Fix vulnerabilities quickly  
+✔ Fix vulnerabilities quickly
 
 ---
 
@@ -189,8 +189,8 @@ Server:
 
 Set headers:
 
-- X-Frame-Options: DENY  
-- or CSP frame-ancestors  
+- X-Frame-Options: DENY
+- or CSP frame-ancestors
 
 ---
 
@@ -200,17 +200,17 @@ Set headers:
 ❌ Trusting frontend validation  
 ❌ Disabling Angular sanitization  
 ❌ No CSRF protection  
-❌ Exposing sensitive APIs  
+❌ Exposing sensitive APIs
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How Angular prevents XSS?  
-- JWT vs Cookies?  
-- CSRF protection approach?  
-- Role-based authorization?  
-- Secure storage practices?  
+- How Angular prevents XSS?
+- JWT vs Cookies?
+- CSRF protection approach?
+- Role-based authorization?
+- Secure storage practices?
 
 ---
 
@@ -222,4 +222,4 @@ Set headers:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

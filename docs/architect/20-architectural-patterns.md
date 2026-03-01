@@ -14,17 +14,17 @@ Architectural patterns in Angular define proven ways to structure large-scale ap
 
 In enterprise applications:
 
-- Large codebases  
-- Multiple teams  
-- Frequent changes  
-- Complex business logic  
+- Large codebases
+- Multiple teams
+- Frequent changes
+- Complex business logic
 
 Without patterns:
 
 ❌ Inconsistent code  
 ❌ Tight coupling  
 ❌ Difficult scaling  
-❌ Hard maintenance  
+❌ Hard maintenance
 
 ---
 
@@ -34,7 +34,7 @@ Without patterns:
 2️⃣ Loose coupling  
 3️⃣ High cohesion  
 4️⃣ Reusability  
-5️⃣ Scalability  
+5️⃣ Scalability
 
 ---
 
@@ -47,21 +47,24 @@ UI Layer → Facade Layer → Service Layer → API Layer
 ```
 
 ✔ Clear separation  
-✔ Easy to maintain  
+✔ Easy to maintain
 
 ---
 
 # 🔥 2️⃣ Smart vs Dumb Components
 
 ✔ Smart (Container)
-- Handles data & logic  
+
+- Handles data & logic
 
 ✔ Dumb (Presentational)
-- Only UI  
+
+- Only UI
 
 ✔ Benefits:
-- Reusability  
-- Easy testing  
+
+- Reusability
+- Easy testing
 
 ---
 
@@ -82,7 +85,7 @@ class ProductFacade {
 ```
 
 ✔ Simplifies component logic  
-✔ Decouples state management  
+✔ Decouples state management
 
 ---
 
@@ -90,11 +93,11 @@ class ProductFacade {
 
 Options:
 
-- RxJS Service Pattern  
-- NgRx (Redux pattern)  
-- Signals (modern reactive pattern)  
+- RxJS Service Pattern
+- NgRx (Redux pattern)
+- Signals (modern reactive pattern)
 
-✔ Choose based on complexity  
+✔ Choose based on complexity
 
 ---
 
@@ -102,21 +105,21 @@ Options:
 
 Use RxJS:
 
-- Streams  
-- Observables  
-- Operators  
+- Streams
+- Observables
+- Operators
 
-✔ Handles async data efficiently  
+✔ Handles async data efficiently
 
 ---
 
 # 🧠 6️⃣ Module-Based Architecture
 
-- Core Module  
-- Shared Module  
-- Feature Modules  
+- Core Module
+- Shared Module
+- Feature Modules
 
-✔ Improves scalability  
+✔ Improves scalability
 
 ---
 
@@ -124,13 +127,13 @@ Use RxJS:
 
 Split large apps into smaller apps:
 
-- Independent deployment  
-- Team ownership  
+- Independent deployment
+- Team ownership
 
 Tools:
 
-- Module Federation  
-- Nx  
+- Module Federation
+- Nx
 
 ---
 
@@ -139,7 +142,7 @@ Tools:
 Angular DI system:
 
 ✔ Loose coupling  
-✔ Easy testing  
+✔ Easy testing
 
 ---
 
@@ -150,12 +153,12 @@ Abstract data access:
 ```ts
 class UserRepository {
   getUsers() {
-    return this.http.get('/api/users');
+    return this.http.get("/api/users");
   }
 }
 ```
 
-✔ Decouples API layer  
+✔ Decouples API layer
 
 ---
 
@@ -163,18 +166,18 @@ class UserRepository {
 
 Separate:
 
-- Commands (write)  
-- Queries (read)  
+- Commands (write)
+- Queries (read)
 
-✔ Improves scalability  
+✔ Improves scalability
 
 ---
 
 # 🧠 When to Use Which Pattern?
 
-- Small app → Service + RxJS  
-- Medium app → Facade + modular  
-- Large app → NgRx + Nx + microfrontend  
+- Small app → Service + RxJS
+- Medium app → Facade + modular
+- Large app → NgRx + Nx + microfrontend
 
 ---
 
@@ -183,16 +186,16 @@ Separate:
 ❌ Overengineering  
 ❌ Using all patterns unnecessarily  
 ❌ Tight coupling between layers  
-❌ Ignoring scalability  
+❌ Ignoring scalability
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Understanding of design patterns  
-- When to use which pattern  
-- Real-world application  
-- Trade-offs  
+- Understanding of design patterns
+- When to use which pattern
+- Real-world application
+- Trade-offs
 
 ---
 
@@ -204,4 +207,4 @@ Separate:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

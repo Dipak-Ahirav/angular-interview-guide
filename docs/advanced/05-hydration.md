@@ -65,16 +65,14 @@ It does NOT recreate DOM elements.
 In Angular 16+:
 
 ```ts
-provideClientHydration()
+provideClientHydration();
 ```
 
 Example:
 
 ```ts
 bootstrapApplication(AppComponent, {
-  providers: [
-    provideClientHydration()
-  ]
+  providers: [provideClientHydration()],
 });
 ```
 
@@ -84,13 +82,13 @@ Hydration works automatically with SSR setup.
 
 # 🟢 SSR vs SSR + Hydration
 
-| Feature | SSR Only | SSR + Hydration |
-|----------|------------|------------------|
-| HTML pre-rendered | ✅ Yes | ✅ Yes |
-| Re-render on client | ✅ Yes | ❌ No |
-| Flicker | Possible | No |
-| Performance | Good | Better |
-| UX | Good | Excellent |
+| Feature             | SSR Only | SSR + Hydration |
+| ------------------- | -------- | --------------- |
+| HTML pre-rendered   | ✅ Yes   | ✅ Yes          |
+| Re-render on client | ✅ Yes   | ❌ No           |
+| Flicker             | Possible | No              |
+| Performance         | Good     | Better          |
+| UX                  | Good     | Excellent       |
 
 ---
 
@@ -218,4 +216,4 @@ Not needed if:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

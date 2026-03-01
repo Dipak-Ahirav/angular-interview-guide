@@ -37,11 +37,13 @@ And Angular CLI creates a fully working project.
 # 🔹 Why Do We Need Angular CLI?
 
 Without CLI:
+
 - Manual configuration required
 - More chances of errors
 - Slower development
 
 With CLI:
+
 - Fast project setup
 - Code generation
 - Build optimization
@@ -136,6 +138,7 @@ This improves performance significantly.
 Ahead-of-Time compilation compiles Angular templates during build time instead of runtime.
 
 Benefits:
+
 - Faster rendering
 - Smaller bundle size
 - Better security
@@ -144,11 +147,11 @@ Benefits:
 
 ## 🔹 ng serve vs ng build
 
-| ng serve | ng build |
-|-----------|-----------|
-| Runs dev server | Creates production build |
-| Not optimized | Optimized & minified |
-| Used for development | Used for deployment |
+| ng serve             | ng build                 |
+| -------------------- | ------------------------ |
+| Runs dev server      | Creates production build |
+| Not optimized        | Optimized & minified     |
+| Used for development | Used for deployment      |
 
 ---
 
@@ -201,4 +204,4 @@ CLI handles configuration automatically.
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

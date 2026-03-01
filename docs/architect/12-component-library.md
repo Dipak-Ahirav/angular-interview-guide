@@ -14,26 +14,28 @@ A component library architecture in Angular is a structured approach to building
 
 In enterprise apps:
 
-- Multiple applications need consistent UI  
-- Many developers build UI in parallel  
-- Repeated UI patterns (buttons, forms, modals)  
-- Branding and accessibility requirements  
+- Multiple applications need consistent UI
+- Many developers build UI in parallel
+- Repeated UI patterns (buttons, forms, modals)
+- Branding and accessibility requirements
 
 Without a component library:
 
 ❌ UI inconsistency  
 ❌ Duplicate components  
 ❌ Slower delivery  
-❌ Accessibility issues  
+❌ Accessibility issues
 
 ---
 
 # 🧠 Component Library vs Design System
 
 ✅ Design System:
+
 - Guidelines, tokens, UI rules, patterns
 
 ✅ Component Library:
+
 - Actual reusable components implementing the system
 
 ---
@@ -56,15 +58,19 @@ libs/
 # 🔥 1️⃣ Component Categorization
 
 1️⃣ Foundation
+
 - Colors, spacing, typography, tokens
 
 2️⃣ Atomic Components
+
 - Button, Input, Badge
 
 3️⃣ Composed Components
+
 - FormField, Modal, Table
 
 4️⃣ Patterns / Templates
+
 - Login template, dashboard layout
 
 ---
@@ -73,15 +79,15 @@ libs/
 
 Enterprise libraries must support:
 
-- Keyboard navigation  
-- Screen reader support  
-- ARIA attributes  
-- Focus management  
+- Keyboard navigation
+- Screen reader support
+- ARIA attributes
+- Focus management
 
 Use:
 
 ✔ Angular CDK a11y utilities  
-✔ Proper semantic HTML  
+✔ Proper semantic HTML
 
 ---
 
@@ -103,7 +109,7 @@ Example:
 ```
 
 ✔ Easy runtime theme switching  
-✔ Works across apps  
+✔ Works across apps
 
 ---
 
@@ -111,15 +117,15 @@ Example:
 
 Good component APIs should be:
 
-- Predictable  
-- Minimal  
-- Strongly typed  
-- Backward compatible  
+- Predictable
+- Minimal
+- Strongly typed
+- Backward compatible
 
 Example:
 
 ✔ Inputs for configuration  
-✔ Outputs for events  
+✔ Outputs for events
 
 ---
 
@@ -127,10 +133,10 @@ Example:
 
 Storybook helps:
 
-- Document components  
-- Preview variants  
-- Test accessibility  
-- Enable design review  
+- Document components
+- Preview variants
+- Test accessibility
+- Enable design review
 
 Example:
 
@@ -144,13 +150,13 @@ npx storybook init
 
 Options:
 
-- Single version for all libs (monorepo)  
-- Independent version per package  
+- Single version for all libs (monorepo)
+- Independent version per package
 
 Enterprise approach:
 
 ✔ Use semantic versioning  
-✔ Breaking changes require major bump  
+✔ Breaking changes require major bump
 
 ---
 
@@ -158,15 +164,15 @@ Enterprise approach:
 
 Must include:
 
-- Unit tests  
-- Visual regression tests  
-- Accessibility tests  
+- Unit tests
+- Visual regression tests
+- Accessibility tests
 
 Tools:
 
-- Jest/Karma  
-- Storybook tests  
-- Playwright/Cypress for UI checks  
+- Jest/Karma
+- Storybook tests
+- Playwright/Cypress for UI checks
 
 ---
 
@@ -174,10 +180,10 @@ Tools:
 
 Rules:
 
-- No copy-pasting UI components  
-- New components must go through review  
-- Deprecation policy  
-- Contribution guidelines  
+- No copy-pasting UI components
+- New components must go through review
+- Deprecation policy
+- Contribution guidelines
 
 ---
 
@@ -187,17 +193,17 @@ Rules:
 ❌ No accessibility checks  
 ❌ No documentation  
 ❌ Inconsistent theming  
-❌ Breaking changes without versioning  
+❌ Breaking changes without versioning
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Why use a component library?  
-- How do you ensure UI consistency?  
-- How do you handle theming and accessibility?  
-- How to document components?  
-- Governance strategy?  
+- Why use a component library?
+- How do you ensure UI consistency?
+- How do you handle theming and accessibility?
+- How to document components?
+- Governance strategy?
 
 ---
 
@@ -209,4 +215,4 @@ Rules:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

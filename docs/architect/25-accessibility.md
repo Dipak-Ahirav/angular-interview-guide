@@ -14,15 +14,15 @@ Accessibility (A11y) architecture in Angular ensures applications are usable by 
 
 In enterprise systems:
 
-- Inclusive user experience  
-- Legal compliance (WCAG, ADA)  
-- Wider audience reach  
+- Inclusive user experience
+- Legal compliance (WCAG, ADA)
+- Wider audience reach
 
 Without accessibility:
 
 ❌ Poor UX for disabled users  
 ❌ Legal risks  
-❌ Lower engagement  
+❌ Lower engagement
 
 ---
 
@@ -31,7 +31,7 @@ Without accessibility:
 1️⃣ Perceivable  
 2️⃣ Operable  
 3️⃣ Understandable  
-4️⃣ Robust  
+4️⃣ Robust
 
 (WCAG guidelines)
 
@@ -41,11 +41,11 @@ Without accessibility:
 
 Use proper tags:
 
-✔ <button>, <nav>, <header>, <main>  
+✔ <button>, <nav>, <header>, <main>
 
 Avoid:
 
-❌ Div-based UI for everything  
+❌ Div-based UI for everything
 
 ---
 
@@ -53,9 +53,9 @@ Avoid:
 
 Ensure:
 
-- Tab navigation works  
-- Focus is visible  
-- No keyboard traps  
+- Tab navigation works
+- Focus is visible
+- No keyboard traps
 
 ---
 
@@ -63,11 +63,11 @@ Ensure:
 
 Use:
 
-- aria-label  
-- aria-hidden  
-- role attributes  
+- aria-label
+- aria-hidden
+- role attributes
 
-✔ Enhance screen reader support  
+✔ Enhance screen reader support
 
 ---
 
@@ -75,41 +75,40 @@ Use:
 
 Test with:
 
-- NVDA  
-- VoiceOver  
+- NVDA
+- VoiceOver
 
-✔ Ensure content is readable  
+✔ Ensure content is readable
 
 ---
 
 # 🚀 5️⃣ Focus Management
 
-- Manage focus on navigation  
-- Focus modals properly  
+- Manage focus on navigation
+- Focus modals properly
 
-✔ Improve usability  
+✔ Improve usability
 
 ---
 
 # 🧠 6️⃣ Color & Contrast
 
-- High contrast ratios  
-- Avoid color-only indicators  
+- High contrast ratios
+- Avoid color-only indicators
 
-✔ Accessible design  
+✔ Accessible design
 
 ---
 
 # 🔥 7️⃣ Forms Accessibility
 
-- Label inputs properly  
-- Show clear error messages  
+- Label inputs properly
+- Show clear error messages
 
 Example:
 
 ```html
-<label for="email">Email</label>
-<input id="email" />
+<label for="email">Email</label> <input id="email" />
 ```
 
 ---
@@ -118,10 +117,10 @@ Example:
 
 Use:
 
-- FocusMonitor  
-- LiveAnnouncer  
+- FocusMonitor
+- LiveAnnouncer
 
-✔ Built-in accessibility tools  
+✔ Built-in accessibility tools
 
 ---
 
@@ -129,10 +128,10 @@ Use:
 
 Tools:
 
-- Lighthouse  
-- axe DevTools  
+- Lighthouse
+- axe DevTools
 
-✔ Detect issues early  
+✔ Detect issues early
 
 ---
 
@@ -140,10 +139,10 @@ Tools:
 
 Follow:
 
-- WCAG 2.1  
-- ADA  
+- WCAG 2.1
+- ADA
 
-✔ Required for enterprise apps  
+✔ Required for enterprise apps
 
 ---
 
@@ -153,16 +152,16 @@ Follow:
 ❌ Missing labels  
 ❌ Poor contrast  
 ❌ Ignoring screen readers  
-❌ No accessibility testing  
+❌ No accessibility testing
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Do you know A11y basics?  
-- How to implement accessibility in Angular?  
-- Tools & standards knowledge  
-- Real-world usage  
+- Do you know A11y basics?
+- How to implement accessibility in Angular?
+- Tools & standards knowledge
+- Real-world usage
 
 ---
 
@@ -174,4 +173,4 @@ Follow:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

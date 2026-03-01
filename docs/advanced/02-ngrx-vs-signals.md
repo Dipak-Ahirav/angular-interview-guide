@@ -58,15 +58,15 @@ Signal → Template automatically reacts
 
 # 🔥 Core Concept Comparison
 
-| Feature | NgRx | Signals |
-|----------|--------|----------|
-| Built-in | ❌ No | ✅ Yes |
-| Learning curve | High | Low |
-| Boilerplate | Heavy | Minimal |
-| Best for | Global app state | Local UI state |
-| DevTools support | ✅ Excellent | Limited |
-| Immutable pattern | Required | Optional |
-| Fine-grained updates | ❌ No | ✅ Yes |
+| Feature              | NgRx             | Signals        |
+| -------------------- | ---------------- | -------------- |
+| Built-in             | ❌ No            | ✅ Yes         |
+| Learning curve       | High             | Low            |
+| Boilerplate          | Heavy            | Minimal        |
+| Best for             | Global app state | Local UI state |
+| DevTools support     | ✅ Excellent     | Limited        |
+| Immutable pattern    | Required         | Optional       |
+| Fine-grained updates | ❌ No            | ✅ Yes         |
 
 ---
 
@@ -228,4 +228,4 @@ Large Enterprise App:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

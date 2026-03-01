@@ -18,7 +18,7 @@ Imagine a Parent Component.
 There are two types of children:
 
 1️⃣ Children inside its template → ViewChild  
-2️⃣ Children passed from outside using <ng-content> → ContentChild  
+2️⃣ Children passed from outside using <ng-content> → ContentChild
 
 👉 ViewChild = View (inside template)  
 👉 ContentChild = Content (projected from outside)
@@ -70,8 +70,7 @@ sayHello() {
 # 🔥 ViewChild with Template Reference Variable
 
 ```html
-<input #inputRef type="text">
-<button (click)="focusInput()">Focus</button>
+<input #inputRef type="text" /> <button (click)="focusInput()">Focus</button>
 ```
 
 ```ts
@@ -89,7 +88,7 @@ focusInput() {
 ViewChild becomes available in:
 
 ```ts
-ngAfterViewInit()
+ngAfterViewInit();
 ```
 
 Not in constructor or ngOnInit.
@@ -136,12 +135,12 @@ ngAfterContentInit() {
 
 # 🔥 ViewChild vs ContentChild Comparison
 
-| Feature | ViewChild | ContentChild |
-|----------|------------|---------------|
-| Access internal template | ✅ Yes | ❌ No |
-| Access projected content | ❌ No | ✅ Yes |
-| Lifecycle hook | ngAfterViewInit | ngAfterContentInit |
-| Used for | Child components, DOM | ng-content elements |
+| Feature                  | ViewChild             | ContentChild        |
+| ------------------------ | --------------------- | ------------------- |
+| Access internal template | ✅ Yes                | ❌ No               |
+| Access projected content | ❌ No                 | ✅ Yes              |
+| Lifecycle hook           | ngAfterViewInit       | ngAfterContentInit  |
+| Used for                 | Child components, DOM | ng-content elements |
 
 ---
 
@@ -207,4 +206,4 @@ Example:
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

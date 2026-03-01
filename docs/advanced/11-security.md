@@ -25,7 +25,7 @@ Without proper security:
 ❌ Token theft  
 ❌ CSRF exploitation  
 ❌ API manipulation  
-❌ Data breaches  
+❌ Data breaches
 
 ---
 
@@ -35,7 +35,7 @@ Without proper security:
 2️⃣ CSRF (Cross-Site Request Forgery)  
 3️⃣ Injection Attacks  
 4️⃣ Broken Authentication  
-5️⃣ Sensitive Data Exposure  
+5️⃣ Sensitive Data Exposure
 
 ---
 
@@ -64,7 +64,7 @@ Angular automatically sanitizes:
 Example:
 
 ```ts
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer } from "@angular/platform-browser";
 ```
 
 Only use bypass methods carefully.
@@ -115,7 +115,7 @@ Better:
 
 ✅ Store in HttpOnly cookies  
 ✅ Use short-lived tokens  
-✅ Implement refresh tokens securely  
+✅ Implement refresh tokens securely
 
 ---
 
@@ -143,7 +143,7 @@ Example:
 
 ```ts
 req.clone({
-  setHeaders: { Authorization: `Bearer ${token}` }
+  setHeaders: { Authorization: `Bearer ${token}` },
 });
 ```
 
@@ -208,7 +208,7 @@ Use tools:
 ✅ Use strong authentication  
 ✅ Use HTTPS only  
 ✅ Secure cookies properly  
-✅ Keep dependencies updated  
+✅ Keep dependencies updated
 
 ---
 
@@ -250,4 +250,4 @@ Use tools:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

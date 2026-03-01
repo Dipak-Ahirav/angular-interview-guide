@@ -24,7 +24,7 @@ Without performance architecture:
 ❌ Slow initial load  
 ❌ UI lag  
 ❌ Poor user experience  
-❌ High bounce rate  
+❌ High bounce rate
 
 ---
 
@@ -34,7 +34,7 @@ Without performance architecture:
 2️⃣ Optimize rendering  
 3️⃣ Minimize unnecessary work  
 4️⃣ Efficient data flow  
-5️⃣ Smart caching  
+5️⃣ Smart caching
 
 ---
 
@@ -52,7 +52,7 @@ Load modules only when needed:
 ```
 
 ✔ Reduces bundle size  
-✔ Faster startup  
+✔ Faster startup
 
 ---
 
@@ -63,28 +63,30 @@ Default strategy checks everything.
 Use:
 
 ```ts
-changeDetection: ChangeDetectionStrategy.OnPush
+changeDetection: ChangeDetectionStrategy.OnPush;
 ```
 
 Benefits:
 
-- Less re-rendering  
-- Better performance  
+- Less re-rendering
+- Better performance
 
 ---
 
 # 🟡 3️⃣ Smart Component Design
 
 ✔ Smart (container)
+
 - Handles data
 
 ✔ Dumb (presentational)
+
 - UI only
 
 Result:
 
-- Reduced change detection load  
-- Better maintainability  
+- Reduced change detection load
+- Better maintainability
 
 ---
 
@@ -92,10 +94,10 @@ Result:
 
 Split large bundles:
 
-- Lazy modules  
-- Dynamic imports  
+- Lazy modules
+- Dynamic imports
 
-✔ Improves load time  
+✔ Improves load time
 
 ---
 
@@ -105,8 +107,8 @@ Using Angular Universal:
 
 Benefits:
 
-- Faster first paint  
-- SEO improvement  
+- Faster first paint
+- SEO improvement
 
 ---
 
@@ -114,14 +116,14 @@ Benefits:
 
 Types:
 
-- HTTP caching  
-- Browser cache  
-- In-memory cache  
+- HTTP caching
+- Browser cache
+- In-memory cache
 
 Example:
 
-- Cache API responses  
-- Avoid duplicate calls  
+- Cache API responses
+- Avoid duplicate calls
 
 ---
 
@@ -129,13 +131,13 @@ Example:
 
 Avoid:
 
-❌ Nested subscriptions  
+❌ Nested subscriptions
 
 Use:
 
 ✔ switchMap  
 ✔ shareReplay  
-✔ takeUntil  
+✔ takeUntil
 
 ---
 
@@ -143,10 +145,10 @@ Use:
 
 Signals reduce:
 
-- unnecessary subscriptions  
-- complex reactive chains  
+- unnecessary subscriptions
+- complex reactive chains
 
-✔ Faster UI updates  
+✔ Faster UI updates
 
 ---
 
@@ -160,9 +162,9 @@ ng build --configuration production
 
 Techniques:
 
-- Tree shaking  
-- Minification  
-- Dead code removal  
+- Tree shaking
+- Minification
+- Dead code removal
 
 ---
 
@@ -172,17 +174,17 @@ Techniques:
 ❌ No lazy loading  
 ❌ Default change detection everywhere  
 ❌ Too many API calls  
-❌ Memory leaks  
+❌ Memory leaks
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How to improve Angular performance?  
-- What is lazy loading?  
-- OnPush vs Default?  
-- SSR benefits?  
-- How to optimize API calls?  
+- How to improve Angular performance?
+- What is lazy loading?
+- OnPush vs Default?
+- SSR benefits?
+- How to optimize API calls?
 
 ---
 
@@ -194,4 +196,4 @@ Techniques:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

@@ -25,7 +25,7 @@ Without migration:
 ❌ Security vulnerabilities  
 ❌ Performance degradation  
 ❌ Unsupported dependencies  
-❌ Hard-to-maintain codebase  
+❌ Hard-to-maintain codebase
 
 ---
 
@@ -45,6 +45,7 @@ Without migration:
 Step-by-step approach:
 
 1. Check current version:
+
    ```bash
    ng version
    ```
@@ -55,6 +56,7 @@ Step-by-step approach:
 3. Upgrade gradually (avoid jumping too many versions)
 
 4. Update dependencies:
+
    ```bash
    ng update @angular/core @angular/cli
    ```
@@ -75,7 +77,7 @@ Common strategies:
 Hybrid example:
 
 ```ts
-UpgradeModule
+UpgradeModule;
 ```
 
 Allows AngularJS + Angular to run together temporarily.
@@ -95,7 +97,7 @@ Migration approach:
 Example:
 
 ```ts
-bootstrapApplication(AppComponent)
+bootstrapApplication(AppComponent);
 ```
 
 ---
@@ -113,13 +115,13 @@ Example:
 Old:
 
 ```ts
-observable.map()
+observable.map();
 ```
 
 New:
 
 ```ts
-observable.pipe(map())
+observable.pipe(map());
 ```
 
 ---
@@ -133,7 +135,7 @@ Best Practices:
 ✅ Maintain full test coverage  
 ✅ Use feature flags  
 ✅ Perform regression testing  
-✅ Monitor performance after migration  
+✅ Monitor performance after migration
 
 ---
 
@@ -182,7 +184,7 @@ After migration:
 ❌ Production downtime  
 ❌ Unexpected breaking changes  
 ❌ Third-party incompatibility  
-❌ Performance regression  
+❌ Performance regression
 
 Mitigation:
 
@@ -237,4 +239,4 @@ Steps:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

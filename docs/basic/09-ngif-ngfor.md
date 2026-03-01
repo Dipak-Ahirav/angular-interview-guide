@@ -18,56 +18,52 @@ Imagine:
 
 Instead of writing complex JavaScript to create/remove elements manually, Angular gives us:
 
-- `*ngIf` → Show or hide elements  
-- `*ngFor` → Repeat elements  
+- `*ngIf` → Show or hide elements
+- `*ngFor` → Repeat elements
 
 👉 These are structural directives because they change the structure of the HTML.
 
 ---
 
-# 🔹 What is *ngIf?
+# 🔹 What is \*ngIf?
 
-*ngIf adds or removes elements from the DOM based on a condition.
+\*ngIf adds or removes elements from the DOM based on a condition.
 
 ### Example:
 
 ```html
-<div *ngIf="isLoggedIn">
-  Welcome User!
-</div>
+<div *ngIf="isLoggedIn">Welcome User!</div>
 ```
 
 If `isLoggedIn = true` → Element appears  
-If `isLoggedIn = false` → Element is completely removed from DOM  
+If `isLoggedIn = false` → Element is completely removed from DOM
 
 ---
 
 ## 🔥 Important Difference
 
-### *ngIf vs hidden
+### \*ngIf vs hidden
 
 ```html
 <div [hidden]="!isLoggedIn"></div>
 ```
 
-- `*ngIf` → Removes element from DOM  
-- `hidden` → Only hides using CSS  
+- `*ngIf` → Removes element from DOM
+- `hidden` → Only hides using CSS
 
 Removing from DOM improves performance.
 
 ---
 
-# 🔹 What is *ngFor?
+# 🔹 What is \*ngFor?
 
-*ngFor is used to loop over arrays and create elements dynamically.
+\*ngFor is used to loop over arrays and create elements dynamically.
 
 ### Example:
 
 ```html
 <ul>
-  <li *ngFor="let user of users">
-    {{ user }}
-  </li>
+  <li *ngFor="let user of users">{{ user }}</li>
 </ul>
 ```
 
@@ -81,7 +77,7 @@ Angular creates one `<li>` for each item in array.
 
 ---
 
-# 🧠 What Does * Mean?
+# 🧠 What Does \* Mean?
 
 The `*` is syntactic sugar.
 
@@ -105,7 +101,7 @@ Angular transforms it internally.
 
 # 🚀 Advanced Concept (Interview Booster)
 
-## 🔹 trackBy in *ngFor
+## 🔹 trackBy in \*ngFor
 
 When looping large lists, Angular recreates DOM elements on every change.
 
@@ -114,9 +110,7 @@ To improve performance, use `trackBy`.
 Example:
 
 ```html
-<li *ngFor="let user of users; trackBy: trackById">
-  {{ user.name }}
-</li>
+<li *ngFor="let user of users; trackBy: trackById">{{ user.name }}</li>
 ```
 
 Component:
@@ -149,9 +143,7 @@ Template:
   <h2>Product List</h2>
 
   <ul>
-    <li *ngFor="let product of products">
-      {{ product }}
-    </li>
+    <li *ngFor="let product of products">{{ product }}</li>
   </ul>
 </div>
 ```
@@ -162,7 +154,7 @@ Template:
 
 - Do you understand structural directives?
 - Do you know DOM removal vs hiding?
-- Can you explain syntactic sugar (* syntax)?
+- Can you explain syntactic sugar (\* syntax)?
 - Do you know performance optimization using trackBy?
 
 ---
@@ -175,7 +167,7 @@ Template:
 
 # 💬 Common Follow-up Questions
 
-1. What is the difference between *ngIf and hidden?
+1. What is the difference between \*ngIf and hidden?
 2. What is trackBy and why is it important?
 3. Can we use multiple structural directives on one element?
 4. What is ng-template?
@@ -184,4 +176,4 @@ Template:
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

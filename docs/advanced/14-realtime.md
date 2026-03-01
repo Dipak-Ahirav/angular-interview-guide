@@ -24,7 +24,7 @@ Without real-time:
 
 ❌ Users must refresh manually  
 ❌ Delayed updates  
-❌ Poor user experience  
+❌ Poor user experience
 
 ---
 
@@ -33,7 +33,7 @@ Without real-time:
 1️⃣ WebSockets  
 2️⃣ Socket.IO  
 3️⃣ Server-Sent Events (SSE)  
-4️⃣ Polling (Not true real-time)  
+4️⃣ Polling (Not true real-time)
 
 ---
 
@@ -56,15 +56,15 @@ Client ↔ Server (single persistent connection)
 ## Install RxJS WebSocket
 
 ```ts
-import { webSocket } from 'rxjs/webSocket';
+import { webSocket } from "rxjs/webSocket";
 ```
 
 ## Create Service
 
 ```ts
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class RealtimeService {
-  private socket$ = webSocket('ws://localhost:3000');
+  private socket$ = webSocket("ws://localhost:3000");
 
   send(message: any) {
     this.socket$.next(message);
@@ -96,11 +96,11 @@ npm install socket.io-client
 Example:
 
 ```ts
-import { io } from 'socket.io-client';
+import { io } from "socket.io-client";
 
-const socket = io('http://localhost:3000');
+const socket = io("http://localhost:3000");
 
-socket.on('message', data => {
+socket.on("message", (data) => {
   console.log(data);
 });
 ```
@@ -118,7 +118,7 @@ SSE:
 Example:
 
 ```ts
-const eventSource = new EventSource('/api/stream');
+const eventSource = new EventSource("/api/stream");
 
 eventSource.onmessage = (event) => {
   console.log(event.data);
@@ -132,7 +132,7 @@ eventSource.onmessage = (event) => {
 Wrap socket events in Observables:
 
 ```ts
-fromEvent(socket, 'message')
+fromEvent(socket, "message");
 ```
 
 Benefits:
@@ -212,7 +212,7 @@ Frontend should handle:
 ❌ Ignoring reconnection  
 ❌ No authentication  
 ❌ Sending heavy payloads  
-❌ Overusing polling  
+❌ Overusing polling
 
 ---
 
@@ -244,4 +244,4 @@ Frontend should handle:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

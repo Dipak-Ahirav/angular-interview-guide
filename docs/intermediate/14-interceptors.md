@@ -15,11 +15,13 @@ HTTP Interceptors in Angular are services that intercept and modify HTTP request
 Imagine every HTTP request in your app passes through a security gate 🚪
 
 Before going to the server:
+
 - Add JWT token
 - Add headers
 - Log request
 
 After receiving response:
+
 - Handle errors
 - Transform data
 - Show loader
@@ -59,21 +61,27 @@ Server → Interceptor → Component
 ## Step 1️⃣ Create Interceptor
 
 ```ts
-import { Injectable } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from "@angular/core";
+import {
+  HttpEvent,
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest,
+} from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
-    const token = localStorage.getItem('token');
+  intercept(
+    req: HttpRequest<any>,
+    next: HttpHandler,
+  ): Observable<HttpEvent<any>> {
+    const token = localStorage.getItem("token");
 
     const clonedReq = req.clone({
       setHeaders: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
 
     return next.handle(clonedReq);
@@ -90,9 +98,9 @@ providers: [
   {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
-    multi: true
-  }
-]
+    multi: true,
+  },
+];
 ```
 
 ---
@@ -120,6 +128,7 @@ intercept(req: HttpRequest<any>, next: HttpHandler) {
 Angular supports multiple interceptors.
 
 Execution order:
+
 - Request → Top to Bottom
 - Response → Bottom to Top
 
@@ -128,8 +137,8 @@ Example:
 ```ts
 providers: [
   { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-  { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true }
-]
+  { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true },
+];
 ```
 
 ---
@@ -148,9 +157,11 @@ providers: [
 # 🚀 Loader Interceptor Example (Concept)
 
 Before request:
+
 - Show spinner
 
 After response:
+
 - Hide spinner
 
 ---
@@ -164,7 +175,7 @@ HttpRequest is immutable.
 So we must use:
 
 ```ts
-req.clone()
+req.clone();
 ```
 
 Direct modification is not allowed.
@@ -176,7 +187,7 @@ Direct modification is not allowed.
 Skip some URLs:
 
 ```ts
-if (req.url.includes('public')) {
+if (req.url.includes("public")) {
   return next.handle(req);
 }
 ```
@@ -185,12 +196,12 @@ if (req.url.includes('public')) {
 
 # 🚀 Interceptor vs Service Difference
 
-| Feature | Service | Interceptor |
-|----------|----------|--------------|
-| Used per API | Yes | Global |
-| Modify request globally | ❌ No | ✅ Yes |
-| Best for token handling | ❌ No | ✅ Yes |
-| Centralized error handling | ❌ No | ✅ Yes |
+| Feature                    | Service | Interceptor |
+| -------------------------- | ------- | ----------- |
+| Used per API               | Yes     | Global      |
+| Modify request globally    | ❌ No   | ✅ Yes      |
+| Best for token handling    | ❌ No   | ✅ Yes      |
+| Centralized error handling | ❌ No   | ✅ Yes      |
 
 ---
 
@@ -231,4 +242,4 @@ if (req.url.includes('public')) {
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

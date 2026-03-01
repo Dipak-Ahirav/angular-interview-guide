@@ -14,16 +14,16 @@ SSR (Server-Side Rendering) architecture in Angular uses Angular Universal to re
 
 In enterprise apps:
 
-- SEO-critical pages  
-- Slow networks/devices  
-- Large bundles  
-- First contentful paint matters  
+- SEO-critical pages
+- Slow networks/devices
+- Large bundles
+- First contentful paint matters
 
 Without SSR:
 
 ❌ Slow initial load  
 ❌ Poor SEO  
-❌ Blank screen until JS loads  
+❌ Blank screen until JS loads
 
 ---
 
@@ -32,7 +32,7 @@ Without SSR:
 1️⃣ Server-side rendering (Angular Universal)  
 2️⃣ Hydration (attach client logic to server HTML)  
 3️⃣ Pre-rendering (SSG)  
-4️⃣ Streaming (advanced SSR)  
+4️⃣ Streaming (advanced SSR)
 
 ---
 
@@ -64,12 +64,12 @@ Hydration avoids re-rendering:
 
 ```ts
 bootstrapApplication(AppComponent, {
-  providers: [provideClientHydration()]
+  providers: [provideClientHydration()],
 });
 ```
 
 ✔ Faster interactivity  
-✔ Less flicker  
+✔ Less flicker
 
 ---
 
@@ -82,7 +82,7 @@ ng run app:prerender
 ```
 
 ✔ Best for static pages  
-✔ Ultra-fast load  
+✔ Ultra-fast load
 
 ---
 
@@ -95,7 +95,7 @@ this.transferState.set(KEY, data);
 ```
 
 ✔ Avoid duplicate API calls  
-✔ Faster rendering  
+✔ Faster rendering
 
 ---
 
@@ -103,8 +103,8 @@ this.transferState.set(KEY, data);
 
 Ensure:
 
-- Lazy-loaded modules supported  
-- Resolvers fetch data server-side  
+- Lazy-loaded modules supported
+- Resolvers fetch data server-side
 
 ---
 
@@ -112,11 +112,11 @@ Ensure:
 
 Use:
 
-- HTTP caching  
-- CDN caching  
-- Server response caching  
+- HTTP caching
+- CDN caching
+- Server response caching
 
-✔ Improves performance  
+✔ Improves performance
 
 ---
 
@@ -124,17 +124,17 @@ Use:
 
 SSR enables:
 
-- Meta tags  
-- Open Graph tags  
-- Structured data  
+- Meta tags
+- Open Graph tags
+- Structured data
 
 ---
 
 # 🟢 8️⃣ Performance Benefits
 
-- Faster First Contentful Paint (FCP)  
-- Better Time to Interactive (TTI)  
-- Improved Lighthouse scores  
+- Faster First Contentful Paint (FCP)
+- Better Time to Interactive (TTI)
+- Improved Lighthouse scores
 
 ---
 
@@ -144,17 +144,17 @@ SSR enables:
 ❌ Duplicate API calls  
 ❌ Memory leaks on server  
 ❌ Improper caching  
-❌ Hydration mismatch  
+❌ Hydration mismatch
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- What is SSR?  
-- Angular Universal usage?  
-- SSR vs CSR vs SSG?  
-- Hydration concept?  
-- SEO benefits?  
+- What is SSR?
+- Angular Universal usage?
+- SSR vs CSR vs SSG?
+- Hydration concept?
+- SEO benefits?
 
 ---
 
@@ -166,4 +166,4 @@ SSR enables:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

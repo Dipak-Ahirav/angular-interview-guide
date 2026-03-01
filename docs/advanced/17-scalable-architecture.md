@@ -32,7 +32,7 @@ Poor architecture leads to tight coupling, slow performance, and difficult maint
 4️⃣ Clear Layered Architecture  
 5️⃣ Lazy Loading  
 6️⃣ Structured State Management  
-7️⃣ Performance-First Design  
+7️⃣ Performance-First Design
 
 ---
 
@@ -111,7 +111,7 @@ Each feature loads independently:
 
 ```ts
 loadChildren: () =>
-  import('./orders/orders.module').then(m => m.OrdersModule)
+  import("./orders/orders.module").then((m) => m.OrdersModule);
 ```
 
 Reduces initial bundle size.
@@ -141,7 +141,7 @@ Application Layer
 ⬇  
 Domain Layer  
 ⬇  
-Infrastructure/API Layer  
+Infrastructure/API Layer
 
 Avoid mixing business logic inside components.
 
@@ -163,7 +163,7 @@ When app becomes very large:
 ❌ No lazy loading  
 ❌ Business logic in components  
 ❌ Overusing global services  
-❌ No structured folder discipline  
+❌ No structured folder discipline
 
 ---
 
@@ -185,4 +185,4 @@ When app becomes very large:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

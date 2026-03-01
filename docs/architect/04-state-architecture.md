@@ -14,17 +14,17 @@ State architecture in Angular defines how application data is managed, shared, a
 
 In enterprise apps:
 
-- Multiple components share data  
-- Complex UI interactions  
-- Frequent API calls  
-- Real-time updates  
+- Multiple components share data
+- Complex UI interactions
+- Frequent API calls
+- Real-time updates
 
 Without proper state management:
 
 ❌ Inconsistent data  
 ❌ Hard-to-debug bugs  
 ❌ Tight coupling  
-❌ Performance issues  
+❌ Performance issues
 
 ---
 
@@ -33,7 +33,7 @@ Without proper state management:
 1️⃣ Local State (Component level)  
 2️⃣ Shared State (Across components)  
 3️⃣ Server State (API data)  
-4️⃣ Global State (App-wide)  
+4️⃣ Global State (App-wide)
 
 ---
 
@@ -48,7 +48,7 @@ private user$ = new BehaviorSubject<User | null>(null);
 ```
 
 ✔ Easy to implement  
-✔ Good for small-medium apps  
+✔ Good for small-medium apps
 
 ---
 
@@ -56,14 +56,14 @@ private user$ = new BehaviorSubject<User | null>(null);
 
 Use:
 
-- BehaviorSubject  
-- ReplaySubject  
-- Observables  
+- BehaviorSubject
+- ReplaySubject
+- Observables
 
 Benefits:
 
 ✔ Reactive updates  
-✔ Fine-grained control  
+✔ Fine-grained control
 
 ---
 
@@ -71,19 +71,19 @@ Benefits:
 
 Uses:
 
-- Store  
-- Actions  
-- Reducers  
-- Effects  
-- Selectors  
+- Store
+- Actions
+- Reducers
+- Effects
+- Selectors
 
 Flow:
 
-Action → Reducer → Store → Selector → UI  
+Action → Reducer → Store → Selector → UI
 
 ✔ Predictable  
 ✔ Scalable  
-✔ Debuggable  
+✔ Debuggable
 
 ---
 
@@ -91,9 +91,9 @@ Action → Reducer → Store → Selector → UI
 
 Angular Signals provide:
 
-- Simpler reactive model  
-- Less boilerplate  
-- Better performance  
+- Simpler reactive model
+- Less boilerplate
+- Better performance
 
 Example:
 
@@ -101,29 +101,31 @@ Example:
 const count = signal(0);
 ```
 
-✔ Easier than RxJS in many cases  
+✔ Easier than RxJS in many cases
 
 ---
 
 # 🔥 State Architecture Best Practices
 
-- Keep state minimal  
-- Normalize data  
-- Avoid duplication  
-- Use selectors  
-- Separate UI & business logic  
+- Keep state minimal
+- Normalize data
+- Avoid duplication
+- Use selectors
+- Separate UI & business logic
 
 ---
 
 # 🟡 Smart vs Dumb Components
 
 ✔ Smart:
-- Handles state  
-- Calls services/store  
+
+- Handles state
+- Calls services/store
 
 ✔ Dumb:
-- Receives data via @Input  
-- Emits events  
+
+- Receives data via @Input
+- Emits events
 
 ---
 
@@ -131,21 +133,21 @@ const count = signal(0);
 
 Unidirectional flow:
 
-Store/Service → Component → Template  
+Store/Service → Component → Template
 
 Avoid:
 
 ❌ Two-way uncontrolled binding  
-❌ Deep nested state mutations  
+❌ Deep nested state mutations
 
 ---
 
 # 🚀 Performance Optimization
 
-- Use OnPush change detection  
-- Memoized selectors  
-- Avoid unnecessary subscriptions  
-- Use Signals where possible  
+- Use OnPush change detection
+- Memoized selectors
+- Avoid unnecessary subscriptions
+- Use Signals where possible
 
 ---
 
@@ -155,17 +157,17 @@ Avoid:
 ❌ Overusing NgRx for small apps  
 ❌ Mutating state directly  
 ❌ Not using selectors  
-❌ Mixing UI and business logic  
+❌ Mixing UI and business logic
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Difference between RxJS vs NgRx vs Signals  
-- When to use each  
-- State architecture decisions  
-- Data flow understanding  
-- Performance considerations  
+- Difference between RxJS vs NgRx vs Signals
+- When to use each
+- State architecture decisions
+- Data flow understanding
+- Performance considerations
 
 ---
 
@@ -177,4 +179,4 @@ Avoid:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

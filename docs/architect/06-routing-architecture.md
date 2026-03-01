@@ -25,7 +25,7 @@ Without proper routing:
 ❌ Slow loading  
 ❌ Security issues  
 ❌ Complex navigation bugs  
-❌ Poor user experience  
+❌ Poor user experience
 
 ---
 
@@ -35,7 +35,7 @@ Without proper routing:
 2️⃣ Lazy loading  
 3️⃣ Route protection  
 4️⃣ Clean URL structure  
-5️⃣ Performance optimization  
+5️⃣ Performance optimization
 
 ---
 
@@ -48,7 +48,7 @@ feature/
   ├── orders-routing.module.ts
 ```
 
-✔ Each feature has its own routing  
+✔ Each feature has its own routing
 
 ---
 
@@ -64,7 +64,7 @@ feature/
 ```
 
 ✔ Reduces initial bundle  
-✔ Improves performance  
+✔ Improves performance
 
 ---
 
@@ -72,10 +72,10 @@ feature/
 
 Types:
 
-- CanActivate  
-- CanActivateChild  
-- CanLoad  
-- CanDeactivate  
+- CanActivate
+- CanActivateChild
+- CanLoad
+- CanDeactivate
 
 Example:
 
@@ -85,7 +85,7 @@ canActivate(): boolean {
 }
 ```
 
-✔ Protect routes  
+✔ Protect routes
 
 ---
 
@@ -100,7 +100,7 @@ resolve() {
 ```
 
 ✔ Prevent empty UI  
-✔ Better UX  
+✔ Better UX
 
 ---
 
@@ -110,11 +110,11 @@ Load modules in background:
 
 ```ts
 RouterModule.forRoot(routes, {
-  preloadingStrategy: PreloadAllModules
-})
+  preloadingStrategy: PreloadAllModules,
+});
 ```
 
-✔ Faster navigation  
+✔ Faster navigation
 
 ---
 
@@ -122,9 +122,9 @@ RouterModule.forRoot(routes, {
 
 Use:
 
-- Feature-based routing  
-- Nested routes  
-- Child routes  
+- Feature-based routing
+- Nested routes
+- Child routes
 
 Example:
 
@@ -147,7 +147,7 @@ Use parameters:
 { path: 'product/:id', component: ProductDetail }
 ```
 
-✔ Dynamic navigation  
+✔ Dynamic navigation
 
 ---
 
@@ -155,9 +155,9 @@ Use parameters:
 
 Best practices:
 
-- Clean URLs  
-- Avoid deep nesting  
-- SEO-friendly paths  
+- Clean URLs
+- Avoid deep nesting
+- SEO-friendly paths
 
 ---
 
@@ -166,10 +166,10 @@ Best practices:
 Use guards:
 
 ```ts
-canActivate: [RoleGuard]
+canActivate: [RoleGuard];
 ```
 
-✔ Restrict access  
+✔ Restrict access
 
 ---
 
@@ -179,17 +179,17 @@ canActivate: [RoleGuard]
 ❌ All routes in one file  
 ❌ No guards  
 ❌ Deep nested routes  
-❌ No preloading  
+❌ No preloading
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Lazy loading concept  
-- Types of guards  
-- Resolver usage  
-- Routing optimization  
-- Large-scale routing design  
+- Lazy loading concept
+- Types of guards
+- Resolver usage
+- Routing optimization
+- Large-scale routing design
 
 ---
 
@@ -201,4 +201,4 @@ canActivate: [RoleGuard]
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

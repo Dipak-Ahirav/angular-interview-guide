@@ -12,7 +12,7 @@ A service in Angular is a reusable class that contains business logic, data acce
 
 Imagine you are building a website.
 
-Instead of writing API call code inside every component, 
+Instead of writing API call code inside every component,
 you create one separate file that handles all API logic.
 
 That separate reusable file is called a **Service**.
@@ -20,6 +20,7 @@ That separate reusable file is called a **Service**.
 👉 Service = Shared Logic Container
 
 For example:
+
 - Login logic
 - API calls
 - Shared data
@@ -30,11 +31,13 @@ For example:
 # 🔹 Why Do We Need Services?
 
 Without services:
+
 - Code duplication happens.
 - Business logic mixes with UI code.
 - Hard to maintain and test.
 
 With services:
+
 - Clean separation of concerns.
 - Reusable logic.
 - Easy testing.
@@ -65,13 +68,12 @@ They are typically used for:
 ## Step 1: Create Service
 
 ```ts
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class UserService {
-
   getUsers() {
     return ["Dipak", "Angular", "Developer"];
   }
@@ -83,17 +85,16 @@ export class UserService {
 ## Step 2: Use Service in Component
 
 ```ts
-import { Component } from '@angular/core';
-import { UserService } from './user.service';
+import { Component } from "@angular/core";
+import { UserService } from "./user.service";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<ul>
-              <li *ngFor="let user of users">{{ user }}</li>
-            </ul>`
+    <li *ngFor="let user of users">{{ user }}</li>
+  </ul>`,
 })
 export class AppComponent {
-
   users: string[];
 
   constructor(private userService: UserService) {
@@ -111,6 +112,7 @@ Angular automatically injects the service instance.
 ## 🔹 Singleton Services
 
 When `providedIn: 'root'` is used:
+
 - Angular creates only one instance.
 - Shared across entire application.
 
@@ -118,12 +120,12 @@ When `providedIn: 'root'` is used:
 
 ## 🔹 Service vs Component
 
-| Service | Component |
-|----------|------------|
-| Contains business logic | Controls UI |
-| No template | Has template |
-| Reusable across app | Used in specific view |
-| Injected via DI | Rendered in DOM |
+| Service                 | Component             |
+| ----------------------- | --------------------- |
+| Contains business logic | Controls UI           |
+| No template             | Has template          |
+| Reusable across app     | Used in specific view |
+| Injected via DI         | Rendered in DOM       |
 
 ---
 
@@ -132,7 +134,7 @@ When `providedIn: 'root'` is used:
 Services can act as a shared data store:
 
 ```ts
-sharedData = new BehaviorSubject<string>('Initial');
+sharedData = new BehaviorSubject<string>("Initial");
 ```
 
 This allows communication between unrelated components.
@@ -180,4 +182,4 @@ When this question is asked, interviewer checks:
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

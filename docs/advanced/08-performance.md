@@ -25,7 +25,7 @@ Without optimization:
 ❌ Slow rendering  
 ❌ High memory usage  
 ❌ Poor Core Web Vitals  
-❌ Bad mobile performance  
+❌ Bad mobile performance
 
 ---
 
@@ -35,7 +35,7 @@ Without optimization:
 2️⃣ Rendering Optimization  
 3️⃣ Bundle Size Optimization  
 4️⃣ Network Optimization  
-5️⃣ Runtime Memory Optimization  
+5️⃣ Runtime Memory Optimization
 
 ---
 
@@ -79,7 +79,7 @@ Signals provide:
 ### Use trackBy with ngFor
 
 ```html
-<div *ngFor="let item of items; trackBy: trackById">
+<div *ngFor="let item of items; trackBy: trackById"></div>
 ```
 
 Prevents DOM recreation.
@@ -108,7 +108,7 @@ Better:
 ### Use Lazy Loading
 
 ```ts
-loadChildren: () => import('./feature/feature.module')
+loadChildren: () => import("./feature/feature.module");
 ```
 
 Reduces initial bundle size.
@@ -208,7 +208,7 @@ Tools:
 ✅ Use Signals for UI state  
 ✅ Avoid unnecessary subscriptions  
 ✅ Use SSR + Hydration if public app  
-✅ Share dependencies properly in Micro Frontends  
+✅ Share dependencies properly in Micro Frontends
 
 ---
 
@@ -250,4 +250,4 @@ Tools:
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

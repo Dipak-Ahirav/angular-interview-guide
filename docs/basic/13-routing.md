@@ -30,11 +30,13 @@ The page loads once, and only the view changes dynamically.
 # 🔹 Why Do We Need Routing?
 
 Without routing:
+
 - No navigation between pages.
 - Everything would be in a single component.
 - Application becomes unmanageable.
 
 With routing:
+
 - Clean navigation
 - Better user experience
 - Bookmarkable URLs
@@ -61,19 +63,19 @@ Routing is configured using `RouterModule`.
 ## Step 1: Define Routes
 
 ```ts
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from "./home/home.component";
+import { AboutComponent } from "./about/about.component";
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent }
+  { path: "", component: HomeComponent },
+  { path: "about", component: AboutComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
 ```
@@ -93,8 +95,7 @@ This is where routed components are displayed.
 ## Step 3: Navigation Links
 
 ```html
-<a routerLink="/">Home</a>
-<a routerLink="/about">About</a>
+<a routerLink="/">Home</a> <a routerLink="/about">About</a>
 ```
 
 ---
@@ -119,7 +120,7 @@ Used to pass dynamic values.
 Access parameter:
 
 ```ts
-this.route.snapshot.paramMap.get('id');
+this.route.snapshot.paramMap.get("id");
 ```
 
 ---
@@ -229,4 +230,4 @@ Used for 404 pages.
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

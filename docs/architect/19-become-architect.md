@@ -14,16 +14,16 @@ Becoming an Angular Architect requires mastering frontend fundamentals, system d
 
 An Architect:
 
-- Defines system design  
-- Sets coding standards  
-- Guides teams  
-- Makes critical decisions  
+- Defines system design
+- Sets coding standards
+- Guides teams
+- Makes critical decisions
 
 Without strong architects:
 
 ❌ Poor scalability  
 ❌ Inconsistent code  
-❌ Technical debt  
+❌ Technical debt
 
 ---
 
@@ -35,7 +35,7 @@ Without strong architects:
 4️⃣ Performance Optimization  
 5️⃣ Security Awareness  
 6️⃣ DevOps Understanding  
-7️⃣ Leadership Skills  
+7️⃣ Leadership Skills
 
 ---
 
@@ -43,13 +43,13 @@ Without strong architects:
 
 You must know:
 
-- Change Detection (Default vs OnPush)  
-- Signals & RxJS  
-- Forms & Routing  
-- SSR & Hydration  
-- Standalone Components  
+- Change Detection (Default vs OnPush)
+- Signals & RxJS
+- Forms & Routing
+- SSR & Hydration
+- Standalone Components
 
-✔ Go beyond basics → understand internals  
+✔ Go beyond basics → understand internals
 
 ---
 
@@ -57,16 +57,16 @@ You must know:
 
 Focus on:
 
-- Scalable architecture  
-- API design  
-- Data flow  
-- Real-time systems  
+- Scalable architecture
+- API design
+- Data flow
+- Real-time systems
 
 Practice:
 
 ✔ SaaS apps  
 ✔ Dashboards  
-✔ E-commerce systems  
+✔ E-commerce systems
 
 ---
 
@@ -74,12 +74,12 @@ Practice:
 
 Learn:
 
-- Monorepo (Nx)  
-- Microfrontend  
-- Layered architecture  
-- Clean architecture  
+- Monorepo (Nx)
+- Microfrontend
+- Layered architecture
+- Clean architecture
 
-✔ Know when to use what  
+✔ Know when to use what
 
 ---
 
@@ -87,12 +87,12 @@ Learn:
 
 You should be able to:
 
-- Reduce bundle size  
-- Optimize change detection  
-- Improve rendering speed  
-- Implement caching  
+- Reduce bundle size
+- Optimize change detection
+- Improve rendering speed
+- Implement caching
 
-✔ Solve real performance issues  
+✔ Solve real performance issues
 
 ---
 
@@ -100,11 +100,11 @@ You should be able to:
 
 Understand:
 
-- XSS, CSRF  
-- Auth strategies  
-- Secure API communication  
+- XSS, CSRF
+- Auth strategies
+- Secure API communication
 
-✔ Design secure systems  
+✔ Design secure systems
 
 ---
 
@@ -112,11 +112,11 @@ Understand:
 
 Learn:
 
-- Build pipelines  
-- Deployment strategies  
-- Monitoring & logging  
+- Build pipelines
+- Deployment strategies
+- Monitoring & logging
 
-✔ Understand production systems  
+✔ Understand production systems
 
 ---
 
@@ -124,26 +124,26 @@ Learn:
 
 Master:
 
-- Unit testing  
-- Integration testing  
-- E2E testing  
+- Unit testing
+- Integration testing
+- E2E testing
 
-✔ Build reliable systems  
+✔ Build reliable systems
 
 ---
 
 # 🟡 8️⃣ Leadership & Communication
 
-Architect ≠ Senior Developer  
+Architect ≠ Senior Developer
 
 You must:
 
-- Guide teams  
-- Do code reviews  
-- Communicate clearly  
-- Take ownership  
+- Guide teams
+- Do code reviews
+- Communicate clearly
+- Take ownership
 
-✔ Influence decisions  
+✔ Influence decisions
 
 ---
 
@@ -151,11 +151,11 @@ You must:
 
 You become architect by:
 
-- Solving real problems  
-- Handling production issues  
-- Making trade-offs  
+- Solving real problems
+- Handling production issues
+- Making trade-offs
 
-✔ Experience > Theory  
+✔ Experience > Theory
 
 ---
 
@@ -164,7 +164,7 @@ You become architect by:
 1️⃣ Developer (0–3 yrs)  
 2️⃣ Senior Developer (3–5 yrs)  
 3️⃣ Tech Lead (5–7 yrs)  
-4️⃣ Architect (7+ yrs)  
+4️⃣ Architect (7+ yrs)
 
 ---
 
@@ -174,7 +174,7 @@ You become architect by:
 ✔ Build side projects  
 ✔ Review others' code  
 ✔ Learn new Angular features  
-✔ Practice system design  
+✔ Practice system design
 
 ---
 
@@ -184,17 +184,17 @@ You become architect by:
 ❌ Ignoring system design  
 ❌ No leadership skills  
 ❌ Avoiding responsibility  
-❌ Not learning from failures  
+❌ Not learning from failures
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Your depth of knowledge  
-- Real-world experience  
-- Decision-making ability  
-- Leadership mindset  
-- System design thinking  
+- Your depth of knowledge
+- Real-world experience
+- Decision-making ability
+- Leadership mindset
+- System design thinking
 
 ---
 
@@ -206,4 +206,4 @@ You become architect by:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

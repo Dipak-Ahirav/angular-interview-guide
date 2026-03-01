@@ -15,7 +15,7 @@ The Async Pipe in Angular is used to automatically subscribe to an Observable or
 When working with Observables, normally we do:
 
 ```ts
-this.data$.subscribe(value => {
+this.data$.subscribe((value) => {
   this.data = value;
 });
 ```
@@ -23,6 +23,7 @@ this.data$.subscribe(value => {
 But then we must remember to unsubscribe.
 
 👉 Async Pipe does both automatically:
+
 - Subscribes
 - Unsubscribes
 
@@ -52,15 +53,13 @@ With Async Pipe:
 ## TypeScript
 
 ```ts
-users$ = this.http.get('/api/users');
+users$ = this.http.get("/api/users");
 ```
 
 ## Template
 
 ```html
-<div *ngFor="let user of users$ | async">
-  {{ user.name }}
-</div>
+<div *ngFor="let user of users$ | async">{{ user.name }}</div>
 ```
 
 That’s it.
@@ -75,14 +74,14 @@ When template renders:
 
 1️⃣ Async Pipe subscribes to Observable  
 2️⃣ When value emits → UI updates  
-3️⃣ When component destroys → automatically unsubscribes  
+3️⃣ When component destroys → automatically unsubscribes
 
 ---
 
 # 🔥 Async Pipe with Promise
 
 ```ts
-dataPromise = fetch('/api/data').then(res => res.json());
+dataPromise = fetch("/api/data").then((res) => res.json());
 ```
 
 ```html
@@ -109,12 +108,12 @@ Every time BehaviorSubject emits → UI updates.
 
 # 🧠 Async Pipe vs Manual Subscribe
 
-| Feature | Manual Subscribe | Async Pipe |
-|----------|-----------------|------------|
-| Code size | More | Less |
-| Memory leak risk | High | Low |
-| Auto unsubscribe | ❌ No | ✅ Yes |
-| Recommended in template | ❌ No | ✅ Yes |
+| Feature                 | Manual Subscribe | Async Pipe |
+| ----------------------- | ---------------- | ---------- |
+| Code size               | More             | Less       |
+| Memory leak risk        | High             | Low        |
+| Auto unsubscribe        | ❌ No            | ✅ Yes     |
+| Recommended in template | ❌ No            | ✅ Yes     |
 
 ---
 
@@ -125,16 +124,14 @@ Every time BehaviorSubject emits → UI updates.
 ```ts
 results$ = this.searchControl.valueChanges.pipe(
   debounceTime(300),
-  switchMap(value => this.api.search(value))
+  switchMap((value) => this.api.search(value)),
 );
 ```
 
 Template:
 
 ```html
-<div *ngFor="let result of results$ | async">
-  {{ result }}
-</div>
+<div *ngFor="let result of results$ | async">{{ result }}</div>
 ```
 
 Clean and reactive.
@@ -156,7 +153,7 @@ Async Pipe:
 Async Pipe works perfectly with:
 
 ```ts
-ChangeDetectionStrategy.OnPush
+ChangeDetectionStrategy.OnPush;
 ```
 
 Because async emission triggers change detection.
@@ -213,4 +210,4 @@ Each pipe manages its own subscription.
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

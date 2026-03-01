@@ -12,7 +12,7 @@ Dependency Injection (DI) is a design pattern used in Angular where required dep
 
 Imagine you own a restaurant.
 
-Instead of the chef going to the market to buy vegetables every time, 
+Instead of the chef going to the market to buy vegetables every time,
 someone else supplies the vegetables to the kitchen.
 
 The chef just uses what is provided.
@@ -32,11 +32,13 @@ This process is called **Dependency Injection**.
 # 🔹 Why Do We Need Dependency Injection?
 
 Without DI:
+
 - Components would create services manually.
 - Code becomes tightly coupled.
 - Testing becomes difficult.
 
 With DI:
+
 - Code becomes loosely coupled.
 - Services are reusable.
 - Easy to mock services during testing.
@@ -69,10 +71,10 @@ This structure improves modularity and scalability.
 ### Step 1: Create Service
 
 ```ts
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class UserService {
   getUsers() {
@@ -86,12 +88,12 @@ export class UserService {
 ### Step 2: Inject Service into Component
 
 ```ts
-import { Component } from '@angular/core';
-import { UserService } from './user.service';
+import { Component } from "@angular/core";
+import { UserService } from "./user.service";
 
 @Component({
-  selector: 'app-root',
-  template: `<h2>{{ users }}</h2>`
+  selector: "app-root",
+  template: `<h2>{{ users }}</h2>`,
 })
 export class AppComponent {
   users: string[];
@@ -173,4 +175,4 @@ When this question is asked, interviewer checks:
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

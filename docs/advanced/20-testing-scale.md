@@ -25,7 +25,7 @@ Without strong testing:
 ❌ Regression bugs  
 ❌ Fear of refactoring  
 ❌ Production instability  
-❌ Slower development  
+❌ Slower development
 
 ---
 
@@ -35,7 +35,7 @@ Without strong testing:
 2️⃣ Component Testing  
 3️⃣ Integration Testing  
 4️⃣ End-to-End (E2E) Testing  
-5️⃣ Performance Testing  
+5️⃣ Performance Testing
 
 ---
 
@@ -57,8 +57,8 @@ Tools:
 Example:
 
 ```ts
-describe('MathService', () => {
-  it('should add numbers correctly', () => {
+describe("MathService", () => {
+  it("should add numbers correctly", () => {
     const service = new MathService();
     expect(service.add(2, 3)).toBe(5);
   });
@@ -74,7 +74,7 @@ Use Angular TestBed:
 ```ts
 beforeEach(async () => {
   await TestBed.configureTestingModule({
-    declarations: [MyComponent]
+    declarations: [MyComponent],
   }).compileComponents();
 });
 ```
@@ -99,13 +99,13 @@ Tests interaction between:
 Mock dependencies:
 
 ```ts
-HttpTestingController
+HttpTestingController;
 ```
 
 Example:
 
 ```ts
-const req = httpMock.expectOne('/api/users');
+const req = httpMock.expectOne("/api/users");
 req.flush(mockUsers);
 ```
 
@@ -124,9 +124,9 @@ Tools:
 Example (Cypress):
 
 ```js
-cy.visit('/login');
-cy.get('input[name=email]').type('test@test.com');
-cy.get('button[type=submit]').click();
+cy.visit("/login");
+cy.get("input[name=email]").type("test@test.com");
+cy.get("button[type=submit]").click();
 ```
 
 ---
@@ -161,7 +161,7 @@ Pipeline should:
 2️⃣ Run unit tests  
 3️⃣ Generate coverage report  
 4️⃣ Run E2E tests  
-5️⃣ Fail build if tests fail  
+5️⃣ Fail build if tests fail
 
 Command:
 
@@ -213,7 +213,7 @@ Signals simplify reactive testing compared to complex RxJS chains.
 ❌ Testing implementation details  
 ❌ Not mocking HTTP calls  
 ❌ Ignoring edge cases  
-❌ Skipping CI enforcement  
+❌ Skipping CI enforcement
 
 ---
 
@@ -235,4 +235,4 @@ Signals simplify reactive testing compared to complex RxJS chains.
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

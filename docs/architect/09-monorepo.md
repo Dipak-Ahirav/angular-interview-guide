@@ -14,17 +14,17 @@ Monorepo architecture in Angular means managing multiple applications and shared
 
 In enterprise apps:
 
-- Multiple products/apps  
-- Shared UI components  
-- Shared business logic  
-- Multiple teams  
+- Multiple products/apps
+- Shared UI components
+- Shared business logic
+- Multiple teams
 
 Without monorepo:
 
 ❌ Duplicate code  
 ❌ Inconsistent standards  
 ❌ Dependency drift  
-❌ Hard collaboration  
+❌ Hard collaboration
 
 ---
 
@@ -58,10 +58,12 @@ libs/
 
 # 🔥 Key Building Blocks
 
-✅ Apps  
+✅ Apps
+
 - Deployable projects
 
-✅ Libraries  
+✅ Libraries
+
 - Shared code (UI, utils, data-access)
 
 ---
@@ -72,7 +74,7 @@ libs/
 ✔ Unified linting & testing  
 ✔ Consistent architecture  
 ✔ Easier refactoring  
-✔ Central dependency versioning  
+✔ Central dependency versioning
 
 ---
 
@@ -80,11 +82,11 @@ libs/
 
 Nx adds:
 
-- Affected builds/tests  
-- Dependency graph  
-- Module boundaries  
-- Caching  
-- Generators  
+- Affected builds/tests
+- Dependency graph
+- Module boundaries
+- Caching
+- Generators
 
 Example:
 
@@ -105,7 +107,7 @@ nx affected:test
 nx affected:lint
 ```
 
-✔ Faster CI/CD  
+✔ Faster CI/CD
 
 ---
 
@@ -114,17 +116,17 @@ nx affected:lint
 1️⃣ UI Libraries  
 2️⃣ Feature Libraries  
 3️⃣ Data-access Libraries  
-4️⃣ Utility Libraries  
+4️⃣ Utility Libraries
 
 ---
 
 # 🔥 Dependency Flow (Best Practice)
 
 ✔ feature → data-access → util  
-✔ feature → ui  
+✔ feature → ui
 
 ❌ ui → feature  
-❌ data-access → feature  
+❌ data-access → feature
 
 ---
 
@@ -132,9 +134,9 @@ nx affected:lint
 
 Each team owns:
 
-- A domain feature library  
-- Its data-access layer  
-- Related UI components  
+- A domain feature library
+- Its data-access layer
+- Related UI components
 
 No cross-team dependency chaos.
 
@@ -144,12 +146,12 @@ No cross-team dependency chaos.
 
 Options:
 
-- Single version (all apps version together)  
-- Independent versioning per app  
+- Single version (all apps version together)
+- Independent versioning per app
 
 Most enterprises prefer:
 
-✔ Single repo version + release tags  
+✔ Single repo version + release tags
 
 ---
 
@@ -159,17 +161,17 @@ Most enterprises prefer:
 ❌ No module boundaries  
 ❌ Too many cross-imports  
 ❌ Not using affected builds  
-❌ Treating monorepo like normal repo  
+❌ Treating monorepo like normal repo
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- What is monorepo?  
-- Why Nx is useful?  
-- How to structure libs?  
-- How to scale teams?  
-- CI optimization with affected builds?  
+- What is monorepo?
+- Why Nx is useful?
+- How to structure libs?
+- How to scale teams?
+- CI optimization with affected builds?
 
 ---
 
@@ -181,4 +183,4 @@ Most enterprises prefer:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

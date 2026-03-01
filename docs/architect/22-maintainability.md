@@ -14,16 +14,16 @@ Maintainability architecture ensures an Angular application is easy to understan
 
 In enterprise systems:
 
-- Long-lived applications  
-- Multiple developers/teams  
-- Frequent feature changes  
+- Long-lived applications
+- Multiple developers/teams
+- Frequent feature changes
 
 Without maintainability:
 
 ❌ Hard to understand code  
 ❌ Slow feature development  
 ❌ High bug rate  
-❌ Difficult onboarding  
+❌ Difficult onboarding
 
 ---
 
@@ -33,7 +33,7 @@ Without maintainability:
 2️⃣ Separation of concerns  
 3️⃣ Consistency  
 4️⃣ Reusability  
-5️⃣ Testability  
+5️⃣ Testability
 
 ---
 
@@ -48,36 +48,36 @@ features/
 ```
 
 ✔ Clear separation  
-✔ Easy navigation  
+✔ Easy navigation
 
 ---
 
 # 🔥 2️⃣ Modular Architecture
 
-- Feature-based modules  
-- Lazy loading  
+- Feature-based modules
+- Lazy loading
 
 ✔ Isolate changes  
-✔ Improve scalability  
+✔ Improve scalability
 
 ---
 
 # 🟡 3️⃣ Coding Standards
 
-- Consistent naming  
-- Lint rules (ESLint)  
-- Formatting (Prettier)  
+- Consistent naming
+- Lint rules (ESLint)
+- Formatting (Prettier)
 
-✔ Improves readability  
+✔ Improves readability
 
 ---
 
 # 🟢 4️⃣ Smart vs Dumb Components
 
 ✔ Smart → logic  
-✔ Dumb → UI  
+✔ Dumb → UI
 
-✔ Reduces complexity  
+✔ Reduces complexity
 
 ---
 
@@ -85,19 +85,19 @@ features/
 
 Move logic to services:
 
-❌ Avoid logic in components  
+❌ Avoid logic in components
 
 ✔ Improves reusability  
-✔ Easier testing  
+✔ Easier testing
 
 ---
 
 # 🧠 6️⃣ State Management Discipline
 
-- Keep state predictable  
-- Avoid unnecessary global state  
+- Keep state predictable
+- Avoid unnecessary global state
 
-✔ Better debugging  
+✔ Better debugging
 
 ---
 
@@ -105,48 +105,48 @@ Move logic to services:
 
 Include:
 
-- README  
-- Architecture diagrams  
-- API contracts  
+- README
+- Architecture diagrams
+- API contracts
 
-✔ Helps new developers  
+✔ Helps new developers
 
 ---
 
 # 🟡 8️⃣ Testing Strategy
 
-- Unit tests  
-- Integration tests  
+- Unit tests
+- Integration tests
 
-✔ Safe refactoring  
+✔ Safe refactoring
 
 ---
 
 # 🟢 9️⃣ Reusable Components & Libraries
 
-- Shared UI library  
-- Utility functions  
+- Shared UI library
+- Utility functions
 
-✔ Avoid duplication  
+✔ Avoid duplication
 
 ---
 
 # 🚀 10️⃣ Dependency Management
 
-- Avoid tight coupling  
-- Use DI properly  
+- Avoid tight coupling
+- Use DI properly
 
-✔ Flexible system  
+✔ Flexible system
 
 ---
 
 # 🧠 11️⃣ Refactoring Culture
 
-- Continuous improvement  
-- Remove dead code  
-- Simplify logic  
+- Continuous improvement
+- Remove dead code
+- Simplify logic
 
-✔ Keeps codebase healthy  
+✔ Keeps codebase healthy
 
 ---
 
@@ -156,16 +156,16 @@ Include:
 ❌ Business logic in components  
 ❌ No documentation  
 ❌ No tests  
-❌ Inconsistent coding  
+❌ Inconsistent coding
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How do you maintain large apps?  
-- Code structure decisions  
-- Refactoring practices  
-- Team collaboration  
+- How do you maintain large apps?
+- Code structure decisions
+- Refactoring practices
+- Team collaboration
 
 ---
 
@@ -177,4 +177,4 @@ Include:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

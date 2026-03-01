@@ -47,10 +47,11 @@ Operators are used inside `.pipe()`.
 Example:
 
 ```ts
-this.http.get('/api/users')
+this.http
+  .get("/api/users")
   .pipe(
-    map(users => users.length),
-    catchError(err => throwError(() => err))
+    map((users) => users.length),
+    catchError((err) => throwError(() => err)),
   )
   .subscribe();
 ```
@@ -63,7 +64,7 @@ this.http.get('/api/users')
 2️⃣ Filtering Operators  
 3️⃣ Combination Operators  
 4️⃣ Higher-Order Mapping Operators  
-5️⃣ Utility Operators  
+5️⃣ Utility Operators
 
 ---
 
@@ -122,10 +123,9 @@ Prevents duplicate consecutive emissions.
 Waits for all observables to complete.
 
 ```ts
-forkJoin([
-  this.api.getUsers(),
-  this.api.getProducts()
-]).subscribe(([users, products]) => {});
+forkJoin([this.api.getUsers(), this.api.getProducts()]).subscribe(
+  ([users, products]) => {},
+);
 ```
 
 ---
@@ -148,7 +148,7 @@ These operators map to another observable.
 
 ---
 
-## 🔹 switchMap()  (Most Asked in Interviews)
+## 🔹 switchMap() (Most Asked in Interviews)
 
 Cancels previous inner observable when new value comes.
 
@@ -161,6 +161,7 @@ Used in search APIs.
 ```
 
 Best for:
+
 - Search functionality
 - Autocomplete
 
@@ -235,7 +236,7 @@ this.searchControl.valueChanges
   .pipe(
     debounceTime(300),
     distinctUntilChanged(),
-    switchMap(term => this.api.search(term))
+    switchMap((term) => this.api.search(term)),
   )
   .subscribe();
 ```
@@ -250,18 +251,17 @@ Because it cancels previous API call if user types again.
 ❌ Bad:
 
 ```ts
-this.api.getUsers().subscribe(users => {
-  this.api.getOrders().subscribe(orders => {});
+this.api.getUsers().subscribe((users) => {
+  this.api.getOrders().subscribe((orders) => {});
 });
 ```
 
 ✅ Good:
 
 ```ts
-this.api.getUsers()
-  .pipe(
-    switchMap(users => this.api.getOrders())
-  )
+this.api
+  .getUsers()
+  .pipe(switchMap((users) => this.api.getOrders()))
   .subscribe();
 ```
 
@@ -305,4 +305,4 @@ this.api.getUsers()
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

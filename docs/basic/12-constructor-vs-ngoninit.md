@@ -44,6 +44,7 @@ constructor(private userService: UserService) {}
 ```
 
 Important:
+
 - Angular calls constructor when creating the class instance.
 - Input properties are NOT available yet.
 - Avoid heavy logic or API calls here.
@@ -78,13 +79,13 @@ ngOnInit() {
 
 # 🟡 Technical Comparison
 
-| Constructor | ngOnInit |
-|-------------|-----------|
-| TypeScript feature | Angular lifecycle hook |
-| Runs first | Runs after constructor |
-| Used for DI | Used for initialization logic |
-| Inputs not available | Inputs available |
-| Avoid heavy logic | Safe for API calls |
+| Constructor          | ngOnInit                      |
+| -------------------- | ----------------------------- |
+| TypeScript feature   | Angular lifecycle hook        |
+| Runs first           | Runs after constructor        |
+| Used for DI          | Used for initialization logic |
+| Inputs not available | Inputs available              |
+| Avoid heavy logic    | Safe for API calls            |
 
 ---
 
@@ -92,7 +93,6 @@ ngOnInit() {
 
 ```ts
 export class UserComponent implements OnInit {
-
   @Input() userId!: number;
 
   constructor(private userService: UserService) {
@@ -126,6 +126,7 @@ constructor(private service: ApiService) {
 ```
 
 Why?
+
 - Component not fully initialized
 - Inputs not ready
 - Harder to test
@@ -182,4 +183,4 @@ Even with standalone components (Angular 15+), constructor usage remains same fo
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

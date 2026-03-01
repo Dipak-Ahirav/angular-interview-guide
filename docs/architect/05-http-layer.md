@@ -14,18 +14,18 @@ HTTP layer architecture in Angular defines how the application communicates with
 
 In enterprise apps:
 
-- Multiple APIs  
-- Authentication & authorization  
-- Error handling  
-- Logging & monitoring  
-- Performance requirements  
+- Multiple APIs
+- Authentication & authorization
+- Error handling
+- Logging & monitoring
+- Performance requirements
 
 Without proper HTTP architecture:
 
 ❌ Duplicate API calls  
 ❌ Poor error handling  
 ❌ Tight coupling  
-❌ Hard-to-maintain code  
+❌ Hard-to-maintain code
 
 ---
 
@@ -35,7 +35,7 @@ Without proper HTTP architecture:
 2️⃣ Separation of concerns  
 3️⃣ Reusability  
 4️⃣ Error handling strategy  
-5️⃣ Security & token management  
+5️⃣ Security & token management
 
 ---
 
@@ -61,18 +61,18 @@ src/app/
 Create dedicated services:
 
 ```ts
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class ProductApiService {
   constructor(private http: HttpClient) {}
 
   getProducts() {
-    return this.http.get('/api/products');
+    return this.http.get("/api/products");
   }
 }
 ```
 
 ✔ Encapsulates HTTP logic  
-✔ Reusable across app  
+✔ Reusable across app
 
 ---
 
@@ -80,10 +80,10 @@ export class ProductApiService {
 
 Used for:
 
-- Adding auth token  
-- Logging  
-- Error handling  
-- Request/response modification  
+- Adding auth token
+- Logging
+- Error handling
+- Request/response modification
 
 Example:
 
@@ -91,10 +91,10 @@ Example:
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
 
     const cloned = req.clone({
-      setHeaders: { Authorization: `Bearer ${token}` }
+      setHeaders: { Authorization: `Bearer ${token}` },
     });
 
     return next.handle(cloned);
@@ -114,11 +114,11 @@ catchError((error) => {
     // redirect to login
   }
   return throwError(() => error);
-})
+});
 ```
 
 ✔ Consistent error handling  
-✔ Cleaner services  
+✔ Cleaner services
 
 ---
 
@@ -127,13 +127,10 @@ catchError((error) => {
 Use RxJS operators:
 
 ```ts
-this.http.get('/api/data').pipe(
-  retry(2),
-  timeout(5000)
-);
+this.http.get("/api/data").pipe(retry(2), timeout(5000));
 ```
 
-✔ Improves resilience  
+✔ Improves resilience
 
 ---
 
@@ -141,19 +138,17 @@ this.http.get('/api/data').pipe(
 
 Options:
 
-- shareReplay  
-- In-memory cache  
-- HTTP cache headers  
+- shareReplay
+- In-memory cache
+- HTTP cache headers
 
 Example:
 
 ```ts
-this.http.get('/api/products').pipe(
-  shareReplay(1)
-);
+this.http.get("/api/products").pipe(shareReplay(1));
 ```
 
-✔ Avoid duplicate calls  
+✔ Avoid duplicate calls
 
 ---
 
@@ -161,28 +156,28 @@ this.http.get('/api/products').pipe(
 
 Separate API and business logic:
 
-- ApiService → HTTP calls  
-- FacadeService → business logic  
+- ApiService → HTTP calls
+- FacadeService → business logic
 
 ✔ Cleaner architecture  
-✔ Better testability  
+✔ Better testability
 
 ---
 
 # 🟡 7️⃣ Security Considerations
 
-- Use HttpOnly cookies (preferred)  
-- Avoid storing tokens in localStorage  
-- Use interceptors for auth  
-- Enable HTTPS  
+- Use HttpOnly cookies (preferred)
+- Avoid storing tokens in localStorage
+- Use interceptors for auth
+- Enable HTTPS
 
 ---
 
 # 🟢 8️⃣ Request Optimization
 
-- Debounce API calls  
-- Cancel previous requests (switchMap)  
-- Batch requests where possible  
+- Debounce API calls
+- Cancel previous requests (switchMap)
+- Batch requests where possible
 
 ---
 
@@ -192,17 +187,17 @@ Separate API and business logic:
 ❌ No interceptors  
 ❌ Duplicate API calls  
 ❌ No error handling  
-❌ Storing tokens insecurely  
+❌ Storing tokens insecurely
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How do you structure API calls?  
-- What are interceptors?  
-- How do you handle errors globally?  
-- How do you avoid duplicate API calls?  
-- Security best practices?  
+- How do you structure API calls?
+- What are interceptors?
+- How do you handle errors globally?
+- How do you avoid duplicate API calls?
+- Security best practices?
 
 ---
 
@@ -214,4 +209,4 @@ Separate API and business logic:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

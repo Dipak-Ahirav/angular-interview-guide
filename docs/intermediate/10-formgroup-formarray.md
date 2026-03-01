@@ -16,10 +16,10 @@ FormGroup represents a group of form controls with a fixed structure, while Form
 Think of a form like a company structure 🏢
 
 FormGroup → A department with fixed employees  
-FormArray → A team where members can increase or decrease dynamically  
+FormArray → A team where members can increase or decrease dynamically
 
 👉 FormGroup = Fixed structure  
-👉 FormArray = Dynamic structure  
+👉 FormArray = Dynamic structure
 
 ---
 
@@ -30,6 +30,7 @@ FormGroup is used when the structure of the form is known and fixed.
 Example:
 
 Login Form:
+
 - username
 - password
 
@@ -56,8 +57,8 @@ loginForm = this.fb.group({
 
 ```html
 <form [formGroup]="loginForm">
-  <input formControlName="username">
-  <input type="password" formControlName="password">
+  <input formControlName="username" />
+  <input type="password" formControlName="password" />
 </form>
 ```
 
@@ -66,8 +67,8 @@ loginForm = this.fb.group({
 # 🔥 Accessing FormGroup Values
 
 ```ts
-this.loginForm.value
-this.loginForm.get('username')?.value
+this.loginForm.value;
+this.loginForm.get("username")?.value;
 ```
 
 ---
@@ -77,9 +78,9 @@ this.loginForm.get('username')?.value
 ```ts
 this.fb.group({
   personalInfo: this.fb.group({
-    firstName: [''],
-    lastName: ['']
-  })
+    firstName: [""],
+    lastName: [""],
+  }),
 });
 ```
 
@@ -92,6 +93,7 @@ Used for complex structured forms.
 FormArray is used when form controls are dynamic.
 
 Example:
+
 - Multiple skills
 - Multiple addresses
 - Multiple phone numbers
@@ -125,7 +127,7 @@ addSkill() {
 ```html
 <div formArrayName="skills">
   <div *ngFor="let skill of skills.controls; let i = index">
-    <input [formControlName]="i">
+    <input [formControlName]="i" />
   </div>
 </div>
 
@@ -146,21 +148,19 @@ removeSkill(index: number) {
 
 # 🧠 FormGroup vs FormArray Comparison
 
-| Feature | FormGroup | FormArray |
-|----------|-----------|-----------|
-| Structure | Fixed | Dynamic |
-| Key-based access | Yes | Index-based access |
-| Use case | Login, Registration | Skills, Addresses |
-| Scalability | Moderate | High |
+| Feature          | FormGroup           | FormArray          |
+| ---------------- | ------------------- | ------------------ |
+| Structure        | Fixed               | Dynamic            |
+| Key-based access | Yes                 | Index-based access |
+| Use case         | Login, Registration | Skills, Addresses  |
+| Scalability      | Moderate            | High               |
 
 ---
 
 # 🔥 Validation in FormArray
 
 ```ts
-this.fb.array([
-  this.fb.control('', Validators.required)
-]);
+this.fb.array([this.fb.control("", Validators.required)]);
 ```
 
 Each control can have its own validators.
@@ -178,10 +178,10 @@ Employee Registration:
 ```ts
 projects: this.fb.array([
   this.fb.group({
-    projectName: [''],
-    duration: ['']
-  })
-])
+    projectName: [""],
+    duration: [""],
+  }),
+]);
 ```
 
 ---
@@ -224,4 +224,4 @@ projects: this.fb.array([
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

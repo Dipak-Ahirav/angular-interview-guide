@@ -9,7 +9,7 @@
 Angular provides two approaches to handling forms:
 
 1️⃣ Template-Driven Forms  
-2️⃣ Reactive Forms  
+2️⃣ Reactive Forms
 
 Template-driven forms are simpler and rely on directives in the template.  
 Reactive forms are more powerful, scalable, and suitable for complex enterprise applications.
@@ -23,7 +23,7 @@ Imagine you are building a Login Form.
 Angular gives you two ways:
 
 Template-Driven → Simple, form logic mostly in HTML  
-Reactive → Form logic fully controlled in TypeScript  
+Reactive → Form logic fully controlled in TypeScript
 
 👉 Small app → Template-driven  
 👉 Large enterprise app → Reactive forms
@@ -45,7 +45,7 @@ Reactive → Form logic fully controlled in TypeScript
 ## 🔹 Setup
 
 ```ts
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from "@angular/forms";
 ```
 
 ---
@@ -56,8 +56,8 @@ import { FormsModule } from '@angular/forms';
 
 ```html
 <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-  <input type="text" name="username" ngModel required>
-  <input type="password" name="password" ngModel required>
+  <input type="text" name="username" ngModel required />
+  <input type="password" name="password" ngModel required />
   <button type="submit">Login</button>
 </form>
 ```
@@ -88,7 +88,7 @@ onSubmit(form: any) {
 ## 🔹 Setup
 
 ```ts
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from "@angular/forms";
 ```
 
 ---
@@ -112,8 +112,8 @@ loginForm = this.fb.group({
 
 ```html
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <input formControlName="username">
-  <input type="password" formControlName="password">
+  <input formControlName="username" />
+  <input type="password" formControlName="password" />
   <button type="submit">Login</button>
 </form>
 ```
@@ -122,14 +122,14 @@ loginForm = this.fb.group({
 
 # 🔥 Template vs Reactive Comparison
 
-| Feature | Template-Driven | Reactive |
-|----------|----------------|----------|
-| Setup location | HTML | TypeScript |
-| Validation | Template-based | Code-based |
-| Scalability | Limited | High |
-| Testing | Harder | Easier |
-| Dynamic forms | Difficult | Easy |
-| Enterprise use | Rare | Common |
+| Feature        | Template-Driven | Reactive   |
+| -------------- | --------------- | ---------- |
+| Setup location | HTML            | TypeScript |
+| Validation     | Template-based  | Code-based |
+| Scalability    | Limited         | High       |
+| Testing        | Harder          | Easier     |
+| Dynamic forms  | Difficult       | Easy       |
+| Enterprise use | Rare            | Common     |
 
 ---
 
@@ -138,11 +138,11 @@ loginForm = this.fb.group({
 ## Built-in Validators
 
 ```ts
-Validators.required  
-Validators.minLength(5)  
-Validators.maxLength(10)  
-Validators.email  
-Validators.pattern()
+Validators.required;
+Validators.minLength(5);
+Validators.maxLength(10);
+Validators.email;
+Validators.pattern();
 ```
 
 ---
@@ -151,7 +151,7 @@ Validators.pattern()
 
 ```ts
 function customValidator(control: AbstractControl) {
-  if (control.value === 'admin') {
+  if (control.value === "admin") {
     return { notAllowed: true };
   }
   return null;
@@ -163,7 +163,7 @@ function customValidator(control: AbstractControl) {
 # 🔥 Async Validator Example
 
 ```ts
-username: ['', null, this.userService.checkUsernameExists]
+username: ["", null, this.userService.checkUsernameExists];
 ```
 
 Used for server-side validation.
@@ -174,7 +174,7 @@ Used for server-side validation.
 
 ```ts
 this.fb.group({
-  skills: this.fb.array([])
+  skills: this.fb.array([]),
 });
 ```
 
@@ -197,7 +197,7 @@ Each control has:
 Example:
 
 ```ts
-this.loginForm.valid
+this.loginForm.valid;
 ```
 
 ---
@@ -250,4 +250,4 @@ Because they provide better scalability, dynamic form support, strong validation
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

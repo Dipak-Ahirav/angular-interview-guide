@@ -14,17 +14,17 @@ An Angular upgrade strategy defines how applications are safely migrated across 
 
 In enterprise apps:
 
-- Long-lived applications  
-- Multiple dependencies  
-- Breaking changes across versions  
-- Security patches  
+- Long-lived applications
+- Multiple dependencies
+- Breaking changes across versions
+- Security patches
 
 Without a proper strategy:
 
 ❌ Build failures  
 ❌ Production bugs  
 ❌ Incompatible dependencies  
-❌ High downtime  
+❌ High downtime
 
 ---
 
@@ -34,7 +34,7 @@ Without a proper strategy:
 2️⃣ Backward compatibility  
 3️⃣ Strong test coverage  
 4️⃣ Automated validation  
-5️⃣ Risk mitigation  
+5️⃣ Risk mitigation
 
 ---
 
@@ -44,10 +44,10 @@ Without a proper strategy:
 
 Upgrade version step-by-step:
 
-Angular 13 → 14 → 15 → 16 → 17  
+Angular 13 → 14 → 15 → 16 → 17
 
 ✔ Safer  
-✔ Easier debugging  
+✔ Easier debugging
 
 ---
 
@@ -56,18 +56,18 @@ Angular 13 → 14 → 15 → 16 → 17
 Jump multiple versions at once:
 
 ❌ High risk  
-❌ Hard to debug  
+❌ Hard to debug
 
-✔ Only for small apps  
+✔ Only for small apps
 
 ---
 
 # 🔥 1️⃣ Pre-Upgrade Checklist
 
-- Ensure app is stable  
-- Increase test coverage  
-- Update dependencies  
-- Check Angular update guide  
+- Ensure app is stable
+- Increase test coverage
+- Update dependencies
+- Check Angular update guide
 
 Command:
 
@@ -81,9 +81,9 @@ ng update @angular/core @angular/cli
 
 Check:
 
-- RxJS compatibility  
-- TypeScript version  
-- Third-party libraries  
+- RxJS compatibility
+- TypeScript version
+- Third-party libraries
 
 Use:
 
@@ -92,7 +92,7 @@ npm outdated
 npm audit
 ```
 
-✔ Fix incompatible packages  
+✔ Fix incompatible packages
 
 ---
 
@@ -100,14 +100,14 @@ npm audit
 
 Handle:
 
-- Deprecated APIs  
-- Removed features  
-- Breaking changes  
+- Deprecated APIs
+- Removed features
+- Breaking changes
 
 Example:
 
-- Renderer → Renderer2  
-- Old RxJS syntax → pipeable operators  
+- Renderer → Renderer2
+- Old RxJS syntax → pipeable operators
 
 ---
 
@@ -115,11 +115,11 @@ Example:
 
 Run:
 
-- Unit tests  
-- Integration tests  
-- E2E tests  
+- Unit tests
+- Integration tests
+- E2E tests
 
-✔ Detect issues early  
+✔ Detect issues early
 
 ---
 
@@ -130,9 +130,9 @@ Pipeline should:
 1️⃣ Build application  
 2️⃣ Run tests  
 3️⃣ Check lint  
-4️⃣ Validate bundle size  
+4️⃣ Validate bundle size
 
-✔ Prevent broken deployments  
+✔ Prevent broken deployments
 
 ---
 
@@ -141,7 +141,7 @@ Pipeline should:
 Use feature toggles:
 
 ✔ Gradual rollout  
-✔ Safe deployment  
+✔ Safe deployment
 
 ---
 
@@ -154,15 +154,15 @@ nx migrate latest
 nx migrate --run-migrations
 ```
 
-✔ Controlled upgrades  
+✔ Controlled upgrades
 
 ---
 
 # 🟢 8️⃣ Handling Breaking Changes
 
-- Read Angular changelog  
-- Use official migration schematics  
-- Refactor step-by-step  
+- Read Angular changelog
+- Use official migration schematics
+- Refactor step-by-step
 
 ---
 
@@ -172,17 +172,17 @@ nx migrate --run-migrations
 ❌ Ignoring test failures  
 ❌ Not checking third-party libs  
 ❌ Upgrading in production directly  
-❌ No rollback plan  
+❌ No rollback plan
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How do you upgrade Angular apps?  
-- Incremental vs big bang?  
-- How to handle breaking changes?  
-- CI/CD role in upgrades?  
-- Dependency management?  
+- How do you upgrade Angular apps?
+- Incremental vs big bang?
+- How to handle breaking changes?
+- CI/CD role in upgrades?
+- Dependency management?
 
 ---
 
@@ -194,4 +194,4 @@ nx migrate --run-migrations
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

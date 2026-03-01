@@ -27,12 +27,14 @@ Angular provides **HttpClient** for calling APIs easily.
 # 🔹 Why Do We Need HttpClient?
 
 Without HttpClient:
+
 - You would use fetch manually.
 - No built-in interceptors.
 - No automatic JSON handling.
 - Harder to manage common headers/auth.
 
 With HttpClient:
+
 - Cleaner API calls
 - Automatic JSON conversion
 - RxJS Observable support
@@ -53,6 +55,7 @@ It is built on top of RxJS and uses Observables, enabling:
 - Stream-based response processing
 
 It supports:
+
 - Request/response interceptors
 - Progress events
 - Typed responses
@@ -65,10 +68,10 @@ It supports:
 First import `HttpClientModule` in AppModule:
 
 ```ts
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-  imports: [HttpClientModule]
+  imports: [HttpClientModule],
 })
 export class AppModule {}
 ```
@@ -92,7 +95,7 @@ getUsers() {
 Usage:
 
 ```ts
-this.getUsers().subscribe(res => console.log(res));
+this.getUsers().subscribe((res) => console.log(res));
 ```
 
 ---
@@ -114,6 +117,7 @@ login(payload: any) {
 HttpClient methods return Observables, not Promises.
 
 Advantages:
+
 - Supports RxJS operators like map, catchError, retry.
 - Can cancel requests.
 - Better for streams and async handling.
@@ -140,6 +144,7 @@ getUsers() {
 ```
 
 This improves:
+
 - Type safety
 - IntelliSense
 - Maintainability
@@ -169,6 +174,7 @@ getUsers() {
 Interceptors help you add headers like JWT token for every request.
 
 Example use case:
+
 - Add authorization header
 - Log requests
 - Handle errors globally
@@ -180,7 +186,7 @@ Example use case:
 ```ts
 const headers = { Authorization: `Bearer ${token}` };
 
-return this.http.get('/api/profile', { headers });
+return this.http.get("/api/profile", { headers });
 ```
 
 But in real apps, we use interceptors instead of adding headers manually.
@@ -215,4 +221,4 @@ But in real apps, we use interceptors instead of adding headers manually.
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

@@ -14,16 +14,16 @@ Architecture red flags are warning signs that indicate poor design decisions in 
 
 In enterprise applications:
 
-- Codebase grows rapidly  
-- Multiple teams contribute  
-- Long-term maintainability is critical  
+- Codebase grows rapidly
+- Multiple teams contribute
+- Long-term maintainability is critical
 
 Ignoring red flags leads to:
 
 ❌ Technical debt  
 ❌ Slow development  
 ❌ Frequent bugs  
-❌ Difficult onboarding  
+❌ Difficult onboarding
 
 ---
 
@@ -33,7 +33,7 @@ Ignoring red flags leads to:
 2️⃣ Performance Problems  
 3️⃣ State Management Issues  
 4️⃣ Dependency Problems  
-5️⃣ Team & Process Issues  
+5️⃣ Team & Process Issues
 
 ---
 
@@ -41,14 +41,14 @@ Ignoring red flags leads to:
 
 Symptoms:
 
-- 1000+ lines component  
-- Handles UI + business logic + API calls  
-- Hard to test  
+- 1000+ lines component
+- Handles UI + business logic + API calls
+- Hard to test
 
 Fix:
 
 ✔ Split into smart + dumb components  
-✔ Move logic to services  
+✔ Move logic to services
 
 ---
 
@@ -56,15 +56,15 @@ Fix:
 
 Problem:
 
-- Components become hard to maintain  
+- Components become hard to maintain
 
 Bad:
 
-❌ API calls + data transformation inside component  
+❌ API calls + data transformation inside component
 
 Fix:
 
-✔ Use services / facades  
+✔ Use services / facades
 
 ---
 
@@ -72,13 +72,13 @@ Fix:
 
 Symptoms:
 
-- Everything inside AppModule  
-- No feature modules  
+- Everything inside AppModule
+- No feature modules
 
 Fix:
 
 ✔ Feature-based architecture  
-✔ Lazy loading  
+✔ Lazy loading
 
 ---
 
@@ -86,16 +86,16 @@ Fix:
 
 Problem:
 
-- Modules depend on each other heavily  
+- Modules depend on each other heavily
 
 Impact:
 
 ❌ Hard to scale  
-❌ Circular dependencies  
+❌ Circular dependencies
 
 Fix:
 
-✔ Use clear boundaries (Nx tags)  
+✔ Use clear boundaries (Nx tags)
 
 ---
 
@@ -103,16 +103,16 @@ Fix:
 
 Symptoms:
 
-- Everything in NgRx store  
+- Everything in NgRx store
 
 Impact:
 
 ❌ Complexity  
-❌ Hard debugging  
+❌ Hard debugging
 
 Fix:
 
-✔ Use local state where possible  
+✔ Use local state where possible
 
 ---
 
@@ -120,12 +120,12 @@ Fix:
 
 Symptoms:
 
-- Same API called multiple times  
+- Same API called multiple times
 
 Fix:
 
 ✔ Use caching (shareReplay)  
-✔ Centralized data layer  
+✔ Centralized data layer
 
 ---
 
@@ -133,12 +133,12 @@ Fix:
 
 Problem:
 
-- Errors handled randomly  
+- Errors handled randomly
 
 Fix:
 
 ✔ Use global interceptor  
-✔ Standard error handling  
+✔ Standard error handling
 
 ---
 
@@ -146,12 +146,12 @@ Fix:
 
 Symptoms:
 
-- Random file placement  
-- No naming conventions  
+- Random file placement
+- No naming conventions
 
 Fix:
 
-✔ Core / Shared / Feature structure  
+✔ Core / Shared / Feature structure
 
 ---
 
@@ -160,11 +160,11 @@ Fix:
 Impact:
 
 ❌ Large bundle size  
-❌ Slow initial load  
+❌ Slow initial load
 
 Fix:
 
-✔ Implement lazy-loaded modules  
+✔ Implement lazy-loaded modules
 
 ---
 
@@ -172,11 +172,11 @@ Fix:
 
 Symptoms:
 
-- Unsubscribed observables  
+- Unsubscribed observables
 
 Fix:
 
-✔ Use takeUntil / async pipe  
+✔ Use takeUntil / async pipe
 
 ---
 
@@ -184,15 +184,15 @@ Fix:
 
 Problem:
 
-- No unit/integration tests  
+- No unit/integration tests
 
 Impact:
 
-❌ Fear of refactoring  
+❌ Fear of refactoring
 
 Fix:
 
-✔ Implement testing pyramid  
+✔ Implement testing pyramid
 
 ---
 
@@ -200,13 +200,13 @@ Fix:
 
 Symptoms:
 
-- Default change detection everywhere  
-- Large DOM rendering  
+- Default change detection everywhere
+- Large DOM rendering
 
 Fix:
 
 ✔ Use OnPush  
-✔ Optimize rendering  
+✔ Optimize rendering
 
 ---
 
@@ -214,13 +214,13 @@ Fix:
 
 Symptoms:
 
-- Tokens in localStorage  
-- No validation  
+- Tokens in localStorage
+- No validation
 
 Fix:
 
 ✔ Use HttpOnly cookies  
-✔ Backend validation  
+✔ Backend validation
 
 ---
 
@@ -230,16 +230,16 @@ Fix:
 ❌ No code review process  
 ❌ No CI/CD checks  
 ❌ No documentation  
-❌ No ownership model  
+❌ No ownership model
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- Can you identify bad architecture?  
-- How do you improve existing systems?  
-- Trade-offs in decisions  
-- Real-world experience  
+- Can you identify bad architecture?
+- How do you improve existing systems?
+- Trade-offs in decisions
+- Real-world experience
 
 ---
 
@@ -251,4 +251,4 @@ Fix:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

@@ -55,7 +55,7 @@ CDK Overlay handles it cleanly and professionally.
 2️⃣ OverlayRef  
 3️⃣ Portal  
 4️⃣ Position Strategy  
-5️⃣ Scroll Strategy  
+5️⃣ Scroll Strategy
 
 ---
 
@@ -70,7 +70,7 @@ npm install @angular/cdk
 Import module:
 
 ```ts
-import { OverlayModule } from '@angular/cdk/overlay';
+import { OverlayModule } from "@angular/cdk/overlay";
 ```
 
 ---
@@ -93,13 +93,14 @@ openOverlay() {
 # 🔥 Position Strategy
 
 ```ts
-const positionStrategy = this.overlay.position()
+const positionStrategy = this.overlay
+  .position()
   .global()
   .centerHorizontally()
   .centerVertically();
 
 const overlayRef = this.overlay.create({
-  positionStrategy
+  positionStrategy,
 });
 ```
 
@@ -108,14 +109,17 @@ const overlayRef = this.overlay.create({
 # 🟢 Connected Position Strategy (Dropdown)
 
 ```ts
-this.overlay.position()
+this.overlay
+  .position()
   .flexibleConnectedTo(buttonRef)
-  .withPositions([{
-    originX: 'start',
-    originY: 'bottom',
-    overlayX: 'start',
-    overlayY: 'top'
-  }]);
+  .withPositions([
+    {
+      originX: "start",
+      originY: "bottom",
+      overlayX: "start",
+      overlayY: "top",
+    },
+  ]);
 ```
 
 ---
@@ -132,7 +136,7 @@ Options:
 Example:
 
 ```ts
-scrollStrategy: this.overlay.scrollStrategies.block()
+scrollStrategy: this.overlay.scrollStrategies.block();
 ```
 
 ---
@@ -166,12 +170,12 @@ Always dispose to avoid memory leaks.
 
 # 🚀 CDK Overlay vs Angular Material Dialog
 
-| Feature | CDK Overlay | MatDialog |
-|----------|-------------|-----------|
-| Low-level control | ✅ Yes | ❌ Limited |
-| Quick modal creation | ❌ No | ✅ Yes |
-| Custom positioning | ✅ Yes | Limited |
-| Full customization | ✅ Yes | Partial |
+| Feature              | CDK Overlay | MatDialog  |
+| -------------------- | ----------- | ---------- |
+| Low-level control    | ✅ Yes      | ❌ Limited |
+| Quick modal creation | ❌ No       | ✅ Yes     |
+| Custom positioning   | ✅ Yes      | Limited    |
+| Full customization   | ✅ Yes      | Partial    |
 
 ---
 
@@ -180,7 +184,7 @@ Always dispose to avoid memory leaks.
 ❌ Not disposing overlay  
 ❌ Hardcoding positions  
 ❌ Ignoring scroll behavior  
-❌ Not handling focus  
+❌ Not handling focus
 
 ---
 
@@ -212,4 +216,4 @@ Always dispose to avoid memory leaks.
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

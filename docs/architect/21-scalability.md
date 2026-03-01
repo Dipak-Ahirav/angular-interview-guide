@@ -14,16 +14,16 @@ Scalability architecture in Angular ensures that applications can handle increas
 
 In enterprise systems:
 
-- Growing user base  
-- Increasing features  
-- Large datasets  
-- Multiple teams  
+- Growing user base
+- Increasing features
+- Large datasets
+- Multiple teams
 
 Without scalability:
 
 ❌ Slow performance  
 ❌ Hard maintenance  
-❌ System failures under load  
+❌ System failures under load
 
 ---
 
@@ -33,31 +33,33 @@ Without scalability:
 2️⃣ Performance optimization  
 3️⃣ Efficient data flow  
 4️⃣ Load distribution  
-5️⃣ Independent scaling  
+5️⃣ Independent scaling
 
 ---
 
 # 🏗️ Types of Scalability
 
-1️⃣ Vertical Scaling  
-- Increase server resources  
+1️⃣ Vertical Scaling
 
-2️⃣ Horizontal Scaling  
-- Add more servers  
+- Increase server resources
+
+2️⃣ Horizontal Scaling
+
+- Add more servers
 
 Frontend focus:
 
 ✔ Efficient rendering  
-✔ API optimization  
+✔ API optimization
 
 ---
 
 # 🔥 1️⃣ Modular Architecture
 
-- Feature-based modules  
-- Lazy loading  
+- Feature-based modules
+- Lazy loading
 
-✔ Load only required code  
+✔ Load only required code
 
 ---
 
@@ -72,7 +74,7 @@ Example:
 }
 ```
 
-✔ Reduces initial bundle size  
+✔ Reduces initial bundle size
 
 ---
 
@@ -81,9 +83,9 @@ Example:
 Use:
 
 ✔ OnPush strategy  
-✔ Signals (modern Angular)  
+✔ Signals (modern Angular)
 
-✔ Reduce unnecessary re-renders  
+✔ Reduce unnecessary re-renders
 
 ---
 
@@ -91,61 +93,61 @@ Use:
 
 Options:
 
-- RxJS services  
-- NgRx  
-- Signals  
+- RxJS services
+- NgRx
+- Signals
 
 ✔ Avoid duplicate API calls  
-✔ Centralize state  
+✔ Centralize state
 
 ---
 
 # 🧠 5️⃣ API Optimization
 
-- Pagination  
-- Filtering  
-- Caching  
+- Pagination
+- Filtering
+- Caching
 
-✔ Reduce data load  
+✔ Reduce data load
 
 ---
 
 # 🔥 6️⃣ Caching Strategy
 
-- shareReplay  
-- HTTP caching  
-- CDN  
+- shareReplay
+- HTTP caching
+- CDN
 
-✔ Improve performance  
+✔ Improve performance
 
 ---
 
 # 🟡 7️⃣ Rendering Optimization
 
-- Virtual scrolling  
-- TrackBy in ngFor  
-- Avoid heavy DOM  
+- Virtual scrolling
+- TrackBy in ngFor
+- Avoid heavy DOM
 
-✔ Handle large data sets  
+✔ Handle large data sets
 
 ---
 
 # 🟢 8️⃣ Microfrontend Scaling
 
-- Split large apps  
-- Independent deployment  
+- Split large apps
+- Independent deployment
 
-✔ Team scalability  
+✔ Team scalability
 
 ---
 
 # 🚀 9️⃣ Build Optimization
 
-- Tree shaking  
-- Code splitting  
-- Compression  
+- Tree shaking
+- Code splitting
+- Compression
 
-✔ Smaller bundle size  
+✔ Smaller bundle size
 
 ---
 
@@ -153,11 +155,11 @@ Options:
 
 Frontend scalability depends on:
 
-- API performance  
-- Load balancing  
-- Database efficiency  
+- API performance
+- Load balancing
+- Database efficiency
 
-✔ Full system design  
+✔ Full system design
 
 ---
 
@@ -167,17 +169,17 @@ Frontend scalability depends on:
 ❌ Large bundle size  
 ❌ Too many API calls  
 ❌ Poor state management  
-❌ Ignoring performance  
+❌ Ignoring performance
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How do you scale Angular apps?  
-- Performance strategies?  
-- Lazy loading benefits?  
-- Handling large data?  
-- System-level thinking?  
+- How do you scale Angular apps?
+- Performance strategies?
+- Lazy loading benefits?
+- Handling large data?
+- System-level thinking?
 
 ---
 
@@ -189,4 +191,4 @@ Frontend scalability depends on:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

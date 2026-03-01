@@ -15,13 +15,13 @@ Preloading Strategy in Angular determines how and when lazy-loaded modules shoul
 Lazy loading improves initial load time, but:
 
 ❌ First navigation to lazy module can be slow  
-❌ Users may experience loading delay  
+❌ Users may experience loading delay
 
 Preloading solves this by:
 
 👉 Loading lazy modules in background  
 👉 Keeping initial bundle small  
-👉 Improving future navigation speed  
+👉 Improving future navigation speed
 
 ---
 
@@ -56,7 +56,7 @@ User doesn’t notice loading time later.
 Angular provides:
 
 1️⃣ NoPreloading (Default)  
-2️⃣ PreloadAllModules  
+2️⃣ PreloadAllModules
 
 ---
 
@@ -76,8 +76,8 @@ Example:
 
 ```ts
 RouterModule.forRoot(routes, {
-  preloadingStrategy: PreloadAllModules
-})
+  preloadingStrategy: PreloadAllModules,
+});
 ```
 
 ---
@@ -87,17 +87,16 @@ RouterModule.forRoot(routes, {
 You can create custom strategy by implementing:
 
 ```ts
-PreloadingStrategy
+PreloadingStrategy;
 ```
 
 Example:
 
 ```ts
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class CustomPreloadStrategy implements PreloadingStrategy {
-
   preload(route: Route, load: () => Observable<any>): Observable<any> {
-    if (route.data && route.data['preload']) {
+    if (route.data && route.data["preload"]) {
       return load();
     }
     return of(null);
@@ -113,8 +112,8 @@ In routing module:
 
 ```ts
 RouterModule.forRoot(routes, {
-  preloadingStrategy: CustomPreloadStrategy
-})
+  preloadingStrategy: CustomPreloadStrategy,
+});
 ```
 
 Route configuration:
@@ -164,12 +163,12 @@ Preload admin module only if user is admin.
 
 # 🧠 Preloading vs Lazy Loading
 
-| Feature | Lazy Loading | Preloading |
-|----------|-------------|------------|
-| Reduces initial bundle | ✅ Yes | ✅ Yes |
-| Loads module on demand | ✅ Yes | ❌ Background load |
-| Improves first visit speed | ❌ No | ✅ Yes |
-| Good for large apps | ✅ Yes | ✅ Yes |
+| Feature                    | Lazy Loading | Preloading         |
+| -------------------------- | ------------ | ------------------ |
+| Reduces initial bundle     | ✅ Yes       | ✅ Yes             |
+| Loads module on demand     | ✅ Yes       | ❌ Background load |
+| Improves first visit speed | ❌ No        | ✅ Yes             |
+| Good for large apps        | ✅ Yes       | ✅ Yes             |
 
 ---
 
@@ -190,7 +189,7 @@ Navigation feels instant
 ❌ Preloading huge modules blindly  
 ❌ Not using route data flags  
 ❌ Ignoring network conditions  
-❌ Mixing eager and lazy incorrectly  
+❌ Mixing eager and lazy incorrectly
 
 ---
 
@@ -222,4 +221,4 @@ Navigation feels instant
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

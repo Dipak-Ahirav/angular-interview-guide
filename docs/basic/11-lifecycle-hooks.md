@@ -12,17 +12,17 @@ Lifecycle hooks are special methods in Angular that are automatically called at 
 
 Think of a component like a human life cycle:
 
-1. Born 👶  
-2. Grows 🧑  
-3. Changes 🔄  
-4. Dies 💀  
+1. Born 👶
+2. Grows 🧑
+3. Changes 🔄
+4. Dies 💀
 
 Similarly, an Angular component:
 
-1. Gets created  
-2. Receives data  
-3. Updates when data changes  
-4. Gets destroyed  
+1. Gets created
+2. Receives data
+3. Updates when data changes
+4. Gets destroyed
 
 Angular gives us **lifecycle hooks** to run code at each stage.
 
@@ -33,11 +33,13 @@ Angular gives us **lifecycle hooks** to run code at each stage.
 # 🔹 Why Do We Need Lifecycle Hooks?
 
 Without lifecycle hooks:
+
 - We wouldn’t know when a component is ready.
 - We wouldn’t know when inputs change.
 - We wouldn’t know when to clean up resources.
 
 With lifecycle hooks:
+
 - We can initialize data properly.
 - React to input changes.
 - Avoid memory leaks.
@@ -136,15 +138,15 @@ ngOnDestroy() {
 
 Correct execution order:
 
-1. constructor  
-2. ngOnChanges  
-3. ngOnInit  
-4. ngDoCheck  
-5. ngAfterContentInit  
-6. ngAfterContentChecked  
-7. ngAfterViewInit  
-8. ngAfterViewChecked  
-9. ngOnDestroy  
+1. constructor
+2. ngOnChanges
+3. ngOnInit
+4. ngDoCheck
+5. ngAfterContentInit
+6. ngAfterContentChecked
+7. ngAfterViewInit
+8. ngAfterViewChecked
+9. ngOnDestroy
 
 ---
 
@@ -152,7 +154,6 @@ Correct execution order:
 
 ```ts
 export class AppComponent implements OnInit, OnDestroy {
-
   constructor() {
     console.log("Constructor called");
   }
@@ -173,7 +174,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
 ## 🔹 Why Should We Unsubscribe?
 
-If you subscribe to Observables and don’t unsubscribe in `ngOnDestroy`, 
+If you subscribe to Observables and don’t unsubscribe in `ngOnDestroy`,
 it can cause memory leaks.
 
 Example:
@@ -219,4 +220,4 @@ ngOnDestroy() {
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

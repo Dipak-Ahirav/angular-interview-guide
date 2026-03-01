@@ -62,10 +62,9 @@ setDisabledState()
 # 🔥 Interface Structure
 
 ```ts
-import { ControlValueAccessor } from '@angular/forms';
+import { ControlValueAccessor } from "@angular/forms";
 
 export class CustomComponent implements ControlValueAccessor {
-
   writeValue(obj: any): void {}
 
   registerOnChange(fn: any): void {}
@@ -110,11 +109,11 @@ Handles disabled state from form.
 ## Step 1️⃣ Create Custom Component
 
 ```ts
-import { Component, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, forwardRef } from "@angular/core";
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 
 @Component({
-  selector: 'app-rating',
+  selector: "app-rating",
   template: `
     <button (click)="setRating(1)">1</button>
     <button (click)="setRating(2)">2</button>
@@ -124,12 +123,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => RatingComponent),
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class RatingComponent implements ControlValueAccessor {
-
   value = 0;
   onChange = (value: any) => {};
   onTouched = () => {};
@@ -162,7 +160,7 @@ export class RatingComponent implements ControlValueAccessor {
 
 ```ts
 this.form = this.fb.group({
-  rating: [0]
+  rating: [0],
 });
 ```
 
@@ -236,4 +234,4 @@ CVA connects both sides.
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

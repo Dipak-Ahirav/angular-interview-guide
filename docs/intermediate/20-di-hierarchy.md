@@ -22,7 +22,7 @@ If a component asks for a service:
 
 👉 Angular checks its own injector  
 👉 If not found → goes to parent  
-👉 If not found → goes to root  
+👉 If not found → goes to root
 
 This is called **Hierarchical Dependency Injection**.
 
@@ -44,7 +44,7 @@ It helps control:
 
 1️⃣ Root Injector  
 2️⃣ Module Injector  
-3️⃣ Component Injector  
+3️⃣ Component Injector
 
 ---
 
@@ -106,7 +106,7 @@ Resolution process:
 1️⃣ Check component injector  
 2️⃣ Check parent component injector  
 3️⃣ Check module injector  
-4️⃣ Check root injector  
+4️⃣ Check root injector
 
 If not found → Error
 
@@ -117,7 +117,7 @@ If not found → Error
 ### Root Provided Service
 
 ```ts
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class LoggerService {}
 ```
 
@@ -159,11 +159,11 @@ Important for multi-tenant apps.
 
 # 🔥 Instance Comparison
 
-| Provided At | Instance Scope | Lifetime |
-|-------------|---------------|----------|
-| Root | Singleton | Entire app |
-| Module | Per module | Module lifetime |
-| Component | Per component | Component lifetime |
+| Provided At | Instance Scope | Lifetime           |
+| ----------- | -------------- | ------------------ |
+| Root        | Singleton      | Entire app         |
+| Module      | Per module     | Module lifetime    |
+| Component   | Per component  | Component lifetime |
 
 ---
 
@@ -216,4 +216,4 @@ This improves memory control and modular architecture.
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

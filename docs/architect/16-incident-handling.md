@@ -14,17 +14,17 @@ Incident handling architecture defines how systems detect, respond to, and recov
 
 In enterprise systems:
 
-- High user traffic  
-- Critical business operations  
-- SLA commitments  
-- 24/7 availability  
+- High user traffic
+- Critical business operations
+- SLA commitments
+- 24/7 availability
 
 Without proper handling:
 
 ❌ Long downtime  
 ❌ Revenue loss  
 ❌ Poor user experience  
-❌ Reputation damage  
+❌ Reputation damage
 
 ---
 
@@ -34,7 +34,7 @@ Without proper handling:
 2️⃣ Quick response  
 3️⃣ Clear ownership  
 4️⃣ Minimal impact  
-5️⃣ Continuous improvement  
+5️⃣ Continuous improvement
 
 ---
 
@@ -48,16 +48,16 @@ Detection → Alert → Triage → Fix → Recovery → RCA (Root Cause Analysis
 
 Monitor:
 
-- API performance  
-- Error rates  
-- Response time  
-- System health  
+- API performance
+- Error rates
+- Response time
+- System health
 
 Tools:
 
-- Prometheus  
-- Grafana  
-- New Relic  
+- Prometheus
+- Grafana
+- New Relic
 
 ---
 
@@ -65,14 +65,14 @@ Tools:
 
 Set alerts for:
 
-- High error rate  
-- Slow response  
-- Service downtime  
+- High error rate
+- Slow response
+- Service downtime
 
 Best practices:
 
 ✔ Avoid alert fatigue  
-✔ Use severity levels  
+✔ Use severity levels
 
 ---
 
@@ -80,16 +80,16 @@ Best practices:
 
 Log:
 
-- Errors  
-- Requests  
-- Critical events  
+- Errors
+- Requests
+- Critical events
 
 Tools:
 
-- ELK Stack (Elasticsearch, Logstash, Kibana)  
-- Splunk  
+- ELK Stack (Elasticsearch, Logstash, Kibana)
+- Splunk
 
-✔ Centralized logging  
+✔ Centralized logging
 
 ---
 
@@ -100,9 +100,9 @@ Steps:
 1️⃣ Identify issue  
 2️⃣ Assign owner  
 3️⃣ Mitigate impact  
-4️⃣ Communicate status  
+4️⃣ Communicate status
 
-✔ Use runbooks for standard issues  
+✔ Use runbooks for standard issues
 
 ---
 
@@ -110,11 +110,11 @@ Steps:
 
 Options:
 
-- Blue-Green deployment  
-- Canary release  
-- Feature flags  
+- Blue-Green deployment
+- Canary release
+- Feature flags
 
-✔ Quick rollback reduces downtime  
+✔ Quick rollback reduces downtime
 
 ---
 
@@ -122,31 +122,31 @@ Options:
 
 After incident:
 
-- Identify root cause  
-- Document findings  
-- Prevent recurrence  
+- Identify root cause
+- Document findings
+- Prevent recurrence
 
-✔ Continuous improvement  
+✔ Continuous improvement
 
 ---
 
 # 🟡 7️⃣ Communication Strategy
 
-- Notify stakeholders  
-- Update status dashboards  
-- Post-incident reports  
+- Notify stakeholders
+- Update status dashboards
+- Post-incident reports
 
-✔ Transparency is key  
+✔ Transparency is key
 
 ---
 
 # 🟢 8️⃣ Automation
 
-- Auto-restart services  
-- Auto-scale systems  
-- Auto-alert triggers  
+- Auto-restart services
+- Auto-scale systems
+- Auto-alert triggers
 
-✔ Faster recovery  
+✔ Faster recovery
 
 ---
 
@@ -156,17 +156,17 @@ After incident:
 ❌ Manual incident handling  
 ❌ No rollback plan  
 ❌ Poor logging  
-❌ No RCA  
+❌ No RCA
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- How do you handle production issues?  
-- Monitoring vs logging?  
-- Rollback strategies?  
-- Incident lifecycle?  
-- RCA importance?  
+- How do you handle production issues?
+- Monitoring vs logging?
+- Rollback strategies?
+- Incident lifecycle?
+- RCA importance?
 
 ---
 
@@ -178,4 +178,4 @@ After incident:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

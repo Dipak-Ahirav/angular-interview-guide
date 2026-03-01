@@ -24,7 +24,7 @@ Without proper architecture:
 ❌ Code becomes messy  
 ❌ Hard to scale  
 ❌ Difficult to debug  
-❌ Slower development  
+❌ Slower development
 
 ---
 
@@ -34,7 +34,7 @@ Without proper architecture:
 2️⃣ Single Responsibility Principle  
 3️⃣ Reusability  
 4️⃣ Scalability  
-5️⃣ Maintainability  
+5️⃣ Maintainability
 
 ---
 
@@ -96,7 +96,7 @@ Benefits:
 
 ✔ Lazy loading  
 ✔ Team ownership  
-✔ Independent scaling  
+✔ Independent scaling
 
 ---
 
@@ -123,10 +123,12 @@ Benefits:
 Smart vs Dumb Components:
 
 ✔ Smart (Container)
+
 - Handles logic
 - Calls services
 
 ✔ Dumb (Presentational)
+
 - UI only
 - Uses @Input / @Output
 
@@ -141,7 +143,7 @@ Service → Component → Template
 Avoid:
 
 ❌ Two-way uncontrolled data  
-❌ Deep nested dependencies  
+❌ Deep nested dependencies
 
 ---
 
@@ -171,7 +173,7 @@ Options:
 ❌ Tight coupling between components  
 ❌ No lazy loading  
 ❌ Business logic inside components  
-❌ No separation between UI & logic  
+❌ No separation between UI & logic
 
 ---
 
@@ -193,4 +195,4 @@ Options:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

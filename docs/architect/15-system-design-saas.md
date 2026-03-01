@@ -14,18 +14,18 @@ Designing a SaaS (Software as a Service) application in Angular involves buildin
 
 In enterprise SaaS products:
 
-- Multiple customers (tenants)  
-- Shared infrastructure  
-- Custom branding & features  
-- Role-based access  
-- Subscription plans  
+- Multiple customers (tenants)
+- Shared infrastructure
+- Custom branding & features
+- Role-based access
+- Subscription plans
 
 Without proper design:
 
 ❌ Data leakage between tenants  
 ❌ Hard to scale  
 ❌ Complex customization  
-❌ Poor performance  
+❌ Poor performance
 
 ---
 
@@ -35,7 +35,7 @@ Without proper design:
 2️⃣ Configuration-driven UI  
 3️⃣ Scalability  
 4️⃣ Security & isolation  
-5️⃣ Feature modularity  
+5️⃣ Feature modularity
 
 ---
 
@@ -53,19 +53,19 @@ Types:
 
 1️⃣ Shared DB, Shared Schema  
 ✔ Cost-effective  
-❌ Needs strong isolation  
+❌ Needs strong isolation
 
 2️⃣ Shared DB, Separate Schema  
-✔ Better isolation  
+✔ Better isolation
 
 3️⃣ Separate DB per Tenant  
 ✔ Highest isolation  
-❌ Expensive  
+❌ Expensive
 
 Frontend impact:
 
-- Tenant ID passed in every request  
-- Dynamic config per tenant  
+- Tenant ID passed in every request
+- Dynamic config per tenant
 
 ---
 
@@ -73,9 +73,9 @@ Frontend impact:
 
 Methods:
 
-- Subdomain (tenant1.app.com)  
-- URL path (/tenant1/dashboard)  
-- Token-based  
+- Subdomain (tenant1.app.com)
+- URL path (/tenant1/dashboard)
+- Token-based
 
 Example:
 
@@ -89,9 +89,9 @@ const tenantId = getTenantFromSubdomain();
 
 Load tenant config at runtime:
 
-- Theme (colors, branding)  
-- Enabled features  
-- Permissions  
+- Theme (colors, branding)
+- Enabled features
+- Permissions
 
 Example:
 
@@ -99,7 +99,7 @@ Example:
 this.configService.loadTenantConfig();
 ```
 
-✔ Dynamic UI per tenant  
+✔ Dynamic UI per tenant
 
 ---
 
@@ -107,10 +107,10 @@ this.configService.loadTenantConfig();
 
 Use feature modules:
 
-- Enable/disable features per tenant  
-- Lazy load modules  
+- Enable/disable features per tenant
+- Lazy load modules
 
-✔ Better scalability  
+✔ Better scalability
 
 ---
 
@@ -118,27 +118,27 @@ Use feature modules:
 
 Levels:
 
-- Admin  
-- User  
-- Super Admin  
+- Admin
+- User
+- Super Admin
 
 Use:
 
-- Route guards  
-- Backend validation  
+- Route guards
+- Backend validation
 
 ---
 
 # 🔥 6️⃣ API Layer Design
 
-- Include tenant context in every request  
-- Use interceptors  
+- Include tenant context in every request
+- Use interceptors
 
 Example:
 
 ```ts
 req.clone({
-  setHeaders: { 'X-Tenant-ID': tenantId }
+  setHeaders: { "X-Tenant-ID": tenantId },
 });
 ```
 
@@ -148,13 +148,13 @@ req.clone({
 
 Store:
 
-- Tenant config  
-- User roles  
-- Permissions  
+- Tenant config
+- User roles
+- Permissions
 
 Use:
 
-- NgRx / Signals / RxJS  
+- NgRx / Signals / RxJS
 
 ---
 
@@ -162,28 +162,28 @@ Use:
 
 Use:
 
-- CSS variables  
-- Dynamic themes  
+- CSS variables
+- Dynamic themes
 
-✔ Each tenant has unique UI  
+✔ Each tenant has unique UI
 
 ---
 
 # 🚀 9️⃣ Performance Optimization
 
-- Lazy loading  
-- Caching tenant config  
-- CDN for assets  
-- OnPush strategy  
+- Lazy loading
+- Caching tenant config
+- CDN for assets
+- OnPush strategy
 
 ---
 
 # 🧠 10️⃣ Security Considerations
 
-- Strict backend validation  
-- Prevent cross-tenant access  
-- Secure token handling  
-- HTTPS everywhere  
+- Strict backend validation
+- Prevent cross-tenant access
+- Secure token handling
+- HTTPS everywhere
 
 ---
 
@@ -193,17 +193,17 @@ Use:
 ❌ No isolation between tenants  
 ❌ Too many conditional checks  
 ❌ Not using config-driven approach  
-❌ Ignoring performance  
+❌ Ignoring performance
 
 ---
 
 # 🎯 What Interviewer Is Testing
 
-- What is multi-tenancy?  
-- How to design SaaS apps?  
-- How to isolate tenant data?  
-- How to handle customization?  
-- Frontend vs backend responsibility?  
+- What is multi-tenancy?
+- How to design SaaS apps?
+- How to isolate tenant data?
+- How to handle customization?
+- Frontend vs backend responsibility?
 
 ---
 
@@ -215,4 +215,4 @@ Use:
 
 ## 🔙 Navigation
 
-⬅️ Back to Architect Questions List
+[⬅️ Back to Architect Questions List](../../README.md)

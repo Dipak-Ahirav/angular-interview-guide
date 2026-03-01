@@ -60,19 +60,18 @@ Controls whether a route can be activated.
 ### Example:
 
 ```ts
-import { Injectable } from '@angular/core';
-import { CanActivate, Router } from '@angular/router';
+import { Injectable } from "@angular/core";
+import { CanActivate, Router } from "@angular/router";
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class AuthGuard implements CanActivate {
-
   constructor(private router: Router) {}
 
   canActivate(): boolean {
-    const isLoggedIn = !!localStorage.getItem('token');
+    const isLoggedIn = !!localStorage.getItem("token");
 
     if (!isLoggedIn) {
-      this.router.navigate(['/login']);
+      this.router.navigate(["/login"]);
       return false;
     }
 
@@ -121,7 +120,7 @@ Used for:
 Example:
 
 ```ts
-import { CanDeactivate } from '@angular/router';
+import { CanDeactivate } from "@angular/router";
 
 export interface CanComponentDeactivate {
   canDeactivate: () => boolean;
@@ -206,11 +205,11 @@ canActivate(): boolean {
 
 ## Difference Between CanActivate and CanLoad
 
-| Feature | CanActivate | CanLoad |
-|----------|-------------|----------|
-| Prevents navigation | ✅ Yes | ✅ Yes |
-| Prevents module loading | ❌ No | ✅ Yes |
-| Used in lazy modules | ⚠️ Limited | ✅ Yes |
+| Feature                 | CanActivate | CanLoad |
+| ----------------------- | ----------- | ------- |
+| Prevents navigation     | ✅ Yes      | ✅ Yes  |
+| Prevents module loading | ❌ No       | ✅ Yes  |
+| Used in lazy modules    | ⚠️ Limited  | ✅ Yes  |
 
 ---
 
@@ -242,4 +241,4 @@ canActivate(): boolean {
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)

@@ -14,9 +14,9 @@ Think of directives as “special powers” you give to HTML elements.
 
 For example:
 
-- Show something only if a condition is true  
-- Repeat an item multiple times  
-- Change color or style dynamically  
+- Show something only if a condition is true
+- Repeat an item multiple times
+- Change color or style dynamically
 
 Directives tell Angular how to change or control the HTML.
 
@@ -27,10 +27,12 @@ Directives tell Angular how to change or control the HTML.
 # 🔹 Why Do We Need Directives?
 
 Without directives:
+
 - We would manually manipulate the DOM using JavaScript.
 - Code would become messy and harder to maintain.
 
 With directives:
+
 - Angular handles DOM changes automatically.
 - UI becomes dynamic and reactive.
 - Code remains clean and declarative.
@@ -118,16 +120,16 @@ They are the most powerful type of directive.
 
 # 🧠 Important Concept (Interview Booster)
 
-### 🔹 Difference Between *ngIf and hidden
+### 🔹 Difference Between \*ngIf and hidden
 
-- `*ngIf` → Removes element from DOM completely  
-- `hidden` → Only hides element using CSS  
+- `*ngIf` → Removes element from DOM completely
+- `hidden` → Only hides element using CSS
 
 Removing from DOM improves performance.
 
 ---
 
-### 🔹 What Does * Mean?
+### 🔹 What Does \* Mean?
 
 The `*` is syntactic sugar.
 
@@ -152,14 +154,14 @@ Becomes:
 You can create your own directive:
 
 ```ts
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef } from "@angular/core";
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: "[appHighlight]",
 })
 export class HighlightDirective {
   constructor(private el: ElementRef) {
-    el.nativeElement.style.backgroundColor = 'yellow';
+    el.nativeElement.style.backgroundColor = "yellow";
   }
 }
 ```
@@ -178,7 +180,7 @@ When asked about directives, interviewer checks:
 
 - Do you understand DOM manipulation in Angular?
 - Do you know structural vs attribute difference?
-- Can you explain * syntax?
+- Can you explain \* syntax?
 - Can you create custom directives?
 
 ---
@@ -191,7 +193,7 @@ When asked about directives, interviewer checks:
 
 # 💬 Common Follow-up Questions
 
-1. What is the difference between *ngIf and hidden?
+1. What is the difference between \*ngIf and hidden?
 2. What is the purpose of ng-template?
 3. Can we create custom directives?
 4. What is structural directive shorthand syntax?
@@ -200,4 +202,4 @@ When asked about directives, interviewer checks:
 
 ## 🔙 Navigation
 
-⬅️ Back to Basic Questions List
+[⬅️ Back to Basic Questions List](../../README.md)

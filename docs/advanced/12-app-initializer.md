@@ -24,7 +24,7 @@ Without APP_INITIALIZER:
 
 ❌ App may render before config loads  
 ❌ Race conditions may occur  
-❌ Guards may execute before data is ready  
+❌ Guards may execute before data is ready
 
 ---
 
@@ -39,7 +39,7 @@ APP_INITIALIZER is:
 Defined in:
 
 ```ts
-import { APP_INITIALIZER } from '@angular/core';
+import { APP_INITIALIZER } from "@angular/core";
 ```
 
 ---
@@ -51,7 +51,7 @@ During bootstrap:
 1️⃣ Angular creates injector  
 2️⃣ Executes all APP_INITIALIZER providers  
 3️⃣ Waits for Promises to resolve  
-4️⃣ Bootstraps root component  
+4️⃣ Bootstraps root component
 
 If Promise is not resolved → App waits.
 
@@ -62,14 +62,14 @@ If Promise is not resolved → App waits.
 ## Step 1: Create Config Service
 
 ```ts
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class ConfigService {
   config: any;
 
   loadConfig(): Promise<void> {
-    return fetch('/api/config')
-      .then(res => res.json())
-      .then(data => {
+    return fetch("/api/config")
+      .then((res) => res.json())
+      .then((data) => {
         this.config = data;
       });
   }
@@ -96,9 +96,9 @@ providers: [
     provide: APP_INITIALIZER,
     useFactory: initConfig,
     deps: [ConfigService],
-    multi: true
-  }
-]
+    multi: true,
+  },
+];
 ```
 
 ---
@@ -125,9 +125,9 @@ bootstrapApplication(AppComponent, {
       provide: APP_INITIALIZER,
       useFactory: initConfig,
       deps: [ConfigService],
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 });
 ```
 
@@ -139,17 +139,17 @@ bootstrapApplication(AppComponent, {
 2️⃣ Multi-tenant setup  
 3️⃣ Role-based permission loading  
 4️⃣ Feature toggle loading  
-5️⃣ Localization initialization  
+5️⃣ Localization initialization
 
 ---
 
 # 🟡 APP_INITIALIZER vs Constructor
 
-| Feature | Constructor | APP_INITIALIZER |
-|----------|-------------|----------------|
-| Runs before bootstrap | ❌ No | ✅ Yes |
-| Can delay app start | ❌ No | ✅ Yes |
-| Suitable for config loading | ❌ No | ✅ Yes |
+| Feature                     | Constructor | APP_INITIALIZER |
+| --------------------------- | ----------- | --------------- |
+| Runs before bootstrap       | ❌ No       | ✅ Yes          |
+| Can delay app start         | ❌ No       | ✅ Yes          |
+| Suitable for config loading | ❌ No       | ✅ Yes          |
 
 ---
 
@@ -158,7 +158,7 @@ bootstrapApplication(AppComponent, {
 ❌ Not returning Promise  
 ❌ Forgetting multi: true  
 ❌ Performing heavy blocking logic  
-❌ Not handling errors properly  
+❌ Not handling errors properly
 
 ---
 
@@ -185,7 +185,7 @@ Always resolve promise to avoid app crash.
 You can register multiple initializers:
 
 ```ts
-multi: true
+multi: true;
 ```
 
 Angular waits for all to resolve.
@@ -220,4 +220,4 @@ Angular waits for all to resolve.
 
 ## 🔙 Navigation
 
-⬅️ Back to Advanced Questions List
+[⬅️ Back to Advanced Questions List](../../README.md)

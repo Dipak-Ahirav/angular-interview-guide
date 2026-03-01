@@ -15,11 +15,13 @@ A Route Resolver in Angular is used to fetch data before a route is activated. I
 Imagine you open a User Details page.
 
 Without Resolver:
+
 - Page opens first
 - Then API call starts
 - User sees loading spinner
 
 With Resolver:
+
 - API call happens first
 - Page opens with data ready
 
@@ -50,7 +52,7 @@ With Resolver:
 2️⃣ Angular calls Resolver  
 3️⃣ Resolver fetches data (API call)  
 4️⃣ If successful → Route activates  
-5️⃣ Component receives resolved data  
+5️⃣ Component receives resolved data
 
 ---
 
@@ -59,14 +61,13 @@ With Resolver:
 ## Step 1️⃣ Create Resolver
 
 ```ts
-import { Injectable } from '@angular/core';
-import { Resolve } from '@angular/router';
-import { Observable } from 'rxjs';
-import { UserService } from './user.service';
+import { Injectable } from "@angular/core";
+import { Resolve } from "@angular/router";
+import { Observable } from "rxjs";
+import { UserService } from "./user.service";
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class UserResolver implements Resolve<any> {
-
   constructor(private userService: UserService) {}
 
   resolve(): Observable<any> {
@@ -134,12 +135,12 @@ Now component always loads with product data ready.
 
 # 🚀 Resolver vs Guard
 
-| Feature | Resolver | Guard |
-|----------|----------|--------|
-| Fetch data before route | ✅ Yes | ❌ No |
-| Block navigation | ❌ No (unless error) | ✅ Yes |
-| Used for authentication | ❌ No | ✅ Yes |
-| Used for data loading | ✅ Yes | ❌ No |
+| Feature                 | Resolver             | Guard  |
+| ----------------------- | -------------------- | ------ |
+| Fetch data before route | ✅ Yes               | ❌ No  |
+| Block navigation        | ❌ No (unless error) | ✅ Yes |
+| Used for authentication | ❌ No                | ✅ Yes |
+| Used for data loading   | ✅ Yes               | ❌ No  |
 
 ---
 
@@ -213,4 +214,4 @@ resolve: {
 
 ## 🔙 Navigation
 
-⬅️ Back to Intermediate Questions List
+[⬅️ Back to Intermediate Questions List](../../README.md)
